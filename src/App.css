@@ -81,3 +81,8 @@ a:hover,
   color: #1e70bf;
   text-decoration: underline;
 }
+
+a:hover .icon {
+  text-decoration: none;
+  color: blue;
+}
