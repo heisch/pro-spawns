@@ -1,19 +1,19 @@
 {
   "main.css": "/pro-spawns/static/css/main.aaebc627.chunk.css",
-  "main.js": "/pro-spawns/static/js/main.064e0b26.chunk.js",
-  "main.js.map": "/pro-spawns/static/js/main.064e0b26.chunk.js.map",
+  "main.js": "/pro-spawns/static/js/main.0df8bafc.chunk.js",
+  "main.js.map": "/pro-spawns/static/js/main.0df8bafc.chunk.js.map",
   "static/css/1.d66a91b5.chunk.css": "/pro-spawns/static/css/1.d66a91b5.chunk.css",
   "static/js/1.f81bb3aa.chunk.js": "/pro-spawns/static/js/1.f81bb3aa.chunk.js",
   "static/js/1.f81bb3aa.chunk.js.map": "/pro-spawns/static/js/1.f81bb3aa.chunk.js.map",
   "runtime~main.js": "/pro-spawns/static/js/runtime~main.5f28c4cb.js",
   "runtime~main.js.map": "/pro-spawns/static/js/runtime~main.5f28c4cb.js.map",
   "static/media/RawSpawnData.csv": "/pro-spawns/static/media/RawSpawnData.139a7916.csv",
-  "static/media/semantic.min.css": "/pro-spawns/static/media/icons.faff9214.woff",
+  "static/media/semantic.min.css": "/pro-spawns/static/media/icons.8e3c7f55.eot",
   "static/media/RawWaterSpawnData.csv": "/pro-spawns/static/media/RawWaterSpawnData.ce1ee5a1.csv",
   "static/media/HeadbuttSpawnData.csv": "/pro-spawns/static/media/HeadbuttSpawnData.5e104bfc.csv",
   "static/css/1.d66a91b5.chunk.css.map": "/pro-spawns/static/css/1.d66a91b5.chunk.css.map",
   "static/css/main.aaebc627.chunk.css.map": "/pro-spawns/static/css/main.aaebc627.chunk.css.map",
   "index.html": "/pro-spawns/index.html",
-  "precache-manifest.08935d8e0e557a29c2f13d224a5393c3.js": "/pro-spawns/precache-manifest.08935d8e0e557a29c2f13d224a5393c3.js",
+  "precache-manifest.c8ec6325b9f4811f841d638aed0d534f.js": "/pro-spawns/precache-manifest.c8ec6325b9f4811f841d638aed0d534f.js",
   "service-worker.js": "/pro-spawns/service-worker.js"
 }
