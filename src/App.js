@@ -99,6 +99,23 @@ class App extends Component {
 
         let repelId = type + ' - ' + data.region + ' - ' + data.area;
 
+        if (typeof data.heldItem === 'string' && data.heldItem.length) {
+            const regex = /(\[\[([^\]|]+)(\|[^\]]+)?]])/g;
+            const tokens = data.heldItem.replace(regex, '###$1###').split('###');
+
+            const heldItem = [];
+            tokens.forEach((token, tokenIndex) => {
+                if (token.match(regex)) {
+                    token.replace(regex, (...matches) => {
+                        heldItem.push(<a key={repelId + tokenIndex} href={`https://prowiki.info/index.php?title=Special:Search/${matches[2]}`} target="_blank" rel="noopener noreferrer">{matches[2]}</a>)
+                    });
+                } else {
+                    heldItem.push(token);
+                }
+            });
+            data.heldItem = heldItem;
+        }
+
         if (!this.repelTrickData.hasOwnProperty(repelId)) {
             this.repelTrickData[repelId] = {};
         }
