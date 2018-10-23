@@ -3,7 +3,7 @@ import * as Papa from 'papaparse';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 import './resources/pokdex_sprites.css';
-import {Button, Checkbox, Container, Form, Icon, Input, List, Segment, Table} from "semantic-ui-react";
+import {Button, Checkbox, Container, Dropdown, Form, Icon, Input, List, Segment, Table} from "semantic-ui-react";
 import _ from 'lodash';
 
 class App extends Component {
@@ -137,7 +137,7 @@ class App extends Component {
         let name_match = false;
         if (this.state.settings.findPokemonSynonyms && this.evolution_synonyms.hasOwnProperty(name)) {
             this.evolution_synonyms[name].forEach(synonym => {
-                if (fname.length > 0 && synonym.toLocaleLowerCase().indexOf(fname) > -1) {
+                if (fname.length > 0 && synonym === fname) {
                     name_match = true;
                 }
             })
@@ -146,14 +146,14 @@ class App extends Component {
     }
 
     filter() {
-        const fname = this.state.filter.name.toLowerCase();
+        const fname = this.state.filter.name;
         const farea = this.state.filter.area;
         try {
             const fareaReg = new RegExp(farea.replace('*', '.*'), 'i');
             this.types.forEach(type => {
                 this.filteredData[type] = this.sourceData[type].filter(entry => {
                     let name_match =
-                        (fname.length > 0 && entry.pokemon.toLocaleLowerCase().indexOf(fname) > -1)
+                        (fname.length > 0 && entry.pokemon === fname)
                         || this._filterMatchSynonym(entry.pokemon, fname);
                     return name_match
                         || (farea.length > 0 && entry._sortArea.match(fareaReg) !== null)
@@ -322,11 +322,14 @@ class App extends Component {
             <Container>
                 <Segment>
                     <Form>
-                        <Input
-                            value={this.state.filter.name}
-                            onChange={(e) => this.setFilter({name: e.target.value})}
-                            icon={{ name: 'close', link: true, onClick: () => this.setFilter({name: ''})}}
+                        <Dropdown
                             placeholder='pokemon name...'
+                            search
+                            selection
+                            clearable
+                            value={this.state.filter.name}
+                            onChange={(e, obj) => this.setFilter({name: obj.value})}
+                            options={require('./resources/json/pokemon_names').map(name => {return {key: name, value: name, text: name}})}
                         />
 
                         &nbsp;
