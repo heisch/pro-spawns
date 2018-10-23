@@ -288,7 +288,7 @@ class App extends Component {
                 <List horizontal >
                     {quickListData.map((entry, index) => (
                         <List.Item key={index}>
-                            <Button className='btn-lnk' onClick={() => this.setFilter({name: entry.name})}>
+                            <Button className='btn-lnk' onClick={() => this.setFilter({name: entry.name, area: ''})}>
                                 <i className={`pokedex-sprite pokedex-sprite-${entry.id}`}/>
                                 {entry.name}
                             </Button>
