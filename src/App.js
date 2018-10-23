@@ -345,7 +345,7 @@ class App extends Component {
                     :this.types.map(type => {
                     const data = this.state.sorted[type];
                     return (
-                        <Table key={type} compact='very' basic className={type} sortable>
+                        <Table key={type} compact='very' basic className={type} sortable unstackable>
                             <Table.Header>
                                 <Table.Row>
                                     <Table.HeaderCell sorted={column === '_sortArea' ? direction : null} onClick={() => this.sortBy('_sortArea')}>
@@ -384,7 +384,11 @@ class App extends Component {
                                     let repelTrickPossible = this.repelTrickPossible(type, entry);
                                     return (
                                         <Table.Row key={JSON.stringify(entry)}>
-                                            <Table.Cell><a href="#" onClick={(e) => this.setFilter({name: '', area: entry.area}, e)}>{entry.region} - {entry.area}</a></Table.Cell>
+                                            <Table.Cell>
+                                                <Button className='btn-lnk' onClick={(e) => this.setFilter({name: '', area: entry.area + '$'}, e)}>
+                                                    {entry.region} - {entry.area}
+                                                </Button>
+                                            </Table.Cell>
                                             <Table.Cell>{entry.pokedexNumber}</Table.Cell>
                                             <Table.Cell>
                                                 <i className={`pokedex-sprite pokedex-sprite-${entry.pokedexNumber}`}/>
