@@ -43,9 +43,6 @@ class App extends Component {
     constructor() {
         super();
 
-        // JSON.parse(localStorage.getItem('playerData'));
-        // localStorage.setItem('playerData', JSON.stringify(save));
-
         this.state = {
             filter: {
                 name: '',
@@ -158,6 +155,7 @@ class App extends Component {
         if (e) e.preventDefault();
         if (!filter.hasOwnProperty('name')) filter.name = this.state.filter.name;
         if (!filter.hasOwnProperty('area')) filter.area = this.state.filter.area;
+        // eslint-disable-next-line react/no-direct-mutation-state
         this.state.filter = filter;
         this.filter();
     }
@@ -167,6 +165,7 @@ class App extends Component {
     }
 
     sortBy(column) {
+        // eslint-disable-next-line react/no-direct-mutation-state
         this.state.sortBy = {
             column: column,
             direction: this.state.sortBy.column === column ? this.alternateDirection(this.state.sortBy.direction) : 'ascending'
