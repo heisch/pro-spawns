@@ -1,0 +1,83 @@
+img {
+  width: auto;
+  height: 14px;
+}
+
+
+table thead tr th:nth-child(1),
+table thead tr th:nth-child(3) {
+  white-space: nowrap;
+}
+
+
+.ui.sortable.table thead tr th:nth-child(1) {
+  /*width: 250px;*/
+}
+.ui.sortable.table thead tr th:nth-child(3) {
+  /*width: 150px;*/
+}
+
+
+.ui.sortable.table thead tr th:nth-child(2),
+
+.ui.sortable.table.land thead tr th:nth-child(4),
+.ui.sortable.table.land thead tr th:nth-child(5),
+.ui.sortable.table.land thead tr th:nth-child(6),
+.ui.sortable.table.land thead tr th:nth-child(7),
+.ui.sortable.table.land thead tr th:nth-child(8),
+.ui.sortable.table.land thead tr th:nth-child(9),
+.ui.sortable.table.land thead tr th:nth-child(10),
+
+.ui.sortable.table.water thead tr th:nth-child(4),
+.ui.sortable.table.water thead tr th:nth-child(5),
+.ui.sortable.table.water thead tr th:nth-child(6),
+.ui.sortable.table.water thead tr th:nth-child(7),
+.ui.sortable.table.water thead tr th:nth-child(8),
+.ui.sortable.table.water thead tr th:nth-child(9),
+.ui.sortable.table.water thead tr th:nth-child(10),
+.ui.sortable.table.water thead tr th:nth-child(11),
+
+.ui.sortable.table.headbutt thead tr th:nth-child(4),
+.ui.sortable.table.headbutt thead tr th:nth-child(5),
+.ui.sortable.table.headbutt thead tr th:nth-child(6) {
+  width: 1px;
+}
+
+
+.ui.sortable.table.land tbody tr td:nth-child(7),
+.ui.sortable.table.water tbody tr td:nth-child(8) {
+  font-weight: bold
+}
+
+
+.ui.table tr td.red    {background-color: #B03060;color: white;}
+.ui.table tr td.orange {background-color: #FE9A76;color: white;}
+.ui.table tr td.yellow {background-color: #FFD700;color: black;}
+.ui.table tr td.olive  {background-color: #32CD32;color: white;}
+.ui.table tr td.green  {background-color: #016936;color: white;}
+.ui.table tr td.teal   {background-color: #008080;color: white;}
+.ui.table tr td.blue   {background-color: #0E6EB8;color: white;}
+.ui.table tr td.violet {background-color: #EE82EE;color: white;}
+.ui.table tr td.purple {background-color: #B413EC;color: white;}
+.ui.table tr td.pink   {background-color: #FF1493;color: white;}
+.ui.table tr td.brown  {background-color: #A52A2A;color: white;}
+.ui.table tr td.grey   {background-color: #A0A0A0;color: white;}
+.ui.table tr td.black  {background-color: #000000;color: white;}
+
+.ui.table tr td .icon {margin: 0}
+
+
+.ui.button.btn-lnk {
+  color: #4183c4;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  font-weight: normal;
+  cursor: pointer;
+  background: transparent;
+}
+
+a:hover,
+.ui.button.btn-lnk:hover {
+  color: #1e70bf;
+  text-decoration: underline;
+}
