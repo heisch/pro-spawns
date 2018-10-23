@@ -113,12 +113,18 @@ class App extends Component {
     filter() {
         const fname = this.state.filter.name.toLowerCase();
         const farea = this.state.filter.area;
-        this.types.forEach(type => {
-            this.filteredData[type] = this.sourceData[type].filter(entry => {
-                return (fname.length > 2 && entry.pokemon.toLowerCase().indexOf(fname) > -1)
-                    || (farea.length > 0 && entry.area === farea)
+        try {
+            const fareaReg = new RegExp(farea.replace('*', '.*'), 'i');
+            this.types.forEach(type => {
+                this.filteredData[type] = this.sourceData[type].filter(entry => {
+                    return (fname.length > 0 && entry.pokemon.toLowerCase().indexOf(fname) > -1)
+                        || (farea.length > 0 && entry._sortArea.match(fareaReg) !== null)
+                });
             });
-        });
+        } catch (e) {
+            // do not throw for invalid regex
+            this.filteredData = _.cloneDeep(this.sourceData);
+        }
         this.sort();
     }
 
@@ -307,6 +313,8 @@ class App extends Component {
 
         const {column, direction} = this.state.sortBy;
 
+        const number_of_results = [].concat(...Object.values(this.state.sorted)).length;
+
         return (
             <Container>
                 <Segment>
@@ -324,11 +332,17 @@ class App extends Component {
                         value={this.state.filter.area}
                         onChange={(e) => this.setFilter({area: e.target.value})}
                         icon={{ name: 'close', link: true, onClick: () => this.setFilter({area: ''})}}
-                        placeholder='area...'
+                        placeholder='region/area (regex)...'
                     />
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <strong>{number_of_results} results</strong>
                 </Segment>
 
-                {this.types.map(type => {
+                {number_of_results > 125 ?
+                    <Segment>Too many results to display</Segment>
+                    :this.types.map(type => {
                     const data = this.state.sorted[type];
                     return (
                         <Table key={type} compact='very' basic className={type} sortable>
