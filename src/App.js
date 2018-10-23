@@ -423,7 +423,7 @@ class App extends Component {
                                                         </Button>
                                                     ) : (
                                                         <Button className='btn-lnk' onClick={() => this.addToQuickList(entry.pokedexNumber, entry.pokemon)}>
-                                                            <i aria-hidden="true" className="bookmark grey icon"/>
+                                                            <i aria-hidden="true" className="bookmark outline grey icon"/>
                                                         </Button>
                                                     )
                                                 }
