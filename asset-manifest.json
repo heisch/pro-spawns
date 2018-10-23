@@ -8,12 +8,12 @@
   "runtime~main.js": "/pro-spawns/static/js/runtime~main.5f28c4cb.js",
   "runtime~main.js.map": "/pro-spawns/static/js/runtime~main.5f28c4cb.js.map",
   "static/media/RawSpawnData.csv": "/pro-spawns/static/media/RawSpawnData.139a7916.csv",
-  "static/media/semantic.min.css": "/pro-spawns/static/media/icons.8e3c7f55.eot",
+  "static/media/semantic.min.css": "/pro-spawns/static/media/icons.0ab54153.woff2",
   "static/media/RawWaterSpawnData.csv": "/pro-spawns/static/media/RawWaterSpawnData.ce1ee5a1.csv",
   "static/media/HeadbuttSpawnData.csv": "/pro-spawns/static/media/HeadbuttSpawnData.5e104bfc.csv",
-  "static/css/1.d66a91b5.chunk.css.map": "/pro-spawns/static/css/1.d66a91b5.chunk.css.map",
   "static/css/main.aaebc627.chunk.css.map": "/pro-spawns/static/css/main.aaebc627.chunk.css.map",
+  "static/css/1.d66a91b5.chunk.css.map": "/pro-spawns/static/css/1.d66a91b5.chunk.css.map",
   "index.html": "/pro-spawns/index.html",
-  "precache-manifest.735d71d299315fc68760e8e27473221b.js": "/pro-spawns/precache-manifest.735d71d299315fc68760e8e27473221b.js",
+  "precache-manifest.1deab13c1d9d6a246ce28b842c848d44.js": "/pro-spawns/precache-manifest.1deab13c1d9d6a246ce28b842c848d44.js",
   "service-worker.js": "/pro-spawns/service-worker.js"
 }
