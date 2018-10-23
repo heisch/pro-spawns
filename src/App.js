@@ -3,7 +3,7 @@ import * as Papa from 'papaparse';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 import './resources/pokdex_sprites.css';
-import {Button, Container, Icon, Input, List, Segment, Table} from "semantic-ui-react";
+import {Button, Checkbox, Container, Form, Icon, Input, List, Segment, Table} from "semantic-ui-react";
 import _ from 'lodash';
 
 class App extends Component {
@@ -43,6 +43,8 @@ class App extends Component {
     constructor() {
         super();
 
+        this.evolution_synonyms = require('./resources/json/evolution_synonyms');
+
         this.state = {
             filter: {
                 name: '',
@@ -58,6 +60,10 @@ class App extends Component {
                 headbutt: [],
             }
         };
+
+        this.state.settings = localStorage.getItem('proSpawnsSettings') === null
+            ? require('./resources/json/default_settings')
+            : JSON.parse(localStorage.getItem('proSpawnsSettings'));
 
         const csv_files = [
             require('./resources/csv/RawSpawnData.csv'),
@@ -127,6 +133,18 @@ class App extends Component {
         return data;
     }
 
+    _filterMatchSynonym(name, fname) {
+        let name_match = false;
+        if (this.state.settings.findPokemonSynonyms && this.evolution_synonyms.hasOwnProperty(name)) {
+            this.evolution_synonyms[name].forEach(synonym => {
+                if (fname.length > 0 && synonym.toLocaleLowerCase().indexOf(fname) > -1) {
+                    name_match = true;
+                }
+            })
+        }
+        return name_match;
+    }
+
     filter() {
         const fname = this.state.filter.name.toLowerCase();
         const farea = this.state.filter.area;
@@ -134,7 +152,10 @@ class App extends Component {
             const fareaReg = new RegExp(farea.replace('*', '.*'), 'i');
             this.types.forEach(type => {
                 this.filteredData[type] = this.sourceData[type].filter(entry => {
-                    return (fname.length > 0 && entry.pokemon.toLowerCase().indexOf(fname) > -1)
+                    let name_match =
+                        (fname.length > 0 && entry.pokemon.toLocaleLowerCase().indexOf(fname) > -1)
+                        || this._filterMatchSynonym(entry.pokemon, fname);
+                    return name_match
                         || (farea.length > 0 && entry._sortArea.match(fareaReg) !== null)
                 });
             });
@@ -221,52 +242,17 @@ class App extends Component {
         }
     }
 
-    _defaultQuickList = [
-        {
-            id: "133",
-            name: "Eevee"
-        },
-        {
-            id: "147",
-            name: "Dratini"
-        },
-        {
-            id: "175",
-            name: "Togepi"
-        },
-        {
-            id: "246",
-            name: "Larvitar"
-        },
-        {
-            id: "280",
-            name: "Ralts"
-        },
-        {
-            id: "371",
-            name: "Bagon"
-        },
-        {
-            id: "443",
-            name: "Gible"
-        },
-        {
-            id: "446",
-            name: "Munchlax"
-        },
-        {
-            id: "532",
-            name: "Timburr"
-        },
-        {
-            id: "633",
-            name: "Deino"
-        }
-    ];
+    setSetting(setting, value) {
+        const settings = this.state.settings;
+        settings[setting] = value;
+        this.setState({settings: settings});
+        localStorage.setItem('proSpawnsSettings', JSON.stringify(settings));
+        this.filter();
+    }
 
     getQuickList() {
-        const quickListData = localStorage.getItem('proSpawnQuickList');
-        if (quickListData === null) return this._defaultQuickList;
+        const quickListData = localStorage.getItem('proSpawnsQuickList');
+        if (quickListData === null) return require('./resources/json/default_quicklist');
         return JSON.parse(quickListData);
     }
 
@@ -275,7 +261,7 @@ class App extends Component {
             if (a.id === b.id) return 0;
             return a.id > b.id ? 1 : -1;
         });
-        localStorage.setItem('proSpawnQuickList', JSON.stringify(quickListData));
+        localStorage.setItem('proSpawnsQuickList', JSON.stringify(quickListData));
         this.forceUpdate();
     }
 
@@ -335,26 +321,31 @@ class App extends Component {
         return (
             <Container>
                 <Segment>
-                    <Input
-                        value={this.state.filter.name}
-                        onChange={(e) => this.setFilter({name: e.target.value})}
-                        icon={{ name: 'close', link: true, onClick: () => this.setFilter({name: ''})}}
-                        placeholder='pokemon name...'
-                    />
+                    <Form>
+                        <Input
+                            value={this.state.filter.name}
+                            onChange={(e) => this.setFilter({name: e.target.value})}
+                            icon={{ name: 'close', link: true, onClick: () => this.setFilter({name: ''})}}
+                            placeholder='pokemon name...'
+                        />
 
-                    &nbsp;
-                    &nbsp;
+                        &nbsp;
+                        &nbsp;
 
-                    <Input
-                        value={this.state.filter.area}
-                        onChange={(e) => this.setFilter({area: e.target.value})}
-                        icon={{ name: 'close', link: true, onClick: () => this.setFilter({area: ''})}}
-                        placeholder='region/area (regex)...'
-                    />
-                    &nbsp;
-                    &nbsp;
-                    &nbsp;
-                    <strong>{number_of_results} results</strong>
+                        <Input
+                            value={this.state.filter.area}
+                            onChange={(e) => this.setFilter({area: e.target.value})}
+                            icon={{ name: 'close', link: true, onClick: () => this.setFilter({area: ''})}}
+                            placeholder='region/area (regex)...'
+                        />
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <strong>{number_of_results} results</strong>
+                        <Form.Field>
+                            <Checkbox label='Include evolutions' checked={this.state.settings.findPokemonSynonyms} onClick={() => this.setSetting('findPokemonSynonyms', !this.state.settings.findPokemonSynonyms)}/>
+                        </Form.Field>
+                    </Form>
                 </Segment>
 
                 {number_of_results > 125 ?
