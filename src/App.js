@@ -411,7 +411,7 @@ class App extends Component {
                                                 <i className={`pokedex-sprite pokedex-sprite-${entry.pokedexNumber}`}/>
                                                 <Button className='btn-lnk' onClick={(e) => this.setFilter({name: entry.pokemon, area: ''}, e)}>{entry.pokemon}</Button>
                                                 &nbsp;
-                                                <a href={`https://pokemondb.net/pokedex/${entry.pokedexNumber}`} target='_blank'>
+                                                <a href={`https://pokemondb.net/pokedex/${entry.pokedexNumber}`} target='_blank' rel="noopener noreferrer">
                                                     <Icon name='external alternate'/>
                                                 </a>
                                                 &nbsp;
