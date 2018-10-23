@@ -1,39 +1,43 @@
 self.__precacheManifest = [
   {
-    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
-    "url": "/pro-spawns/static/media/outline-icons.ef60a4f6.woff"
+    "revision": "701ae6abd4719e9c2ada3535a497b341",
+    "url": "/pro-spawns/static/media/outline-icons.701ae6ab.eot"
   },
   {
-    "revision": "0df8bafcf4016c5c9a83",
-    "url": "/pro-spawns/static/css/main.aaebc627.chunk.css"
+    "revision": "cde07f88f9232e27fc2d",
+    "url": "/pro-spawns/static/css/main.ffb16fa7.chunk.css"
   },
   {
     "revision": "5e104bfc7d1a6177dead046715c21055",
     "url": "/pro-spawns/static/media/HeadbuttSpawnData.5e104bfc.csv"
   },
   {
-    "revision": "f81bb3aaa35ad992e5be",
-    "url": "/pro-spawns/static/js/1.f81bb3aa.chunk.js"
+    "revision": "eb41349203ad364255da",
+    "url": "/pro-spawns/static/js/1.eb413492.chunk.js"
   },
   {
     "revision": "5f28c4cb43efe5cc1acb",
     "url": "/pro-spawns/static/js/runtime~main.5f28c4cb.js"
   },
   {
-    "revision": "0ab54153eeeca0ce03978cc463b257f7",
-    "url": "/pro-spawns/static/media/icons.0ab54153.woff2"
-  },
-  {
     "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
     "url": "/pro-spawns/static/media/icons.8e3c7f55.eot"
+  },
+  {
+    "revision": "0ab54153eeeca0ce03978cc463b257f7",
+    "url": "/pro-spawns/static/media/icons.0ab54153.woff2"
   },
   {
     "revision": "faff92145777a3cbaf8e7367b4807987",
     "url": "/pro-spawns/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "701ae6abd4719e9c2ada3535a497b341",
-    "url": "/pro-spawns/static/media/outline-icons.701ae6ab.eot"
+    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
+    "url": "/pro-spawns/static/media/outline-icons.ef60a4f6.woff"
+  },
+  {
+    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
+    "url": "/pro-spawns/static/media/outline-icons.ad97afd3.ttf"
   },
   {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
@@ -44,20 +48,8 @@ self.__precacheManifest = [
     "url": "/pro-spawns/static/media/outline-icons.cd6c777f.woff2"
   },
   {
-    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
-    "url": "/pro-spawns/static/media/outline-icons.ad97afd3.ttf"
-  },
-  {
-    "revision": "0df8bafcf4016c5c9a83",
-    "url": "/pro-spawns/static/js/main.0df8bafc.chunk.js"
-  },
-  {
-    "revision": "962a1bf31c081691065fe333d9fa8105",
-    "url": "/pro-spawns/static/media/icons.962a1bf3.svg"
-  },
-  {
-    "revision": "e8c322de9658cbeb8a774b6624167c2c",
-    "url": "/pro-spawns/static/media/brand-icons.e8c322de.woff2"
+    "revision": "cde07f88f9232e27fc2d",
+    "url": "/pro-spawns/static/js/main.cde07f88.chunk.js"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
@@ -76,6 +68,14 @@ self.__precacheManifest = [
     "url": "/pro-spawns/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
+    "revision": "e8c322de9658cbeb8a774b6624167c2c",
+    "url": "/pro-spawns/static/media/brand-icons.e8c322de.woff2"
+  },
+  {
+    "revision": "962a1bf31c081691065fe333d9fa8105",
+    "url": "/pro-spawns/static/media/icons.962a1bf3.svg"
+  },
+  {
     "revision": "a1a749e89f578a49306ec2b055c073da",
     "url": "/pro-spawns/static/media/brand-icons.a1a749e8.svg"
   },
@@ -92,11 +92,11 @@ self.__precacheManifest = [
     "url": "/pro-spawns/static/media/RawWaterSpawnData.ce1ee5a1.csv"
   },
   {
-    "revision": "f81bb3aaa35ad992e5be",
-    "url": "/pro-spawns/static/css/1.d66a91b5.chunk.css"
+    "revision": "eb41349203ad364255da",
+    "url": "/pro-spawns/static/css/1.f08f0a93.chunk.css"
   },
   {
-    "revision": "da0e8878956684439262a836995ef3ff",
+    "revision": "85fc6000137dee3dfb8ce5cda413eaec",
     "url": "/pro-spawns/index.html"
   }
 ];
