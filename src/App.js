@@ -301,7 +301,22 @@ class App extends Component {
         );
     }
 
-    render() {
+    getSourceTypeLabel(type) {
+        switch (type) {
+            case 'headbutt':
+                return 'Headbutting';
+            case 'water':
+                return 'Surfing and Fishing';
+            default:
+                return 'Walking';
+        }
+    }
+
+    renderTable(type, data) {
+        if (data.length === 0) {
+            return <Segment>No results for {this.getSourceTypeLabel(type)}</Segment>
+        }
+
         const icon_morning = <img src="https://img.pokemondb.net/images/locations/morning.png" alt="Morning" title="Morning"/>;
         const icon_day = <img src="https://img.pokemondb.net/images/locations/day.png" alt="Day" title="Day"/>;
         const icon_night = <img src="https://img.pokemondb.net/images/locations/night.png" alt="Night" title="Night"/>;
@@ -315,6 +330,100 @@ class App extends Component {
         };
 
         const {column, direction} = this.state.sortBy;
+        return (
+            <Table key={type} compact='very' basic className={type} sortable unstackable>
+                <Table.Header>
+                    <Table.Row>
+                        <Table.HeaderCell sorted={column === '_sortArea' ? direction : null} onClick={() => this.sortBy('_sortArea')}>
+                            Region - Area
+                        </Table.HeaderCell>
+                        <Table.HeaderCell sorted={column === 'pokedexNumber' ? direction : null} onClick={() => this.sortBy('pokedexNumber')}>
+                            ID
+                        </Table.HeaderCell>
+                        <Table.HeaderCell>Pokemon</Table.HeaderCell>
+                        {type !== 'headbutt' ? (
+                                <React.Fragment>
+                                    <Table.HeaderCell>M</Table.HeaderCell>
+                                    <Table.HeaderCell>D</Table.HeaderCell>
+                                    <Table.HeaderCell>N</Table.HeaderCell>
+                                </React.Fragment>
+                            )
+                            : null}
+                        {type === 'water'
+                            ? <Table.HeaderCell>{icon_rod}</Table.HeaderCell>
+                            : null}
+                        <Table.HeaderCell sorted={column === 'tier' ? direction : null} onClick={() => this.sortBy('tier')}>
+                            Tier
+                        </Table.HeaderCell>
+                        <Table.HeaderCell>MS?</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='right' sorted={column === 'min' ? direction : null} onClick={() => this.sortBy('min')}>
+                            Levels
+                        </Table.HeaderCell>
+                        {type !== 'headbutt' ? (
+                            <Table.HeaderCell>Repel</Table.HeaderCell>
+                        ) : null}
+                        <Table.HeaderCell>Item</Table.HeaderCell>
+                    </Table.Row>
+                </Table.Header>
+                <Table.Body>
+                    {data.map(entry => {
+                        let repelTrickPossible = this.repelTrickPossible(type, entry);
+                        return (
+                            <Table.Row key={JSON.stringify(entry)}>
+                                <Table.Cell>
+                                    <Button className='btn-lnk' onClick={(e) => this.setFilter({name: '', area: entry.area + '$'}, e)}>
+                                        {entry.region} - {entry.area}
+                                    </Button>
+                                </Table.Cell>
+                                <Table.Cell>{entry.pokedexNumber}</Table.Cell>
+                                <Table.Cell>
+                                    <i className={`pokedex-sprite pokedex-sprite-${entry.pokedexNumber}`}/>
+                                    <Button className='btn-lnk' onClick={(e) => this.setFilter({name: entry.pokemon, area: ''}, e)}>{entry.pokemon}</Button>
+                                    &nbsp;
+                                    <a href={`https://pokemondb.net/pokedex/${entry.pokedexNumber}`} target='_blank' rel="noopener noreferrer">
+                                        <Icon name='external alternate'/>
+                                    </a>
+                                    &nbsp;
+                                    {this.inQuickList(entry.pokedexNumber)
+                                        ? (
+                                            <Button className='btn-lnk' onClick={() => this.removeFromQuickList(entry.pokedexNumber)}>
+                                                <i aria-hidden="true" className="bookmark green icon"/>
+                                            </Button>
+                                        ) : (
+                                            <Button className='btn-lnk' onClick={() => this.addToQuickList(entry.pokedexNumber, entry.pokemon)}>
+                                                <i aria-hidden="true" className="bookmark outline grey icon"/>
+                                            </Button>
+                                        )
+                                    }
+                                </Table.Cell>
+                                {type !== 'headbutt' ? (
+                                        <React.Fragment>
+                                            <Table.Cell className={entry.morning ? 'yellow' : ''}>{entry.morning ? icon_morning : null}</Table.Cell>
+                                            <Table.Cell className={entry.day ? 'blue' : ''}>{entry.day ? icon_day : null}</Table.Cell>
+                                            <Table.Cell className={entry.night ? 'grey' : ''}>{entry.night ? icon_night : null}</Table.Cell>
+                                        </React.Fragment>
+                                    )
+                                    : null}
+                                {type === 'water'
+                                    ? <Table.Cell>{entry.rod ? icons_rod[entry.rod] : null}</Table.Cell>
+                                    : null}
+                                <Table.Cell className={this.getTierClassName(entry.tier)} textAlign='center'>{entry.tier}</Table.Cell>
+                                <Table.Cell textAlign='center' className={entry.membership ? 'violet' : ''}>{entry.membership ?
+                                    <i className='ui icon dollar sign white'/> : null}</Table.Cell>
+                                <Table.Cell textAlign='right'>{entry.levels}</Table.Cell>
+                                {type !== 'headbutt' ? (
+                                    <Table.Cell textAlign='center' className={repelTrickPossible ? 'teal' : ''}>{repelTrickPossible ? 'Yes' : null}</Table.Cell>
+                                ) : null}
+                                <Table.Cell>{entry.heldItem}</Table.Cell>
+                            </Table.Row>
+                        );
+                    })}
+                </Table.Body>
+            </Table>
+        );
+    }
+
+    render() {
 
         const number_of_results = [].concat(...Object.values(this.state.sorted)).length;
 
@@ -351,103 +460,18 @@ class App extends Component {
                     </Form>
                 </Segment>
 
-                {number_of_results > 125 ?
-                    <Segment>Too many results to display</Segment>
-                    :this.types.map(type => {
-                    const data = this.state.sorted[type];
-                    return (
-                        <Table key={type} compact='very' basic className={type} sortable unstackable>
-                            <Table.Header>
-                                <Table.Row>
-                                    <Table.HeaderCell sorted={column === '_sortArea' ? direction : null} onClick={() => this.sortBy('_sortArea')}>
-                                        Region - Area
-                                    </Table.HeaderCell>
-                                    <Table.HeaderCell sorted={column === 'pokedexNumber' ? direction : null} onClick={() => this.sortBy('pokedexNumber')}>
-                                        ID
-                                    </Table.HeaderCell>
-                                    <Table.HeaderCell>Pokemon</Table.HeaderCell>
-                                    {type !== 'headbutt' ? (
-                                            <React.Fragment>
-                                                <Table.HeaderCell>M</Table.HeaderCell>
-                                                <Table.HeaderCell>D</Table.HeaderCell>
-                                                <Table.HeaderCell>N</Table.HeaderCell>
-                                            </React.Fragment>
-                                        )
-                                        : null}
-                                    {type === 'water'
-                                        ? <Table.HeaderCell>{icon_rod}</Table.HeaderCell>
-                                        : null}
-                                    <Table.HeaderCell sorted={column === 'tier' ? direction : null} onClick={() => this.sortBy('tier')}>
-                                        Tier
-                                    </Table.HeaderCell>
-                                    <Table.HeaderCell>MS?</Table.HeaderCell>
-                                    <Table.HeaderCell textAlign='right' sorted={column === 'min' ? direction : null} onClick={() => this.sortBy('min')}>
-                                        Levels
-                                    </Table.HeaderCell>
-                                    {type !== 'headbutt' ? (
-                                        <Table.HeaderCell>Repel</Table.HeaderCell>
-                                    ) : null}
-                                    <Table.HeaderCell>Item</Table.HeaderCell>
-                                </Table.Row>
-                            </Table.Header>
-                            <Table.Body>
-                                {data.map(entry => {
-                                    let repelTrickPossible = this.repelTrickPossible(type, entry);
-                                    return (
-                                        <Table.Row key={JSON.stringify(entry)}>
-                                            <Table.Cell>
-                                                <Button className='btn-lnk' onClick={(e) => this.setFilter({name: '', area: entry.area + '$'}, e)}>
-                                                    {entry.region} - {entry.area}
-                                                </Button>
-                                            </Table.Cell>
-                                            <Table.Cell>{entry.pokedexNumber}</Table.Cell>
-                                            <Table.Cell>
-                                                <i className={`pokedex-sprite pokedex-sprite-${entry.pokedexNumber}`}/>
-                                                <Button className='btn-lnk' onClick={(e) => this.setFilter({name: entry.pokemon, area: ''}, e)}>{entry.pokemon}</Button>
-                                                &nbsp;
-                                                <a href={`https://pokemondb.net/pokedex/${entry.pokedexNumber}`} target='_blank' rel="noopener noreferrer">
-                                                    <Icon name='external alternate'/>
-                                                </a>
-                                                &nbsp;
-                                                {this.inQuickList(entry.pokedexNumber)
-                                                    ? (
-
-                                                        <Button className='btn-lnk' onClick={() => this.removeFromQuickList(entry.pokedexNumber)}>
-                                                            <i aria-hidden="true" className="bookmark green icon"/>
-                                                        </Button>
-                                                    ) : (
-                                                        <Button className='btn-lnk' onClick={() => this.addToQuickList(entry.pokedexNumber, entry.pokemon)}>
-                                                            <i aria-hidden="true" className="bookmark outline grey icon"/>
-                                                        </Button>
-                                                    )
-                                                }
-                                            </Table.Cell>
-                                            {type !== 'headbutt' ? (
-                                                    <React.Fragment>
-                                                        <Table.Cell className={entry.morning ? 'yellow' : ''}>{entry.morning ? icon_morning : null}</Table.Cell>
-                                                        <Table.Cell className={entry.day ? 'blue' : ''}>{entry.day ? icon_day : null}</Table.Cell>
-                                                        <Table.Cell className={entry.night ? 'grey' : ''}>{entry.night ? icon_night : null}</Table.Cell>
-                                                    </React.Fragment>
-                                                )
-                                                : null}
-                                            {type === 'water'
-                                                ? <Table.Cell>{entry.rod ? icons_rod[entry.rod] : null}</Table.Cell>
-                                                : null}
-                                            <Table.Cell className={this.getTierClassName(entry.tier)} textAlign='center'>{entry.tier}</Table.Cell>
-                                            <Table.Cell textAlign='center' className={entry.membership ? 'violet' : ''}>{entry.membership ?
-                                                <i className='ui icon dollar sign white'/> : null}</Table.Cell>
-                                            <Table.Cell textAlign='right'>{entry.levels}</Table.Cell>
-                                            {type !== 'headbutt' ? (
-                                                <Table.Cell textAlign='center' className={repelTrickPossible ? 'teal' : ''}>{repelTrickPossible ? 'Yes' : null}</Table.Cell>
-                                            ) : null}
-                                            <Table.Cell>{entry.heldItem}</Table.Cell>
-                                        </Table.Row>
-                                    );
-                                })}
-                            </Table.Body>
-                        </Table>
-                    );
-                })}
+                {number_of_results > 125
+                    ? <Segment>Too many results to display</Segment>
+                    : (
+                        number_of_results === 0
+                            ? <Segment>Please try searching for something</Segment>
+                            : this.types.map(type => {
+                                const data = this.state.sorted[type];
+                                return this.renderTable(type, data);
+                            }
+                        )
+                    )
+                }
 
                 {this.renderQuickList()}
             </Container>
