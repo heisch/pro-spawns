@@ -9,6 +9,12 @@ img {
   }
 }
 
+@media only screen and (max-width: 991px) {
+  .ui.basic.table {
+    font-size: 0.8em;
+  }
+}
+
 table thead tr th:nth-child(1),
 table thead tr th:nth-child(3) {
   white-space: nowrap;
