@@ -398,9 +398,9 @@ class App extends Component {
                                 </Table.Cell>
                                 {type !== 'headbutt' ? (
                                         <React.Fragment>
-                                            <Table.Cell className={entry.morning ? 'yellow' : ''}>{entry.morning ? icon_morning : null}</Table.Cell>
-                                            <Table.Cell className={entry.day ? 'blue' : ''}>{entry.day ? icon_day : null}</Table.Cell>
-                                            <Table.Cell className={entry.night ? 'grey' : ''}>{entry.night ? icon_night : null}</Table.Cell>
+                                            <Table.Cell textAlign='center' className={entry.morning ? 'yellow' : ''}>{entry.morning ? icon_morning : null}</Table.Cell>
+                                            <Table.Cell textAlign='center' className={entry.day ? 'blue' : ''}>{entry.day ? icon_day : null}</Table.Cell>
+                                            <Table.Cell textAlign='center' className={entry.night ? 'grey' : ''}>{entry.night ? icon_night : null}</Table.Cell>
                                         </React.Fragment>
                                     )
                                     : null}
