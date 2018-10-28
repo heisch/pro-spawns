@@ -85,6 +85,41 @@ table thead tr th:nth-child(3) {
   font-weight: bold
 }
 
+.ev_yield {
+  white-space: nowrap;
+  font-weight: bolder;
+}
+.ev_yield small {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.ev_yield_hp {
+  background-color: black;
+  color: white;
+}
+
+.ev_yield_atk {
+  background-color: red;
+  color: white;
+}
+.ev_yield_sp_atk {
+  background-color: darkorange;
+  color: white;
+}
+
+.ev_yield_def {
+  background-color: slategray;
+  color: white;
+}
+.ev_yield_sp_def {
+  background-color: blueviolet;
+  color: white;
+}
+.ev_yield_spd {
+  background-color: darkgreen;
+  color: white;
+}
 
 .ui.table tr td.red    {background-color: #B03060;color: white;}
 .ui.table tr td.orange {background-color: #FE9A76;color: white;}

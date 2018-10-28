@@ -6,6 +6,8 @@ import './resources/pokdex_sprites.css';
 import {Button, Checkbox, Container, Dropdown, Form, Icon, Input, List, Segment, Table} from "semantic-ui-react";
 import _ from 'lodash';
 
+const POKEMON_DATA = require('./resources/json/pokemon_data');
+
 class App extends Component {
 
     types = ['land', 'water', 'headbutt'];
@@ -38,6 +40,9 @@ class App extends Component {
         _sortArea: ['_sortArea', 'tier', 'pokedexNumber', 'location'],
         min: ['min', '_sortArea', 'location'],
         tier: ['tier', '_sortArea', 'pokedexNumber', 'location'],
+        morning: ['morning', 'day', 'night', '_sortArea', 'pokedexNumber', 'location'],
+        day: ['day', 'morning', 'night', '_sortArea', 'pokedexNumber', 'location'],
+        night: ['night', 'morning', 'day', '_sortArea', 'pokedexNumber', 'location'],
     };
 
     constructor() {
@@ -312,6 +317,21 @@ class App extends Component {
         }
     }
 
+    renderEvYield(id) {
+        return _.filter(_.find(POKEMON_DATA, {id: id}).ev_yield.map((value, index) => {
+            if (value === 0) return null;
+            switch (index) {
+                case 0: return <small className='ev_yield_hp'><strong>{value}</strong>hp</small>;
+                case 1: return <small className='ev_yield_atk'><strong>{value}</strong>atk</small>;
+                case 2: return <small className='ev_yield_def'><strong>{value}</strong>def</small>;
+                case 3: return <small className='ev_yield_sp_atk'><strong>{value}</strong>sp.atk</small>;
+                case 4: return <small className='ev_yield_sp_def'><strong>{value}</strong>sp.def</small>;
+                case 5: return <small className='ev_yield_spd'><strong>{value}</strong>spd</small>;
+            }
+            return null;
+        }));
+    }
+
     renderTable(type, data) {
         if (data.length === 0) {
             return <Segment>No results for {this.getSourceTypeLabel(type)}</Segment>
@@ -343,9 +363,9 @@ class App extends Component {
                         <Table.HeaderCell>Pokemon</Table.HeaderCell>
                         {type !== 'headbutt' ? (
                                 <React.Fragment>
-                                    <Table.HeaderCell>M</Table.HeaderCell>
-                                    <Table.HeaderCell>D</Table.HeaderCell>
-                                    <Table.HeaderCell>N</Table.HeaderCell>
+                                    <Table.HeaderCell sorted={column === 'morning' ? direction : null} onClick={() => this.sortBy('morning')}>M</Table.HeaderCell>
+                                    <Table.HeaderCell sorted={column === 'day' ? direction : null} onClick={() => this.sortBy('day')}>D</Table.HeaderCell>
+                                    <Table.HeaderCell sorted={column === 'night' ? direction : null} onClick={() => this.sortBy('night')}>N</Table.HeaderCell>
                                 </React.Fragment>
                             )
                             : null}
@@ -363,6 +383,7 @@ class App extends Component {
                             <Table.HeaderCell>Repel</Table.HeaderCell>
                         ) : null}
                         <Table.HeaderCell>Item</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='right'>EVs</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
@@ -415,6 +436,7 @@ class App extends Component {
                                     <Table.Cell textAlign='center' className={repelTrickPossible ? 'teal' : ''}>{repelTrickPossible ? 'Yes' : null}</Table.Cell>
                                 ) : null}
                                 <Table.Cell>{entry.heldItem}</Table.Cell>
+                                <Table.Cell className='ev_yield' textAlign='right'>{this.renderEvYield(entry.pokedexNumber)}</Table.Cell>
                             </Table.Row>
                         );
                     })}
