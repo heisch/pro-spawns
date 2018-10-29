@@ -446,7 +446,7 @@ class App extends Component {
                                 {type === 'water'
                                     ? <Table.Cell className='row-rod'>{entry.rod ? icons_rod[entry.rod] : null}</Table.Cell>
                                     : null}
-                                {showColumns.tier && <Table.Cell className={this.getTierClassName(entry.tier)} textAlign='center'>{entry.tier}</Table.Cell>}
+                                {showColumns.tier && <Table.Cell className={'row-tier ' + this.getTierClassName(entry.tier)} textAlign='center'>{entry.tier}</Table.Cell>}
                                 {showColumns.ms && (
                                     <Table.Cell textAlign='center' className={entry.membership ? 'violet' : ''}>
                                         {entry.membership ?
