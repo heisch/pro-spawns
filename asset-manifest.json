@@ -1,7 +1,7 @@
 {
-  "main.css": "/pro-spawns/static/css/main.0647b67e.chunk.css",
-  "main.js": "/pro-spawns/static/js/main.1c808ff2.chunk.js",
-  "main.js.map": "/pro-spawns/static/js/main.1c808ff2.chunk.js.map",
+  "main.css": "/pro-spawns/static/css/main.4f7a6124.chunk.css",
+  "main.js": "/pro-spawns/static/js/main.7d1b4328.chunk.js",
+  "main.js.map": "/pro-spawns/static/js/main.7d1b4328.chunk.js.map",
   "static/css/1.f89c1c04.chunk.css": "/pro-spawns/static/css/1.f89c1c04.chunk.css",
   "static/js/1.91f8216e.chunk.js": "/pro-spawns/static/js/1.91f8216e.chunk.js",
   "static/js/1.91f8216e.chunk.js.map": "/pro-spawns/static/js/1.91f8216e.chunk.js.map",
@@ -11,9 +11,9 @@
   "static/media/semantic.min.css": "/pro-spawns/static/media/icons.faff9214.woff",
   "static/media/RawWaterSpawnData.csv": "/pro-spawns/static/media/RawWaterSpawnData.844b0620.csv",
   "static/media/HeadbuttSpawnData.csv": "/pro-spawns/static/media/HeadbuttSpawnData.5e104bfc.csv",
+  "static/css/main.4f7a6124.chunk.css.map": "/pro-spawns/static/css/main.4f7a6124.chunk.css.map",
   "static/css/1.f89c1c04.chunk.css.map": "/pro-spawns/static/css/1.f89c1c04.chunk.css.map",
-  "static/css/main.0647b67e.chunk.css.map": "/pro-spawns/static/css/main.0647b67e.chunk.css.map",
   "index.html": "/pro-spawns/index.html",
-  "precache-manifest.0f5b1b31d13ca5ce73147becdb4235fd.js": "/pro-spawns/precache-manifest.0f5b1b31d13ca5ce73147becdb4235fd.js",
+  "precache-manifest.ab6de5d36cac33f1cee079b1c2b9dde8.js": "/pro-spawns/precache-manifest.ab6de5d36cac33f1cee079b1c2b9dde8.js",
   "service-worker.js": "/pro-spawns/service-worker.js"
 }
