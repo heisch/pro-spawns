@@ -11,8 +11,7 @@
   }
 }
 
-table thead tr th:nth-child(1),
-table thead tr th:nth-child(3) {
+.ui.sortable.table tbody tr td{
   white-space: nowrap;
 }
 
