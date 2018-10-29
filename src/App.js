@@ -9,12 +9,12 @@ import {
     Container,
     Dropdown,
     Form,
-    Header,
     Icon,
     Input,
     List,
     Modal,
     Segment,
+    Tab,
     Table
 } from "semantic-ui-react";
 import _ from 'lodash';
@@ -515,6 +515,17 @@ class App extends Component {
 
         const number_of_results = [].concat(...Object.values(this.state.sorted)).length;
 
+        let active_index = 0;
+
+        const tab_panes = this.types.map((type, index) => {
+            const data = this.state.sorted[type];
+            if (data.length === 0 && active_index === index) active_index++;
+            return {
+                menuItem: this.getSourceTypeLabel(type) + ` (${data.length})`,
+                render: () => <Tab.Pane>{this.renderTable(type, data)}</Tab.Pane>
+            }
+        });
+
         return (
             <Container>
                 <Segment>
@@ -549,16 +560,12 @@ class App extends Component {
                     </Form>
                 </Segment>
 
-                {number_of_results > 125
+                {number_of_results > 250
                     ? <Segment>Too many results to display</Segment>
                     : (
                         number_of_results === 0
                             ? <Segment>Please try searching for something</Segment>
-                            : this.types.map(type => {
-                                const data = this.state.sorted[type];
-                                return this.renderTable(type, data);
-                            }
-                        )
+                            : <Tab panes={tab_panes} defaultActiveIndex={active_index} />
                     )
                 }
 
