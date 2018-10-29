@@ -121,3 +121,97 @@ a:hover .icon {
   text-decoration: none;
   color: blue;
 }
+
+.type-icon {
+  font-family: monospace;
+  display: inline-block;
+  /*border: 1px solid #a3a3a3;*/
+  width: 22px;
+  margin: 0 1px;
+  /*background: #dbdbdb;*/
+  border-radius: 2px;
+  color: #fff;
+  font-size: .7rem;
+  font-weight: normal;
+  line-height: 0.9rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.type-normal {
+  background-color: #aa9
+}
+
+.type-fire {
+  background-color: #f42
+}
+
+.type-water {
+  background-color: #39f
+}
+
+.type-electric {
+  background-color: #fc3
+}
+
+.type-grass {
+  background-color: #7c5
+}
+
+.type-ice {
+  background-color: #6cf
+}
+
+.type-fighting {
+  background-color: #b54
+}
+
+.type-poison {
+  background-color: #a59
+}
+
+.type-ground {
+  background-color: #db5
+}
+
+.type-flying {
+  background-color: #89f
+}
+
+.type-psychic {
+  background-color: #f59
+}
+
+.type-bug {
+  background-color: #ab2
+}
+
+.type-rock {
+  background-color: #ba6
+}
+
+.type-ghost {
+  background-color: #66b
+}
+
+.type-dragon {
+  background-color: #76e
+}
+
+.type-dark {
+  background-color: #754
+}
+
+.type-steel {
+  background-color: #aab
+}
+
+.type-fairy {
+  background-color: #e9e
+}
+
+.type-curse {
+  background-color: #698
+}

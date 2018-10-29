@@ -19,6 +19,7 @@ import {
     Table
 } from "semantic-ui-react";
 import _ from 'lodash';
+import Types from "./Types";
 
 const POKEMON_DATA = require('./resources/json/pokemon_data');
 
@@ -66,7 +67,7 @@ class App extends Component {
 
         this.state = {
             filter: {
-                name: 'Tentacool',
+                name: '',
                 area: ''
             },
             sortBy: {
@@ -453,6 +454,7 @@ class App extends Component {
                                             </Button>
                                         )
                                     }
+                                    {showColumns.types && <Types types={_.find(POKEMON_DATA, {id: entry.pokedexNumber}).types}/>}
                                 </Table.Cell>
                                 {type !== 'headbutt' && showColumns.time_of_day && (
                                         <React.Fragment>
@@ -507,6 +509,7 @@ class App extends Component {
 
         let showColumnsLabels = {
                 "id": 'pokedex id',
+                "types": 'pokemon types',
                 "time_of_day": 'time of day',
                 "tier": 'tier',
                 "ms": 'membership',
