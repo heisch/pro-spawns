@@ -25,44 +25,34 @@ table thead tr th:nth-child(3) {
 }
 
 
-.ui.sortable.table thead tr th:nth-child(2),
-
-.ui.sortable.table.land thead tr th:nth-child(4),
-.ui.sortable.table.land thead tr th:nth-child(5),
-.ui.sortable.table.land thead tr th:nth-child(6),
-.ui.sortable.table.land thead tr th:nth-child(7),
-.ui.sortable.table.land thead tr th:nth-child(8),
-.ui.sortable.table.land thead tr th:nth-child(9),
-.ui.sortable.table.land thead tr th:nth-child(10),
-
-.ui.sortable.table.water thead tr th:nth-child(4),
-.ui.sortable.table.water thead tr th:nth-child(5),
-.ui.sortable.table.water thead tr th:nth-child(6),
-.ui.sortable.table.water thead tr th:nth-child(7),
-.ui.sortable.table.water thead tr th:nth-child(8),
-.ui.sortable.table.water thead tr th:nth-child(9),
-.ui.sortable.table.water thead tr th:nth-child(10),
-.ui.sortable.table.water thead tr th:nth-child(11),
-
-.ui.sortable.table.headbutt thead tr th:nth-child(4),
-.ui.sortable.table.headbutt thead tr th:nth-child(5),
-.ui.sortable.table.headbutt thead tr th:nth-child(6) {
+.ui.sortable.table thead tr th.header-id,
+.ui.sortable.table thead tr th.header-morning,
+.ui.sortable.table thead tr th.header-day,
+.ui.sortable.table thead tr th.header-night,
+.ui.sortable.table thead tr th.header-rod,
+.ui.sortable.table thead tr th.header-tier,
+.ui.sortable.table thead tr th.header-ms,
+.ui.sortable.table thead tr th.header-levels,
+.ui.sortable.table thead tr th.header-repel,
+.ui.sortable.table thead tr th.header-ev {
   width: 1px;
 }
 
-.ui.sortable.table.land tbody tr td:nth-child(4),
-.ui.sortable.table.land tbody tr td:nth-child(5),
-.ui.sortable.table.land tbody tr td:nth-child(6),
-
-.ui.sortable.table.water tbody tr td:nth-child(4),
-.ui.sortable.table.water tbody tr td:nth-child(5),
-.ui.sortable.table.water tbody tr td:nth-child(6){
+.ui.sortable.table tbody tr td.row-morning,
+.ui.sortable.table tbody tr td.row-day,
+.ui.sortable.table tbody tr td.row-night {
   padding: 0;
 }
 
 .ui.sortable.table.water thead tr th:nth-child(7) {
 
 }
+
+.ui.sortable.table tbody tr td.row-morning img,
+.ui.sortable.table tbody tr td.row-day img,
+.ui.sortable.table tbody tr td.row-night img,
+.ui.sortable.table tbody tr td.row-rod img,
+.ui.sortable.table thead tr th.header-rod img,
 
 .ui.sortable.table.land tbody tr td:nth-child(4) img,
 .ui.sortable.table.land tbody tr td:nth-child(5) img,

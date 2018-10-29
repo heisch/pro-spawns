@@ -1,3 +1,13 @@
 {
-  "findPokemonSynonyms": true
+  "findPokemonSynonyms": true,
+  "showColumns": {
+    "id": true,
+    "time_of_day": true,
+    "tier": true,
+    "ms": true,
+    "levels": true,
+    "repel": true,
+    "item": true,
+    "ev": true
+  }
 }

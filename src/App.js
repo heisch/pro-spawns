@@ -3,7 +3,20 @@ import * as Papa from 'papaparse';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 import './resources/pokdex_sprites.css';
-import {Button, Checkbox, Container, Dropdown, Form, Icon, Input, List, Segment, Table} from "semantic-ui-react";
+import {
+    Button,
+    Checkbox,
+    Container,
+    Dropdown,
+    Form,
+    Header,
+    Icon,
+    Input,
+    List,
+    Modal,
+    Segment,
+    Table
+} from "semantic-ui-react";
 import _ from 'lodash';
 
 const POKEMON_DATA = require('./resources/json/pokemon_data');
@@ -63,12 +76,15 @@ class App extends Component {
                 land: [],
                 water: [],
                 headbutt: [],
-            }
+            },
+            settingsModalOpen: false,
         };
 
-        this.state.settings = localStorage.getItem('proSpawnsSettings') === null
-            ? require('./resources/json/default_settings')
+        const stored_settings = localStorage.getItem('proSpawnsSettings') === null
+            ? {}
             : JSON.parse(localStorage.getItem('proSpawnsSettings'));
+
+        this.state.settings = Object.assign({}, require('./resources/json/default_settings'), stored_settings);
 
         const csv_files = [
             require('./resources/csv/RawSpawnData.csv'),
@@ -247,9 +263,13 @@ class App extends Component {
         }
     }
 
-    setSetting(setting, value) {
+    setSetting(setting, value, group) {
         const settings = this.state.settings;
-        settings[setting] = value;
+        if (group) {
+            settings[group][setting] = value;
+        } else {
+            settings[setting] = value;
+        }
         this.setState({settings: settings});
         localStorage.setItem('proSpawnsSettings', JSON.stringify(settings));
         this.filter();
@@ -350,40 +370,38 @@ class App extends Component {
         };
 
         const {column, direction} = this.state.sortBy;
+
+        const showColumns = this.state.settings.showColumns;
+
         return (
             <Table key={type} compact='very' basic className={type} sortable unstackable>
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell sorted={column === '_sortArea' ? direction : null} onClick={() => this.sortBy('_sortArea')}>
+                        <Table.HeaderCell className='header-area' sorted={column === '_sortArea' ? direction : null} onClick={() => this.sortBy('_sortArea')}>
                             Region - Area
                         </Table.HeaderCell>
-                        <Table.HeaderCell sorted={column === 'pokedexNumber' ? direction : null} onClick={() => this.sortBy('pokedexNumber')}>
-                            ID
-                        </Table.HeaderCell>
+                        {showColumns.id && (
+                            <Table.HeaderCell textAlign='right' className='header-id' sorted={column === 'pokedexNumber' ? direction : null} onClick={() => this.sortBy('pokedexNumber')}>ID</Table.HeaderCell>
+                        )}
                         <Table.HeaderCell>Pokemon</Table.HeaderCell>
-                        {type !== 'headbutt' ? (
+                        {showColumns.time_of_day && type !== 'headbutt' && (
                                 <React.Fragment>
-                                    <Table.HeaderCell sorted={column === 'morning' ? direction : null} onClick={() => this.sortBy('morning')}>M</Table.HeaderCell>
-                                    <Table.HeaderCell sorted={column === 'day' ? direction : null} onClick={() => this.sortBy('day')}>D</Table.HeaderCell>
-                                    <Table.HeaderCell sorted={column === 'night' ? direction : null} onClick={() => this.sortBy('night')}>N</Table.HeaderCell>
+                                    <Table.HeaderCell className='header-morning' sorted={column === 'morning' ? direction : null} onClick={() => this.sortBy('morning')}>M</Table.HeaderCell>
+                                    <Table.HeaderCell className='header-day' sorted={column === 'day' ? direction : null} onClick={() => this.sortBy('day')}>D</Table.HeaderCell>
+                                    <Table.HeaderCell className='header-night' sorted={column === 'night' ? direction : null} onClick={() => this.sortBy('night')}>N</Table.HeaderCell>
                                 </React.Fragment>
-                            )
-                            : null}
-                        {type === 'water'
-                            ? <Table.HeaderCell>{icon_rod}</Table.HeaderCell>
-                            : null}
-                        <Table.HeaderCell sorted={column === 'tier' ? direction : null} onClick={() => this.sortBy('tier')}>
+                            )}
+                        {type === 'water' && <Table.HeaderCell className='header-rod'>{icon_rod}</Table.HeaderCell>}
+                        {showColumns.tier && <Table.HeaderCell className='header-tier' sorted={column === 'tier' ? direction : null} onClick={() => this.sortBy('tier')}>
                             Tier
-                        </Table.HeaderCell>
-                        <Table.HeaderCell>MS?</Table.HeaderCell>
-                        <Table.HeaderCell textAlign='right' sorted={column === 'min' ? direction : null} onClick={() => this.sortBy('min')}>
+                        </Table.HeaderCell>}
+                        {showColumns.ms && <Table.HeaderCell className='header-ms'>MS?</Table.HeaderCell>}
+                        {showColumns.levels && <Table.HeaderCell className='header-levels' textAlign='right' sorted={column === 'min' ? direction : null} onClick={() => this.sortBy('min')}>
                             Levels
-                        </Table.HeaderCell>
-                        {type !== 'headbutt' ? (
-                            <Table.HeaderCell>Repel</Table.HeaderCell>
-                        ) : null}
-                        <Table.HeaderCell>Item</Table.HeaderCell>
-                        <Table.HeaderCell textAlign='right'>EVs</Table.HeaderCell>
+                        </Table.HeaderCell>}
+                        {type !== 'headbutt' && showColumns.repel && <Table.HeaderCell className='header-repel'>Repel</Table.HeaderCell>}
+                        {showColumns.item && <Table.HeaderCell className='header-item'>Item</Table.HeaderCell>}
+                        {showColumns.ev && <Table.HeaderCell className='header-ev' textAlign='right'>EVs</Table.HeaderCell>}
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
@@ -392,11 +410,12 @@ class App extends Component {
                         return (
                             <Table.Row key={JSON.stringify(entry)}>
                                 <Table.Cell>
+                                    <small>{entry.region} - </small>
                                     <Button className='btn-lnk' onClick={(e) => this.setFilter({name: '', area: entry.area + '$'}, e)}>
-                                        {entry.region} - {entry.area}
+                                        {entry.area}
                                     </Button>
                                 </Table.Cell>
-                                <Table.Cell>{entry.pokedexNumber}</Table.Cell>
+                                {showColumns.id && <Table.Cell textAlign='right'><small>{entry.pokedexNumber}</small></Table.Cell>}
                                 <Table.Cell>
                                     <i className={`pokedex-sprite pokedex-sprite-${entry.pokedexNumber}`}/>
                                     <Button className='btn-lnk' onClick={(e) => this.setFilter({name: entry.pokemon, area: ''}, e)}>{entry.pokemon}</Button>
@@ -417,31 +436,78 @@ class App extends Component {
                                         )
                                     }
                                 </Table.Cell>
-                                {type !== 'headbutt' ? (
+                                {type !== 'headbutt' && showColumns.time_of_day && (
                                         <React.Fragment>
-                                            <Table.Cell textAlign='center' className={entry.morning ? 'yellow' : ''}>{entry.morning ? icon_morning : null}</Table.Cell>
-                                            <Table.Cell textAlign='center' className={entry.day ? 'blue' : ''}>{entry.day ? icon_day : null}</Table.Cell>
-                                            <Table.Cell textAlign='center' className={entry.night ? 'grey' : ''}>{entry.night ? icon_night : null}</Table.Cell>
+                                            <Table.Cell textAlign='center' className={'row-morning ' + (entry.morning ? 'yellow' : '')}>{entry.morning ? icon_morning : null}</Table.Cell>
+                                            <Table.Cell textAlign='center' className={'row-day ' + (entry.day ? 'blue' : '')}>{entry.day ? icon_day : null}</Table.Cell>
+                                            <Table.Cell textAlign='center' className={'row-night ' + (entry.night ? 'grey' : '')}>{entry.night ? icon_night : null}</Table.Cell>
                                         </React.Fragment>
-                                    )
-                                    : null}
+                                    )}
                                 {type === 'water'
-                                    ? <Table.Cell>{entry.rod ? icons_rod[entry.rod] : null}</Table.Cell>
+                                    ? <Table.Cell className='row-rod'>{entry.rod ? icons_rod[entry.rod] : null}</Table.Cell>
                                     : null}
-                                <Table.Cell className={this.getTierClassName(entry.tier)} textAlign='center'>{entry.tier}</Table.Cell>
-                                <Table.Cell textAlign='center' className={entry.membership ? 'violet' : ''}>{entry.membership ?
-                                    <i className='ui icon dollar sign white'/> : null}</Table.Cell>
-                                <Table.Cell textAlign='right'>{entry.levels}</Table.Cell>
-                                {type !== 'headbutt' ? (
+                                {showColumns.tier && <Table.Cell className={this.getTierClassName(entry.tier)} textAlign='center'>{entry.tier}</Table.Cell>}
+                                {showColumns.ms && (
+                                    <Table.Cell textAlign='center' className={entry.membership ? 'violet' : ''}>
+                                        {entry.membership ?
+                                        <i className='ui icon dollar sign white'/> : null}
+                                    </Table.Cell>
+                                )}
+                                {showColumns.levels && <Table.Cell textAlign='right'>{entry.levels}</Table.Cell>}
+                                {type !== 'headbutt' && showColumns.repel && (
                                     <Table.Cell textAlign='center' className={repelTrickPossible ? 'teal' : ''}>{repelTrickPossible ? 'Yes' : null}</Table.Cell>
-                                ) : null}
-                                <Table.Cell>{entry.heldItem}</Table.Cell>
-                                <Table.Cell className='ev_yield' textAlign='right'>{this.renderEvYield(entry.pokedexNumber)}</Table.Cell>
+                                )}
+                                {showColumns.item && <Table.Cell>{entry.heldItem}</Table.Cell>}
+                                {showColumns.ev && <Table.Cell className='ev_yield' textAlign='right'>{this.renderEvYield(entry.pokedexNumber)}</Table.Cell>}
                             </Table.Row>
                         );
                     })}
                 </Table.Body>
             </Table>
+        );
+    }
+
+    renderSettingsModal() {
+        const modalOpen = this.state.settingsModalOpen;
+        const showColumns = this.state.settings.showColumns;
+
+        let showColumnsLabels = {
+                "id": 'pokedex id',
+                "time_of_day": 'time of day',
+                "tier": 'tier',
+                "ms": 'membership',
+                "levels": 'levels',
+                "repel": 'repel trick',
+                "item": 'held item',
+                "ev": 'ev yield'
+        };
+
+        return (
+            <React.Fragment>
+                <Button icon='cog' floated='right' onClick={() => this.setState({settingsModalOpen: true})}/>
+                <Modal size='mini' open={modalOpen} onClose={() => this.setState({settingsModalOpen: false})} >
+                    <Modal.Header>Settings</Modal.Header>
+                    <Modal.Content>
+                        <Form>
+                            {_.map(showColumnsLabels, (label, index) => (
+                                <Form.Field>
+                                    <Checkbox
+                                        label={`show ${label} column`}
+                                        toggle
+                                        checked={showColumns[index]}
+                                        onClick={() => this.setSetting(index, !showColumns[index], 'showColumns')}
+                                    />
+                                </Form.Field>
+                            ))}
+                        </Form>
+                    </Modal.Content>
+                    <Modal.Actions>
+                        <Button color='green' onClick={() => this.setState({settingsModalOpen: false})}>
+                            Close
+                        </Button>
+                    </Modal.Actions>
+                </Modal>
+            </React.Fragment>
         );
     }
 
@@ -453,6 +519,7 @@ class App extends Component {
             <Container>
                 <Segment>
                     <Form>
+                        {this.renderSettingsModal()}
                         <Dropdown
                             placeholder='pokemon name...'
                             search
