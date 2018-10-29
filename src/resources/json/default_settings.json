@@ -1,5 +1,6 @@
 {
   "findPokemonSynonyms": true,
+  "resultsPerPage": 20,
   "showColumns": {
     "id": true,
     "time_of_day": true,

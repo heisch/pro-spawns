@@ -13,6 +13,7 @@ import {
     Input,
     List,
     Modal,
+    Pagination,
     Segment,
     Tab,
     Table
@@ -65,7 +66,7 @@ class App extends Component {
 
         this.state = {
             filter: {
-                name: '',
+                name: 'Tentacool',
                 area: ''
             },
             sortBy: {
@@ -78,6 +79,11 @@ class App extends Component {
                 headbutt: [],
             },
             settingsModalOpen: false,
+            pagination: {
+                land: 1,
+                water: 1,
+                headbutt: 1
+            }
         };
 
         const stored_settings = localStorage.getItem('proSpawnsSettings') === null
@@ -184,6 +190,12 @@ class App extends Component {
             // do not throw for invalid regex
             this.filteredData = _.cloneDeep(this.sourceData);
         }
+        // eslint-disable-next-line react/no-direct-mutation-state
+        this.state.pagination = {
+            land: 1,
+            water: 1,
+            headbutt: 1
+        };
         this.sort();
     }
 
@@ -341,12 +353,12 @@ class App extends Component {
         return _.filter(_.find(POKEMON_DATA, {id: id}).ev_yield.map((value, index) => {
             if (value === 0) return null;
             switch (index) {
-                case 0: return <small className='ev_yield_hp'><strong>{value}</strong>hp</small>;
-                case 1: return <small className='ev_yield_atk'><strong>{value}</strong>atk</small>;
-                case 2: return <small className='ev_yield_def'><strong>{value}</strong>def</small>;
-                case 3: return <small className='ev_yield_sp_atk'><strong>{value}</strong>sp.atk</small>;
-                case 4: return <small className='ev_yield_sp_def'><strong>{value}</strong>sp.def</small>;
-                case 5: return <small className='ev_yield_spd'><strong>{value}</strong>spd</small>;
+                case 0: return <small key={index} className='ev_yield_hp'><strong>{value}</strong>hp</small>;
+                case 1: return <small key={index} className='ev_yield_atk'><strong>{value}</strong>atk</small>;
+                case 2: return <small key={index} className='ev_yield_def'><strong>{value}</strong>def</small>;
+                case 3: return <small key={index} className='ev_yield_sp_atk'><strong>{value}</strong>sp.atk</small>;
+                case 4: return <small key={index} className='ev_yield_sp_def'><strong>{value}</strong>sp.def</small>;
+                case 5: return <small key={index} className='ev_yield_spd'><strong>{value}</strong>spd</small>;
             }
             return null;
         }));
@@ -372,6 +384,10 @@ class App extends Component {
         const {column, direction} = this.state.sortBy;
 
         const showColumns = this.state.settings.showColumns;
+
+        const numberOfColumns = 2 + Object.values(showColumns).reduce((sum, v) => sum + (v ? 1 : 0));
+        const pageSize = this.state.settings.resultsPerPage;
+        const currentPage = this.state.pagination[type];
 
         return (
             <Table key={type} compact='very' basic className={type} sortable unstackable>
@@ -405,7 +421,9 @@ class App extends Component {
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
-                    {data.map(entry => {
+                    {data
+                        .slice((currentPage-1)*pageSize, currentPage*pageSize)
+                        .map(entry => {
                         let repelTrickPossible = this.repelTrickPossible(type, entry);
                         return (
                             <Table.Row key={JSON.stringify(entry)}>
@@ -463,6 +481,22 @@ class App extends Component {
                         );
                     })}
                 </Table.Body>
+                {data.length > 25 &&
+                <Table.Footer>
+                    <Table.Row>
+                        <Table.HeaderCell colSpan={numberOfColumns}>
+                            <Pagination
+                                defaultActivePage={this.state.pagination[type]}
+                                totalPages={Math.ceil(data.length / pageSize)}
+                                onPageChange={(e, {activePage}) => {
+                                    const paginationState = this.state.pagination;
+                                    paginationState[type] = activePage;
+                                    this.setState({pagination: paginationState});
+                                }}
+                            />
+                        </Table.HeaderCell>
+                    </Table.Row>
+                </Table.Footer>}
             </Table>
         );
     }
@@ -490,7 +524,7 @@ class App extends Component {
                     <Modal.Content>
                         <Form>
                             {_.map(showColumnsLabels, (label, index) => (
-                                <Form.Field>
+                                <Form.Field key={label + index}>
                                     <Checkbox
                                         label={`show ${label} column`}
                                         toggle
@@ -499,6 +533,19 @@ class App extends Component {
                                     />
                                 </Form.Field>
                             ))}
+
+                            <Form.Field>
+                                <Form.Input
+                                    label={`results per page: ${this.state.settings.resultsPerPage}`}
+                                    min={10}
+                                    max={50}
+                                    name='resultsPerPage'
+                                    step={10}
+                                    type='range'
+                                    value={this.state.settings.resultsPerPage}
+                                    onChange={(e, {value}) => this.setSetting('resultsPerPage', value)}
+                                />
+                            </Form.Field>
                         </Form>
                     </Modal.Content>
                     <Modal.Actions>
