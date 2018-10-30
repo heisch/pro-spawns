@@ -124,11 +124,7 @@ class App extends Component {
         const farea = this.state.filter.area;
 
         if (fname.length === 0 && farea.length === 0) {
-            this.filteredData = {
-                land: [],
-                water: [],
-                headbutt: [],
-            };
+            this.filteredData = Object.assign({}, this.sourceData);
         } else {
             try {
                 const fareaReg = new RegExp(farea.replace('*', '.*'), 'i');
@@ -143,11 +139,7 @@ class App extends Component {
                 });
             } catch (e) {
                 // do not throw for invalid regex
-                this.filteredData = {
-                    land: [],
-                    water: [],
-                    headbutt: [],
-                };
+                this.filteredData = Object.assign({}, this.sourceData);
             }
         }
 
@@ -575,13 +567,9 @@ class App extends Component {
                     </Form>
                 </Segment>
 
-                {number_of_results > 250
-                    ? <React.Fragment>Too many results to display</React.Fragment>
-                    : (
-                        number_of_results === 0
-                            ? <React.Fragment>Please try searching for something</React.Fragment>
-                            : <Tab panes={tab_panes} defaultActiveIndex={active_index} />
-                    )
+                {number_of_results === 0
+                    ? <React.Fragment>No results for current filters</React.Fragment>
+                    : <Tab panes={tab_panes} defaultActiveIndex={active_index} />
                 }
 
                 {this.renderQuickList()}
