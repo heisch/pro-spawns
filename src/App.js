@@ -99,6 +99,9 @@ class App extends Component {
             require('./resources/csv/HeadbuttSpawnData.csv'),
         ];
 
+        this.pokemon_dropdown_values = require('./resources/json/pokemon_data')
+            .map(entry => {return {key: entry.id, value: entry.name, text: entry.id + ': ' + entry.name}});
+
         Promise.all(csv_files.map(file => new Promise((resolve, reject) => {
             Papa.parse(file, {
                 header: true,
@@ -127,6 +130,7 @@ class App extends Component {
         data.day = !!data.day;
         data.night = !!data.night;
         data._sortArea = this.regionSorting[data.region] + ' - ' + data.region + ' - ' + data.area;
+        data.uniqueId = _.uniqueId();
         data.min = parseInt(!!data.levels.match(/^(\d+)-(\d+)$/) ? data.levels.replace(/^(\d+)-(\d+)$/, '$1') : data.levels, 10);
         data.max = parseInt(!!data.levels.match(/^(\d+)-(\d+)$/) ? data.levels.replace(/^(\d+)-(\d+)$/, '$2') : data.levels, 10);
 
@@ -376,8 +380,8 @@ class App extends Component {
                 case 3: return <small key={index} className='ev_yield_sp_atk'><strong>{value}</strong>sp.atk</small>;
                 case 4: return <small key={index} className='ev_yield_sp_def'><strong>{value}</strong>sp.def</small>;
                 case 5: return <small key={index} className='ev_yield_spd'><strong>{value}</strong>spd</small>;
+                default: return null;
             }
-            return null;
         }));
     }
 
@@ -467,7 +471,7 @@ class App extends Component {
         };
 
         return (
-            <Table.Row key={JSON.stringify(entry)}>
+            <Table.Row key={entry.uniqueId}>
                 <Table.Cell>
                     <small>{entry.region} - </small>
                     <Button className='btn-lnk' onClick={(e) => this.setFilter({name: '', area: entry.area + '$'}, e)}>
@@ -608,7 +612,7 @@ class App extends Component {
                             clearable
                             value={this.state.filter.name}
                             onChange={(e, obj) => this.setFilter({name: obj.value})}
-                            options={require('./resources/json/pokemon_data').map(entry => {return {key: entry.id, value: entry.name, text: entry.id + ': ' + entry.name}})}
+                            options={this.pokemon_dropdown_values}
                         />
 
                         &nbsp;
