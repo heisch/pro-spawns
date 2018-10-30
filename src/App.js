@@ -176,21 +176,36 @@ class App extends Component {
     filter() {
         const fname = this.state.filter.name;
         const farea = this.state.filter.area;
-        try {
-            const fareaReg = new RegExp(farea.replace('*', '.*'), 'i');
-            this.types.forEach(type => {
-                this.filteredData[type] = this.sourceData[type].filter(entry => {
-                    let name_match =
-                        (fname.length > 0 && entry.pokemon === fname)
-                        || this._filterMatchSynonym(entry.pokemon, fname);
-                    return name_match
-                        || (farea.length > 0 && entry._sortArea.match(fareaReg) !== null)
+
+        if (fname.length === 0 && farea.length === 0) {
+            this.filteredData = {
+                land: [],
+                water: [],
+                headbutt: [],
+            };
+        } else {
+            try {
+                const fareaReg = new RegExp(farea.replace('*', '.*'), 'i');
+                this.types.forEach(type => {
+                    this.filteredData[type] = this.sourceData[type].filter(entry => {
+                        let name_match =
+                            (fname.length > 0 && entry.pokemon === fname)
+                            || this._filterMatchSynonym(entry.pokemon, fname);
+                        return name_match
+                            || (farea.length > 0 && entry._sortArea.match(fareaReg) !== null)
+                    });
                 });
-            });
-        } catch (e) {
-            // do not throw for invalid regex
-            this.filteredData = _.cloneDeep(this.sourceData);
+            } catch (e) {
+                // do not throw for invalid regex
+                this.filteredData = {
+                    land: [],
+                    water: [],
+                    headbutt: [],
+                };
+            }
         }
+
+        // reset pagination when filters change
         // eslint-disable-next-line react/no-direct-mutation-state
         this.state.pagination = {
             land: 1,
@@ -367,20 +382,10 @@ class App extends Component {
 
     renderTable(type, data) {
         if (data.length === 0) {
-            return <Segment>No results for {this.getSourceTypeLabel(type)}</Segment>
+            return <React.Fragment>No results for {this.getSourceTypeLabel(type)}</React.Fragment>
         }
 
-        const icon_morning = <img src="https://img.pokemondb.net/images/locations/morning.png" alt="Morning" title="Morning"/>;
-        const icon_day = <img src="https://img.pokemondb.net/images/locations/day.png" alt="Day" title="Day"/>;
-        const icon_night = <img src="https://img.pokemondb.net/images/locations/night.png" alt="Night" title="Night"/>;
-
         const icon_rod = <img src="https://img.pokemondb.net/sprites/items/fishing-rod.png" alt="Fishing Rod"/>;
-
-        const icons_rod = {
-            Old: <img src="https://img.pokemondb.net/sprites/items/old-rod.png" alt="Old Rod" title="Old Rod"/>,
-            Good: <img src="https://img.pokemondb.net/sprites/items/good-rod.png" alt="Good Rod" title="Good Rod"/>,
-            Super: <img src="https://img.pokemondb.net/sprites/items/super-rod.png" alt="Super Rod" title="Super Rod"/>,
-        };
 
         const {column, direction} = this.state.sortBy;
 
@@ -424,66 +429,9 @@ class App extends Component {
                 <Table.Body>
                     {data
                         .slice((currentPage-1)*pageSize, currentPage*pageSize)
-                        .map(entry => {
-                        let repelTrickPossible = this.repelTrickPossible(type, entry);
-                        return (
-                            <Table.Row key={JSON.stringify(entry)}>
-                                <Table.Cell>
-                                    <small>{entry.region} - </small>
-                                    <Button className='btn-lnk' onClick={(e) => this.setFilter({name: '', area: entry.area + '$'}, e)}>
-                                        {entry.area}
-                                    </Button>
-                                </Table.Cell>
-                                {showColumns.id && <Table.Cell textAlign='right'><small>{entry.pokedexNumber}</small></Table.Cell>}
-                                <Table.Cell>
-                                    <i className={`pokedex-sprite pokedex-sprite-${entry.pokedexNumber}`}/>
-                                    <Button className='btn-lnk' onClick={(e) => this.setFilter({name: entry.pokemon, area: ''}, e)}>{entry.pokemon}</Button>
-                                    &nbsp;
-                                    <a href={`https://pokemondb.net/pokedex/${entry.pokedexNumber}`} target='_blank' rel="noopener noreferrer">
-                                        <Icon name='external alternate'/>
-                                    </a>
-                                    &nbsp;
-                                    {this.inQuickList(entry.pokedexNumber)
-                                        ? (
-                                            <Button className='btn-lnk' onClick={() => this.removeFromQuickList(entry.pokedexNumber)}>
-                                                <i aria-hidden="true" className="bookmark green icon"/>
-                                            </Button>
-                                        ) : (
-                                            <Button className='btn-lnk' onClick={() => this.addToQuickList(entry.pokedexNumber, entry.pokemon)}>
-                                                <i aria-hidden="true" className="bookmark outline grey icon"/>
-                                            </Button>
-                                        )
-                                    }
-                                    {showColumns.types && <Types types={_.find(POKEMON_DATA, {id: entry.pokedexNumber}).types}/>}
-                                </Table.Cell>
-                                {type !== 'headbutt' && showColumns.time_of_day && (
-                                        <React.Fragment>
-                                            <Table.Cell textAlign='center' className={'row-morning ' + (entry.morning ? 'yellow' : '')}>{entry.morning ? icon_morning : null}</Table.Cell>
-                                            <Table.Cell textAlign='center' className={'row-day ' + (entry.day ? 'blue' : '')}>{entry.day ? icon_day : null}</Table.Cell>
-                                            <Table.Cell textAlign='center' className={'row-night ' + (entry.night ? 'grey' : '')}>{entry.night ? icon_night : null}</Table.Cell>
-                                        </React.Fragment>
-                                    )}
-                                {type === 'water'
-                                    ? <Table.Cell className='row-rod'>{entry.rod ? icons_rod[entry.rod] : null}</Table.Cell>
-                                    : null}
-                                {showColumns.tier && <Table.Cell className={'row-tier ' + this.getTierClassName(entry.tier)} textAlign='center'>{entry.tier}</Table.Cell>}
-                                {showColumns.ms && (
-                                    <Table.Cell textAlign='center' className={entry.membership ? 'violet' : ''}>
-                                        {entry.membership ?
-                                        <i className='ui icon dollar sign white'/> : null}
-                                    </Table.Cell>
-                                )}
-                                {showColumns.levels && <Table.Cell textAlign='right'>{entry.levels}</Table.Cell>}
-                                {type !== 'headbutt' && showColumns.repel && (
-                                    <Table.Cell textAlign='center' className={repelTrickPossible ? 'teal' : ''}>{repelTrickPossible ? 'Yes' : null}</Table.Cell>
-                                )}
-                                {showColumns.item && <Table.Cell>{entry.heldItem}</Table.Cell>}
-                                {showColumns.ev && <Table.Cell className='ev_yield' textAlign='right'>{this.renderEvYield(entry.pokedexNumber)}</Table.Cell>}
-                            </Table.Row>
-                        );
-                    })}
+                        .map(entry => this.renderTableRow(entry, type))}
                 </Table.Body>
-                {data.length > 25 &&
+                {data.length > pageSize &&
                 <Table.Footer>
                     <Table.Row>
                         <Table.HeaderCell colSpan={numberOfColumns}>
@@ -500,6 +448,77 @@ class App extends Component {
                     </Table.Row>
                 </Table.Footer>}
             </Table>
+        );
+    }
+
+    renderTableRow(entry, type) {
+        const showColumns = this.state.settings.showColumns;
+        const repelTrickPossible = this.repelTrickPossible(type, entry);
+
+        const icon_morning = <img src="https://img.pokemondb.net/images/locations/morning.png" alt="Morning" title="Morning"/>;
+        const icon_day = <img src="https://img.pokemondb.net/images/locations/day.png" alt="Day" title="Day"/>;
+        const icon_night = <img src="https://img.pokemondb.net/images/locations/night.png" alt="Night" title="Night"/>;
+
+        const icons_rod = {
+            Old: <img src="https://img.pokemondb.net/sprites/items/old-rod.png" alt="Old Rod" title="Old Rod"/>,
+            Good: <img src="https://img.pokemondb.net/sprites/items/good-rod.png" alt="Good Rod" title="Good Rod"/>,
+            Super: <img src="https://img.pokemondb.net/sprites/items/super-rod.png" alt="Super Rod" title="Super Rod"/>,
+        };
+
+        return (
+            <Table.Row key={JSON.stringify(entry)}>
+                <Table.Cell>
+                    <small>{entry.region} - </small>
+                    <Button className='btn-lnk' onClick={(e) => this.setFilter({name: '', area: entry.area + '$'}, e)}>
+                        {entry.area}
+                    </Button>
+                </Table.Cell>
+                {showColumns.id && <Table.Cell textAlign='right'><small>{entry.pokedexNumber}</small></Table.Cell>}
+                <Table.Cell>
+                    <i className={`pokedex-sprite pokedex-sprite-${entry.pokedexNumber}`}/>
+                    <Button className='btn-lnk' onClick={(e) => this.setFilter({name: entry.pokemon, area: ''}, e)}>{entry.pokemon}</Button>
+                    &nbsp;
+                    <a href={`https://pokemondb.net/pokedex/${entry.pokedexNumber}`} target='_blank' rel="noopener noreferrer">
+                        <Icon name='external alternate'/>
+                    </a>
+                    &nbsp;
+                    {this.inQuickList(entry.pokedexNumber)
+                        ? (
+                            <Button className='btn-lnk' onClick={() => this.removeFromQuickList(entry.pokedexNumber)}>
+                                <i aria-hidden="true" className="bookmark green icon"/>
+                            </Button>
+                        ) : (
+                            <Button className='btn-lnk' onClick={() => this.addToQuickList(entry.pokedexNumber, entry.pokemon)}>
+                                <i aria-hidden="true" className="bookmark outline grey icon"/>
+                            </Button>
+                        )
+                    }
+                    {showColumns.types && <Types types={_.find(POKEMON_DATA, {id: entry.pokedexNumber}).types}/>}
+                </Table.Cell>
+                {type !== 'headbutt' && showColumns.time_of_day && (
+                    <React.Fragment>
+                        <Table.Cell textAlign='center' className={'row-morning ' + (entry.morning ? 'yellow' : '')}>{entry.morning ? icon_morning : null}</Table.Cell>
+                        <Table.Cell textAlign='center' className={'row-day ' + (entry.day ? 'blue' : '')}>{entry.day ? icon_day : null}</Table.Cell>
+                        <Table.Cell textAlign='center' className={'row-night ' + (entry.night ? 'grey' : '')}>{entry.night ? icon_night : null}</Table.Cell>
+                    </React.Fragment>
+                )}
+                {type === 'water'
+                    ? <Table.Cell className='row-rod'>{entry.rod ? icons_rod[entry.rod] : null}</Table.Cell>
+                    : null}
+                {showColumns.tier && <Table.Cell className={'row-tier ' + this.getTierClassName(entry.tier)} textAlign='center'>{entry.tier}</Table.Cell>}
+                {showColumns.ms && (
+                    <Table.Cell textAlign='center' className={entry.membership ? 'violet' : ''}>
+                        {entry.membership ?
+                            <i className='ui icon dollar sign white'/> : null}
+                    </Table.Cell>
+                )}
+                {showColumns.levels && <Table.Cell textAlign='right'>{entry.levels}</Table.Cell>}
+                {type !== 'headbutt' && showColumns.repel && (
+                    <Table.Cell textAlign='center' className={repelTrickPossible ? 'teal' : ''}>{repelTrickPossible ? 'Yes' : null}</Table.Cell>
+                )}
+                {showColumns.item && <Table.Cell>{entry.heldItem}</Table.Cell>}
+                {showColumns.ev && <Table.Cell className='ev_yield' textAlign='right'>{this.renderEvYield(entry.pokedexNumber)}</Table.Cell>}
+            </Table.Row>
         );
     }
 
@@ -611,10 +630,10 @@ class App extends Component {
                 </Segment>
 
                 {number_of_results > 250
-                    ? <Segment>Too many results to display</Segment>
+                    ? <React.Fragment>Too many results to display</React.Fragment>
                     : (
                         number_of_results === 0
-                            ? <Segment>Please try searching for something</Segment>
+                            ? <React.Fragment>Please try searching for something</React.Fragment>
                             : <Tab panes={tab_panes} defaultActiveIndex={active_index} />
                     )
                 }
