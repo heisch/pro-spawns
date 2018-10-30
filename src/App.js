@@ -608,7 +608,7 @@ class App extends Component {
                             clearable
                             value={this.state.filter.name}
                             onChange={(e, obj) => this.setFilter({name: obj.value})}
-                            options={require('./resources/json/pokemon_names').map(name => {return {key: name, value: name, text: name}})}
+                            options={require('./resources/json/pokemon_data').map(entry => {return {key: entry.id, value: entry.name, text: entry.id + ': ' + entry.name}})}
                         />
 
                         &nbsp;
