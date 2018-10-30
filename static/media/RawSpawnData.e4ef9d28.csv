@@ -601,6 +601,15 @@ Iron Island Exit Room,,Sinnoh,Onix,95,Morning,Day,Night,,,6,32-36
 Iron Island Exit Room,,Sinnoh,Steelix,208,Morning,Day,Night,,,8,32-36
 Iron Island Exit Room,,Sinnoh,Makuhita,296,Morning,Day,Night,,,2,32-36
 Iron Island Exit Room,,Sinnoh,Riolu,447,Morning,Day,Night,#FF00BF,,9,10-14
+Isolated Forest,,Kanto,Pidgey,16,Morning,Day,Night,,,1,55-60
+Isolated Forest,,Kanto,Pidgeotto,17,Morning,Day,Night,,,3,55-60
+Isolated Forest,,Kanto,Rattata,19,Morning,Day,Night,,,1,55-60
+Isolated Forest,,Kanto,Bellsprout,69,Morning,Day,Night,,,1,55-60
+Isolated Forest,,Kanto,Pinsir,127,Morning,Day,Night,,,8,55-60
+Isolated Forest,,Kanto,Seedot,273,Morning,Day,Night,,,3,55-60
+Isolated Forest,,Kanto,Budew,406,Morning,Day,Night,,,5,55-60
+Isolated Forest,,Kanto,Solosis,577,Morning,Day,Night,,,9,55-60
+Isolated Forest,,Kanto,Hawlucha,701,Morning,Day,Night,,,8,55-60
 Jagged Pass,,Hoenn,Mankey,56,Morning,Day,Night,,,2,18-22
 Jagged Pass,,Hoenn,Primeape,57,Morning,Day,Night,,[[Black Belt]],5,18-22
 Jagged Pass,,Hoenn,Ponyta,77,Morning,Day,Night,,,4,18-22
@@ -864,6 +873,18 @@ Mirage Island Summit,,Hoenn,Wynaut,360,Morning,Day,Night,,[[Smoke Ball]],7,65-70
 Mirage Island Summit,,Hoenn,Budew,406,Morning,Day,Night,,[[Sun Stone]],6,65-70
 Mirage Island Summit,,Hoenn,Zorua,570,Morning,Day,Night,,[[Black Glasses]],9,65-70
 Mirage Island Summit,,Hoenn,Joltik,595,Morning,Day,Night,,[[Silverpowder]],8,65-70
+Monkey Path,,Kanto,Pidgey,16,Morning,Day,Night,,,1,50-55
+Monkey Path,,Kanto,Ekans,23,Morning,Day,Night,,,1,50-55
+Monkey Path,,Kanto,Arbok,24,Morning,Day,Night,,,3,50-55
+Monkey Path,,Kanto,Mankey,56,Morning,Day,Night,,,1,50-55
+Monkey Path,,Kanto,Primeape,57,Morning,Day,Night,,,3,50-55
+Monkey Path,,Kanto,Aipom,190,Morning,Day,Night,,,7,50-55
+Monkey Path,,Kanto,Slakoth,287,Morning,Day,Night,,,7,50-55
+Monkey Path,,Kanto,Chimchar,390,Morning,Day,Night,Yes,,9,50-55
+Monkey Path,,Kanto,Darumaka,554,Morning,Day,Night,Yes,,8,50-55
+Monkey Path,,Kanto,Pansage,511,Morning,Day,Night,,[[Leaf Stone]],8,50-55
+Monkey Path,,Kanto,Pansear,513,Morning,Day,Night,,[[Fire Stone]],8,50-55
+Monkey Path,,Kanto,Panpour,515,Morning,Day,Night,,[[Water Stone]],8,50-55
 Moon,,Hoenn,Gible,443,Morning,Day,Night,,,8,24-28
 Moon,,Hoenn,Togepi,175,Morning,Day,,,,9,10-14
 Moon,,Hoenn,Clefairy,35,Morning,Day,Night,,,3,19-23
@@ -1417,6 +1438,15 @@ Pinkan Island Forest,,Orange Islands,Rattata,19,,,Night,,,1,17-23
 Pinkan Island Forest,,Orange Islands,Scyther,123,Morning,Day,,,,9,17-23
 Pinkan Island Forest,,Orange Islands,Venonat,48,,,Night,,,2,17-23
 Pinkan Island Forest,,Orange Islands,Weedle,13,,,Night,,,1,17-23
+Pitch Black Cave,,Kanto,Crobat,169,Morning,Day,Night,,,3,50-55
+Pitch Black Cave,,Kanto,Dugtrio,51,Morning,Day,Night,,,5,50-55
+Pitch Black Cave,,Kanto,Golbat,42,Morning,Day,Night,,,1,50-55
+Pitch Black Cave,,Kanto,Golem,76,Morning,Day,Night,,,4,50-55
+Pitch Black Cave,,Kanto,Graveler,75,Morning,Day,Night,,,3,50-55
+Pitch Black Cave,,Kanto,Machamp,68,Morning,Day,Night,,,6,50-55
+Pitch Black Cave,,Kanto,Machoke,67,Morning,Day,Night,,,4,50-55
+Pitch Black Cave,,Kanto,Mawile,303,Morning,Day,Night,,,9,50-55
+Pitch Black Cave,,Kanto,Skarmory,227,Morning,Day,Night,,,8,50-55
 Power Plant,,Kanto,Pikachu,25,Morning,,,,[[Oran Berry]],5,23-26
 Power Plant,,Kanto,Magnemite,81,Morning,Day,Night,,[[Metal Coat]],2,21-23
 Power Plant,,Kanto,Magneton,82,Morning,Day,Night,,[[Magnet]],4,21-23
@@ -2747,24 +2777,25 @@ Tohjo Falls,,Kanto,Slowpoke,79,Morning,Day,Night,,[[Lagging Tail]],2,22-26
 Tohjo Falls,,Kanto,Makuhita,296,Morning,Day,Night,,[[Black Belt]],3,22-25
 Tohjo Falls,,Kanto,Chingling,433,Morning,Day,Night,,,6,22-25
 Tohjo Falls,,Kanto,Bronzor,436,Morning,Day,Night,,[[Metal Coat]],5,22-26
-Trainers Valley,,Kanto,Duskull,355,,,Night,,[[Reaper Cloth]],6,13-17
-Trainers Valley,,Kanto,Gastly,92,,,Night,,,3,10-12
-Trainers Valley,,Kanto,Houndour,228,,,Night,,,8,10-12
-Trainers Valley,,Kanto,Meditite,307,Morning,,Night,,[[Twisted Spoon]],9,10-12
-Trainers Valley,,Kanto,Meowth,52,Morning,,Night,,,1,10-12
-Trainers Valley,,Kanto,Grimer,88,Morning,Day,Night,,[[Black Sludge]],1,10-12
-Trainers Valley,,Kanto,Koffing,109,Morning,Day,Night,,[[Smoke Ball]],3,10-12
-Trainers Valley,,Kanto,Krabby,98,Morning,Day,Night,,,1,14-16
-Trainers Valley,,Kanto,Rattata,19,Morning,Day,Night,,,1,10-12
-Trainers Valley,,Kanto,Shuckle,213,Morning,Day,Night,,[[Berry Juice]],7,10-12
-Trainers Valley,,Kanto,Shuppet,353,Morning,Day,Night,,[[Spell Tag]],8,10-12
-Trainers Valley,,Kanto,Snubbull,209,Morning,Day,Night,,,4,10-12
-Trainers Valley,,Kanto,Wooper,194,Morning,Day,Night,,,2,10-12
-Trainers Valley Cave,,Kanto,Gastly,92,Morning,Day,Night,,,1,12-15
-Trainers Valley Cave,,Kanto,Golbat,42,Morning,Day,Night,,,3,12-15
-Trainers Valley Cave,,Kanto,Onix,95,Morning,Day,Night,,[[Hard Stone]],5,12-15
-Trainers Valley Cave,,Kanto,Woobat,527,Morning,Day,Night,,,9,12-15
-Trainers Valley Cave,,Kanto,Zubat,41,Morning,Day,Night,,,1,12-15
+Trainers Valley,,Kanto,Cherubi,420,Morning,Day,Night,,[[Colbur Berry]],1,45-50
+Trainers Valley,,Kanto,Duskull,355,,,Night,,[[Reaper Cloth]],6,51-56
+Trainers Valley,,Kanto,Gastly,92,,,Night,,,3,45-50
+Trainers Valley,,Kanto,Grimer,88,Morning,Day,Night,,[[Black Sludge]],1,45-50
+Trainers Valley,,Kanto,Houndour,228,,,Night,,,8,45-50
+Trainers Valley,,Kanto,Krabby,98,Morning,Day,Night,,,1,45-50
+Trainers Valley,,Kanto,Meditite,307,Morning,,Night,,[[Twisted Spoon]],9,45-50
+Trainers Valley,,Kanto,Meowth,52,Morning,,Night,,,1,45-50
+Trainers Valley,,Kanto,Rattata,19,Morning,Day,Night,,,1,45-50
+Trainers Valley,,Kanto,Shuckle,213,Morning,Day,Night,,[[Berry Juice]],7,45-50
+Trainers Valley,,Kanto,Shuppet,353,Morning,Day,Night,,[[Spell Tag]],6,45-49
+Trainers Valley,,Kanto,Snubbull,209,Morning,Day,Night,,,4,45-50
+Trainers Valley,,Kanto,Wooper,194,Morning,Day,Night,,,2,45-50
+Trainers Valley Cave,,Kanto,Crobat,169,Morning,Day,Night,,,2,45-50
+Trainers Valley Cave,,Kanto,Gligar,207,,Day,,,,6,45-50
+Trainers Valley Cave,,Kanto,Golbat,42,Morning,Day,Night,,,1,45-50
+Trainers Valley Cave,,Kanto,Noibat,714,,,Night,,,8,45-50
+Trainers Valley Cave,,Kanto,Woobat,527,Morning,,,,,7,45-50
+Trainers Valley Cave,,Kanto,Zubat,41,Morning,Day,Night,,,1,45-50
 Treasure Beach,#FF00BF,Sevii Islands,Fearow,22,Morning,,,,[[Sharp Beak]],2,34-38
 Treasure Beach,#FF00BF,Sevii Islands,Starly,396,Morning,,,,,9,12-13
 Treasure Beach,#FF00BF,Sevii Islands,Ponyta,77,,Day,,,,4,34-38
@@ -2772,6 +2803,15 @@ Treasure Beach,#FF00BF,Sevii Islands,Meowth,52,,,Night,,,1,34-38
 Treasure Beach,#FF00BF,Sevii Islands,Persian,53,,,Night,,[[Quick Claw]],2,34-38
 Treasure Beach,#FF00BF,Sevii Islands,Spearow,21,Morning,,Night,,[[Sharp Beak]],1,34-38
 Treasure Beach,#FF00BF,Sevii Islands,Tangela,114,Morning,Day,Night,,[[Miracle Seed]],2,34-38
+Underground Ruins,,Kanto,Geodude,74,Morning,Day,Night,,,1,60-65
+Underground Ruins,,Kanto,Graveler,75,Morning,Day,Night,,,3,60-65
+Underground Ruins,,Kanto,Golem,76,Morning,Day,Night,,,5,60-65
+Underground Ruins,,Kanto,Zubat,41,Morning,Day,Night,,,1,60-65
+Underground Ruins,,Kanto,Golbat,42,Morning,Day,Night,,,3,60-65
+Underground Ruins,,Kanto,Onix,95,Morning,Day,Night,,,1,60-65
+Underground Ruins,,Kanto,Nosepass,299,,Day,,,,7,60-65
+Underground Ruins,,Kanto,Lairon,305,Morning,,,,,8,60-65
+Underground Ruins,,Kanto,Sigilyph,561,Morning,Day,Night,,,9,60-65
 Union Cave 1F,,Johto,Rattata,19,Morning,Day,Night,,,1,6-10
 Union Cave 1F,,Johto,Sandshrew,27,Morning,Day,Night,,[[Quick Claw]],2,6-10
 Union Cave 1F,,Johto,Zubat,41,Morning,Day,Night,,,1,6-10
@@ -2791,16 +2831,14 @@ Union Cave B2F,,Johto,Onix,95,Morning,Day,Night,,[[Hard Stone]],5,6-10
 Union Cave B2F,,Johto,Marill,183,Morning,Day,Night,,[[Oran Berry]],5,11-15
 Union Cave B2F,,Johto,Makuhita,296,Morning,Day,Night,,[[Black Belt]],3,6-10
 Union Cave B2F,,Johto,Bronzor,436,Morning,Day,Night,,[[Metal Coat]],6,6-10
-Unknown Place,,Kanto,Delibird,225,,,Night,#FF00BF,[[NeverMeltIce]],1,32-34
-Unknown Place,,Kanto,Donphan,232,Morning,Day,Night,,,5,35-59
-Unknown Place,,Kanto,Golduck,55,Morning,Day,Night,,,2,35-59
-Unknown Place,,Kanto,Murkrow,198,,,Night,,[[Dusk Stone]],8,35-59
-Unknown Place,,Kanto,Phanpy,231,Morning,,,,,4,35-59
-Unknown Place,,Kanto,Slowbro,80,Morning,Day,Night,,,1,35-59
-Unknown Place,,Kanto,Sneasel,215,,,Night,,[[Razor Claw]],5,35-59
-Unknown Place,,Kanto,Snorunt,361,,,Night,,[[Dawn Stone]],3,35-59
-Unknown Place,,Kanto,Swinub,220,Morning,Day,Night,,[[NeverMeltIce]],2,28-48
-Unknown Place,,Kanto,Zangoose,335,Morning,Day,Night,#FF00BF,[[Silk Scarf]],9,28-30
+Unknown Place,,Kanto,Murkrow,198,,,Night,,[[Dusk Stone]],8,55-60
+Unknown Place,,Kanto,Sneasel,215,,,Night,,[[Razor Claw]],7,55-60
+Unknown Place,,Kanto,Swinub,220,Morning,Day,Night,,[[Nevermeltice]],2,55-60
+Unknown Place,,Kanto,Delibird,225,,,Night,#FF00BF,[[Nevermeltice]],1,55-60
+Unknown Place,,Kanto,Phanpy,231,Morning,,,,[[Leppa Berry]],4,55-60
+Unknown Place,,Kanto,Donphan,232,Morning,Day,Night,,[[Leppa Berry]],5,55-60
+Unknown Place,,Kanto,Zangoose,335,Morning,Day,Night,#FF00BF,[[Silk Scarf]],9,55-60
+Unknown Place,,Kanto,Snorunt,361,,,Night,,[[Dawn Stone]],5,55-60
 Valley of Steel Western Peak,,Hoenn,Zubat,41,,,Night,,,1,23-27
 Valley of Steel Western Peak,,Hoenn,Klefki,707,Morning,,Night,#FF00BF,[[Light Clay]],9,20-24
 Valley of Steel Western Peak,,Hoenn,Skarmory,227,Morning,Day,,,,8,20-24

@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
-    "url": "/pro-spawns/static/media/outline-icons.82f60bd0.svg"
+    "revision": "962a1bf31c081691065fe333d9fa8105",
+    "url": "/pro-spawns/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "9b05ed36a99cd3c41719",
-    "url": "/pro-spawns/static/css/main.c82ad0b1.chunk.css"
+    "revision": "39215df7c6d57d98b71a",
+    "url": "/pro-spawns/static/css/main.0ba5da75.chunk.css"
   },
   {
-    "revision": "5e104bfc7d1a6177dead046715c21055",
-    "url": "/pro-spawns/static/media/HeadbuttSpawnData.5e104bfc.csv"
+    "revision": "bed677a0df9eeb902b4bc281dcc2fda1",
+    "url": "/pro-spawns/static/media/HeadbuttSpawnData.bed677a0.csv"
   },
   {
-    "revision": "ad376d60233cd0d299a9",
-    "url": "/pro-spawns/static/js/1.ad376d60.chunk.js"
+    "revision": "dff45c99df08dab01e15",
+    "url": "/pro-spawns/static/js/1.dff45c99.chunk.js"
   },
   {
     "revision": "5f28c4cb43efe5cc1acb",
@@ -24,12 +24,16 @@ self.__precacheManifest = [
     "url": "/pro-spawns/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "faff92145777a3cbaf8e7367b4807987",
-    "url": "/pro-spawns/static/media/icons.faff9214.woff"
-  },
-  {
     "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
     "url": "/pro-spawns/static/media/icons.8e3c7f55.eot"
+  },
+  {
+    "revision": "701ae6abd4719e9c2ada3535a497b341",
+    "url": "/pro-spawns/static/media/outline-icons.701ae6ab.eot"
+  },
+  {
+    "revision": "faff92145777a3cbaf8e7367b4807987",
+    "url": "/pro-spawns/static/media/icons.faff9214.woff"
   },
   {
     "revision": "cd6c777f1945164224dee082abaea03a",
@@ -40,24 +44,20 @@ self.__precacheManifest = [
     "url": "/pro-spawns/static/media/outline-icons.ef60a4f6.woff"
   },
   {
-    "revision": "701ae6abd4719e9c2ada3535a497b341",
-    "url": "/pro-spawns/static/media/outline-icons.701ae6ab.eot"
-  },
-  {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
     "url": "/pro-spawns/static/media/icons.b87b9ba5.ttf"
   },
   {
-    "revision": "9b05ed36a99cd3c41719",
-    "url": "/pro-spawns/static/js/main.9b05ed36.chunk.js"
+    "revision": "39215df7c6d57d98b71a",
+    "url": "/pro-spawns/static/js/main.39215df7.chunk.js"
   },
   {
     "revision": "ad97afd3337e8cda302d10ff5a4026b8",
     "url": "/pro-spawns/static/media/outline-icons.ad97afd3.ttf"
   },
   {
-    "revision": "962a1bf31c081691065fe333d9fa8105",
-    "url": "/pro-spawns/static/media/icons.962a1bf3.svg"
+    "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
+    "url": "/pro-spawns/static/media/outline-icons.82f60bd0.svg"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -84,19 +84,19 @@ self.__precacheManifest = [
     "url": "/pro-spawns/static/media/flags.9c74e172.png"
   },
   {
-    "revision": "1daa5028f7268d1604e1645959100b35",
-    "url": "/pro-spawns/static/media/RawSpawnData.1daa5028.csv"
+    "revision": "e4ef9d281585cb4b6e558b453982be86",
+    "url": "/pro-spawns/static/media/RawSpawnData.e4ef9d28.csv"
   },
   {
-    "revision": "844b06209be372cdd921f010b6c73c14",
-    "url": "/pro-spawns/static/media/RawWaterSpawnData.844b0620.csv"
+    "revision": "f8ca3dfe67d53b5b74299f3cad81ac54",
+    "url": "/pro-spawns/static/media/RawWaterSpawnData.f8ca3dfe.csv"
   },
   {
-    "revision": "ad376d60233cd0d299a9",
-    "url": "/pro-spawns/static/css/1.d841213d.chunk.css"
+    "revision": "dff45c99df08dab01e15",
+    "url": "/pro-spawns/static/css/1.8df5e4b2.chunk.css"
   },
   {
-    "revision": "976a76d7311d82a389d556dcded10505",
+    "revision": "3f03b25aedf7eb6af10eb7884dada841",
     "url": "/pro-spawns/index.html"
   }
 ];

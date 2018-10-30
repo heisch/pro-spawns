@@ -1469,16 +1469,19 @@ Trainer Tower,,Hoenn,Qwilfish,211,Morning,,Night,Surfing,Super,,[[Poison Barb]],
 Trainer Tower,,Hoenn,Seadra,117,,,Night,Surfing,Super,,[[Dragon Scale]],5,12-42
 Trainer Tower,,Hoenn,Tentacool,72,Morning,Day,Night,Surfing,Old,,,1,12-42
 Trainer Tower,,Hoenn,Tentacruel,73,Morning,Day,Night,Surfing,Super,,,3,12-42
-Trainers Valley,,Kanto,Krabby,98,Morning,Day,Night,Surfing,Old,,,1,45-50
-Trainers Valley,,Kanto,Horsea,116,Morning,Day,Night,Surfing,Old,,,2,45-50
-Trainers Valley,,Kanto,Goldeen,118,Morning,Day,Night,Surfing,Good,,,1,45-50
+Trainers Valley,,Kanto,Staryu,120,,,Night,Surfing,,,,6,45-50
 Trainers Valley,,Kanto,Chinchou,170,Morning,Day,Night,Surfing,Good,,,1,45-50
-Trainers Valley,,Kanto,Snubbull,209,Morning,Day,Night,Surfing,Good,,,4,45-50
 Trainers Valley,,Kanto,Corsola,222,Morning,Day,,Surfing,Good,,,3,45-50
-Trainers Valley,,Kanto,Shellder,90,Morning,Day,Night,Surfing,Super,,,6,45-50
-Trainers Valley,,Kanto,Remoraid,223,Morning,Day,Night,Surfing,Super,,,6,45-50
-Trainers Valley,,Kanto,Wailmer,320,Morning,Day,Night,Surfing,Super,,,6,45-50
+Trainers Valley,,Kanto,Goldeen,118,Morning,Day,Night,Surfing,Good,,,1,45-50
+Trainers Valley,,Kanto,Snubbull,209,Morning,Day,Night,Surfing,Good,,,4,45-50
+Trainers Valley,,Kanto,Horsea,116,Morning,Day,Night,Surfing,Old,,,2,45-50
+Trainers Valley,,Kanto,Krabby,98,Morning,Day,Night,Surfing,Old,,,1,45-50
+Trainers Valley,,Kanto,Magikarp,129,Morning,Day,Night,Surfing,Old,,,2,45-50
+Trainers Valley,,Kanto,Tentacool,72,Morning,Day,Night,Surfing,Old,,,1,45-50
 Trainers Valley,,Kanto,Ducklett,580,Morning,Day,Night,Surfing,Super,#FF00BF,,5,45-50
+Trainers Valley,,Kanto,Remoraid,223,Morning,Day,Night,Surfing,Super,,,6,45-50
+Trainers Valley,,Kanto,Shellder,90,Morning,Day,Night,Surfing,Super,,,6,45-50
+Trainers Valley,,Kanto,Wailmer,320,Morning,Day,Night,Surfing,Super,,,6,45-50
 Treasure Beach,#FF00BF,Sevii Islands,Magikarp,129,,,Night,Fishing,Old,,,2,34-38
 Treasure Beach,#FF00BF,Sevii Islands,Slowpoke,79,Morning,Day,,Fishing,Super,,,2,34-38
 Treasure Beach,#FF00BF,Sevii Islands,Frillish,592,Morning,Day,Night,Fishing,Super,,,7,34-38
