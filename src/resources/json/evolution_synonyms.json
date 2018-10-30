@@ -168,6 +168,7 @@
     "Torchic"
   ],
   "Blissey": [
+    "Chansey",
     "Happiny"
   ],
   "Blitzle": [
@@ -252,6 +253,10 @@
   "Caterpie": [
     "Metapod",
     "Butterfree"
+  ],
+  "Chansey": [
+    "Blissey",
+    "Happiny"
   ],
   "Chandelure": [
     "Lampent",
@@ -864,7 +869,8 @@
     "Kommo-o"
   ],
   "Happiny": [
-    "Blissey"
+    "Blissey",
+    "Chansey"
   ],
   "Hariyama": [
     "Makuhita"
@@ -892,6 +898,21 @@
   ],
   "Hippowdon": [
     "Hippopotas"
+  ],
+  "Hitmonchan": [
+    "Hitmontop",
+    "Hitmonlee",
+    "Tyrogue"
+  ],
+  "Hitmontop": [
+    "Hitmonchan",
+    "Hitmonlee",
+    "Tyrogue"
+  ],
+  "Hitmonlee": [
+    "Hitmonchan",
+    "Hitmontop",
+    "Tyrogue"
   ],
   "Honchkrow": [
     "Murkrow"
@@ -2091,6 +2112,11 @@
   ],
   "Tyrunt": [
     "Tyrantrum"
+  ],
+  "Tyrogue": [
+    "Hitmonchan",
+    "Hitmontop",
+    "Hitmonlee"
   ],
   "Umbreon": [
     "Eevee",
