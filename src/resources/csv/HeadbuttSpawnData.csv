@@ -240,13 +240,13 @@ Sevault Canyon,#FF00BF,Sevii Islands,Cascoon,268,#FF00BF,Common,28-32
 Sevault Canyon,#FF00BF,Sevii Islands,Volbeat,313,#FF00BF,Intermediate,28-32
 Sevault Canyon,#FF00BF,Sevii Islands,Cottonee,546,#FF00BF,Intermediate,28-32
 Sevault Canyon,#FF00BF,Sevii Islands,Venipede,543,#FF00BF,Rare,28-32
-Trainers Valley,,Kanto,Bibarel,400,,Common,58-65
-Trainers Valley,,Kanto,Xatu,178,,Common,58-65
-Trainers Valley,,Kanto,Nuzleaf,274,,Intermediate,58-65
-Trainers Valley,,Kanto,Vigoroth,288,,Intermediate,58-65
-Trainers Valley,,Kanto,Pansage,511,,Rare,58-65
-Trainers Valley,,Kanto,Pansear,513,,Rare,58-65
-Trainers Valley,,Kanto,Panpour,515,,Rare,58-65
+Trainers Valley,,Kanto,Ariados,168,,Common,58-65
+Trainers Valley,,Kanto,Xatu,178,,Common,58-65,Day
+Trainers Valley,,Kanto,Murkrow,198,,Common,58-65,Night
+Trainers Valley,,Kanto,Jumpluff,189,,Intermediate,58-65
+Trainers Valley,,Kanto,Aipom,190,,Intermediate,58-65
+Trainers Valley,,Kanto,Bagon,371,,Rare,58-65,Morning & Day
+Trainers Valley,,Kanto,Sableye,302,,Rare,58-65,Night
 Unknown Place,,Kanto,Leavanny,542,,Common,58-65
 Unknown Place,,Kanto,Wingull,278,,Common,58-65
 Unknown Place,,Kanto,Scyther,123,,Intermediate,58-65

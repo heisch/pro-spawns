@@ -2747,24 +2747,25 @@ Tohjo Falls,,Kanto,Slowpoke,79,Morning,Day,Night,,[[Lagging Tail]],2,22-26
 Tohjo Falls,,Kanto,Makuhita,296,Morning,Day,Night,,[[Black Belt]],3,22-25
 Tohjo Falls,,Kanto,Chingling,433,Morning,Day,Night,,,6,22-25
 Tohjo Falls,,Kanto,Bronzor,436,Morning,Day,Night,,[[Metal Coat]],5,22-26
-Trainers Valley,,Kanto,Duskull,355,,,Night,,[[Reaper Cloth]],6,13-17
-Trainers Valley,,Kanto,Gastly,92,,,Night,,,3,10-12
-Trainers Valley,,Kanto,Houndour,228,,,Night,,,8,10-12
-Trainers Valley,,Kanto,Meditite,307,Morning,,Night,,[[Twisted Spoon]],9,10-12
-Trainers Valley,,Kanto,Meowth,52,Morning,,Night,,,1,10-12
-Trainers Valley,,Kanto,Grimer,88,Morning,Day,Night,,[[Black Sludge]],1,10-12
-Trainers Valley,,Kanto,Koffing,109,Morning,Day,Night,,[[Smoke Ball]],3,10-12
-Trainers Valley,,Kanto,Krabby,98,Morning,Day,Night,,,1,14-16
-Trainers Valley,,Kanto,Rattata,19,Morning,Day,Night,,,1,10-12
-Trainers Valley,,Kanto,Shuckle,213,Morning,Day,Night,,[[Berry Juice]],7,10-12
-Trainers Valley,,Kanto,Shuppet,353,Morning,Day,Night,,[[Spell Tag]],8,10-12
-Trainers Valley,,Kanto,Snubbull,209,Morning,Day,Night,,,4,10-12
-Trainers Valley,,Kanto,Wooper,194,Morning,Day,Night,,,2,10-12
-Trainers Valley Cave,,Kanto,Gastly,92,Morning,Day,Night,,,1,12-15
-Trainers Valley Cave,,Kanto,Golbat,42,Morning,Day,Night,,,3,12-15
-Trainers Valley Cave,,Kanto,Onix,95,Morning,Day,Night,,[[Hard Stone]],5,12-15
-Trainers Valley Cave,,Kanto,Woobat,527,Morning,Day,Night,,,9,12-15
-Trainers Valley Cave,,Kanto,Zubat,41,Morning,Day,Night,,,1,12-15
+Trainers Valley,,Kanto,Cherubi,420,Morning,Day,Night,,Colbur Berry,1,45-50
+Trainers Valley,,Kanto,Duskull,355,,,Night,,Reaper Cloth,6,51-56
+Trainers Valley,,Kanto,Gastly,92,,,Night,,,3,45-50
+Trainers Valley,,Kanto,Grimer,88,Morning,Day,Night,,Black Sludge,1,45-50
+Trainers Valley,,Kanto,Houndour,228,,,Night,,,8,45-50
+Trainers Valley,,Kanto,Krabby,98,Morning,Day,Night,,,1,45-50
+Trainers Valley,,Kanto,Meditite,307,Morning,,Night,,Twisted Spoon,9,45-50
+Trainers Valley,,Kanto,Meowth,52,Morning,,Night,,,1,45-50
+Trainers Valley,,Kanto,Rattata,19,Morning,Day,Night,,,1,45-50
+Trainers Valley,,Kanto,Shuckle,213,Morning,Day,Night,,Berry Juice,7,45-50
+Trainers Valley,,Kanto,Shuppet,353,Morning,Day,Night,,Spell Tag,6,45-49
+Trainers Valley,,Kanto,Snubbull,209,Morning,Day,Night,,,4,45-50
+Trainers Valley,,Kanto,Wooper,194,Morning,Day,Night,,,2,45-50
+Trainers Valley Cave,,Kanto,Crobat,169,Morning,Day,Night,,,2,45-50
+Trainers Valley Cave,,Kanto,Gligar,207,,Day,,,,6,45-50
+Trainers Valley Cave,,Kanto,Golbat,42,Morning,Day,Night,,,1,45-50
+Trainers Valley Cave,,Kanto,Noibat,714,,,Night,,,8,45-50
+Trainers Valley Cave,,Kanto,Woobat,527,Morning,,,,,7,45-50
+Trainers Valley Cave,,Kanto,Zubat,41,Morning,Day,Night,,,1,45-50
 Treasure Beach,#FF00BF,Sevii Islands,Fearow,22,Morning,,,,[[Sharp Beak]],2,34-38
 Treasure Beach,#FF00BF,Sevii Islands,Starly,396,Morning,,,,,9,12-13
 Treasure Beach,#FF00BF,Sevii Islands,Ponyta,77,,Day,,,,4,34-38
