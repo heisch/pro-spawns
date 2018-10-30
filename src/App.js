@@ -121,15 +121,16 @@ class App extends Component {
     }
 
     _dataParser(data, type) {
-        delete data.membersAccessible;
         data.pokedexNumber = data.pokedexNumber.padStart(3, '0');
-        data.membership = data.membership.length > 0;
+        data.membership = data.membership.length > 0 || data.membersAccessible.length;
         data.morning = !!data.morning;
         data.day = !!data.day;
         data.night = !!data.night;
         data._sortArea = this.regionSorting[data.region] + ' - ' + data.region + ' - ' + data.area;
         data.min = parseInt(!!data.levels.match(/^(\d+)-(\d+)$/) ? data.levels.replace(/^(\d+)-(\d+)$/, '$1') : data.levels, 10);
         data.max = parseInt(!!data.levels.match(/^(\d+)-(\d+)$/) ? data.levels.replace(/^(\d+)-(\d+)$/, '$2') : data.levels, 10);
+
+        delete data.membersAccessible;
 
         let repelId = type + ' - ' + data.region + ' - ' + data.area;
 
