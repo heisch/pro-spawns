@@ -16,8 +16,4 @@ Types.propTypes = {
     types: PropTypes.array.isRequired,
 };
 
-Types.defaultProps = {
-    displayAs: 'short'
-};
-
 export default Types

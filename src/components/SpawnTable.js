@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {Button, Icon, Pagination, Table} from "semantic-ui-react";
-import Types from "./Types";
 import _ from "lodash";
 import {Helpers, QuickListHelpers} from "../helpers/helpers";
+import TypeEffectivenessMatrixModal from "./TypeEffectivenessMatrixModal";
 
 const POKEMON_DATA = require('../resources/json/pokemon_data');
 
@@ -123,7 +123,7 @@ class SpawnTable extends Component {
                             </Button>
                         )
                     }
-                    {showColumns.types && <Types types={_.find(POKEMON_DATA, {id: entry.pokedexNumber}).types}/>}
+                    {showColumns.types && <TypeEffectivenessMatrixModal types={_.find(POKEMON_DATA, {id: entry.pokedexNumber}).types} pokemonName={entry.pokemon}/>}
                 </Table.Cell>
                 {type !== 'headbutt' && showColumns.time_of_day && (
                     <React.Fragment>
