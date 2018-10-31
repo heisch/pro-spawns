@@ -48,8 +48,6 @@ export class spawnDataParser {
 
     }
 
-
-
     _dataParser(data, type) {
         data.pokedexNumber = data.pokedexNumber.padStart(3, '0');
         data.membership = data.membership.length > 0 || data.membersAccessible.length;
