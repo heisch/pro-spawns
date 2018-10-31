@@ -4,28 +4,20 @@ self.__precacheManifest = [
     "url": "/pro-spawns/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "04130e53a217bfe8c1b2",
-    "url": "/pro-spawns/static/css/main.bf3b076b.chunk.css"
+    "revision": "457cecce1d1ddc2353e8",
+    "url": "/pro-spawns/static/css/main.0c7b8e3b.chunk.css"
   },
   {
     "revision": "bed677a0df9eeb902b4bc281dcc2fda1",
     "url": "/pro-spawns/static/media/HeadbuttSpawnData.bed677a0.csv"
   },
   {
-    "revision": "eeaf1fe324895501d71a",
-    "url": "/pro-spawns/static/js/1.eeaf1fe3.chunk.js"
+    "revision": "57649384b6945a26f16e",
+    "url": "/pro-spawns/static/js/1.57649384.chunk.js"
   },
   {
     "revision": "5f28c4cb43efe5cc1acb",
     "url": "/pro-spawns/static/js/runtime~main.5f28c4cb.js"
-  },
-  {
-    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
-    "url": "/pro-spawns/static/media/icons.b87b9ba5.ttf"
-  },
-  {
-    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
-    "url": "/pro-spawns/static/media/icons.8e3c7f55.eot"
   },
   {
     "revision": "9c74e172f87984c48ddf5c8108cabe67",
@@ -36,32 +28,40 @@ self.__precacheManifest = [
     "url": "/pro-spawns/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "701ae6abd4719e9c2ada3535a497b341",
-    "url": "/pro-spawns/static/media/outline-icons.701ae6ab.eot"
-  },
-  {
-    "revision": "cd6c777f1945164224dee082abaea03a",
-    "url": "/pro-spawns/static/media/outline-icons.cd6c777f.woff2"
-  },
-  {
-    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
-    "url": "/pro-spawns/static/media/outline-icons.ef60a4f6.woff"
-  },
-  {
-    "revision": "04130e53a217bfe8c1b2",
-    "url": "/pro-spawns/static/js/main.04130e53.chunk.js"
+    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
+    "url": "/pro-spawns/static/media/icons.8e3c7f55.eot"
   },
   {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
     "url": "/pro-spawns/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
-    "url": "/pro-spawns/static/media/outline-icons.ad97afd3.ttf"
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/pro-spawns/static/media/icons.b87b9ba5.ttf"
+  },
+  {
+    "revision": "cd6c777f1945164224dee082abaea03a",
+    "url": "/pro-spawns/static/media/outline-icons.cd6c777f.woff2"
+  },
+  {
+    "revision": "701ae6abd4719e9c2ada3535a497b341",
+    "url": "/pro-spawns/static/media/outline-icons.701ae6ab.eot"
+  },
+  {
+    "revision": "457cecce1d1ddc2353e8",
+    "url": "/pro-spawns/static/js/main.457cecce.chunk.js"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
     "url": "/pro-spawns/static/media/outline-icons.82f60bd0.svg"
+  },
+  {
+    "revision": "ad97afd3337e8cda302d10ff5a4026b8",
+    "url": "/pro-spawns/static/media/outline-icons.ad97afd3.ttf"
+  },
+  {
+    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
+    "url": "/pro-spawns/static/media/outline-icons.ef60a4f6.woff"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -92,11 +92,11 @@ self.__precacheManifest = [
     "url": "/pro-spawns/static/media/RawWaterSpawnData.14146c25.csv"
   },
   {
-    "revision": "eeaf1fe324895501d71a",
-    "url": "/pro-spawns/static/css/1.2e0e460a.chunk.css"
+    "revision": "57649384b6945a26f16e",
+    "url": "/pro-spawns/static/css/1.a155bc76.chunk.css"
   },
   {
-    "revision": "1cc986aa23cfbe8744222ea7cac9df84",
+    "revision": "6b6a5beb670482d340ddf92080536514",
     "url": "/pro-spawns/index.html"
   }
 ];
