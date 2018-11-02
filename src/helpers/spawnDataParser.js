@@ -80,13 +80,15 @@ export class spawnDataParser {
             data.heldItem = heldItem;
         }
 
-        if (!this.repelTrickData.hasOwnProperty(repelId)) {
-            this.repelTrickData[repelId] = {};
+        if (type !== 'headbutt') {
+            if (!this.repelTrickData.hasOwnProperty(repelId)) {
+                this.repelTrickData[repelId] = {};
+            }
+            if (!this.repelTrickData[repelId].hasOwnProperty(data.max)) {
+                this.repelTrickData[repelId][data.max] = 0;
+            }
+            this.repelTrickData[repelId][data.max]++;
         }
-        if (!this.repelTrickData[repelId].hasOwnProperty(data.max)) {
-            this.repelTrickData[repelId][data.max] = 0;
-        }
-        this.repelTrickData[repelId][data.max]++;
 
         return data;
     }
