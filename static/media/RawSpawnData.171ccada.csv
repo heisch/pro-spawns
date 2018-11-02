@@ -48,7 +48,7 @@ Bell Tower,,Johto,Spinarak,167,Morning,,Night,,,1,14-17
 Bell Tower,,Johto,Ariados,168,Morning,,Night,,[[Silver Powder]],5,14-17
 Bell Tower,,Johto,Shuppet,353,Morning,Day,Night,,[[Spell Tag]],6,14-17
 Berry Forest,#FF00BF,Sevii Islands,Bellsprout,69,Morning,Day,,,[[Awakening]],1,36-44
-Berry Forest,#FF00BF,Sevii Islands,Drowzee,69,Morning,,Night,,[[Sun Stone]],1,10-30
+Berry Forest,#FF00BF,Sevii Islands,Drowzee,96,Morning,,Night,,[[Sun Stone]],1,10-30
 Berry Forest,#FF00BF,Sevii Islands,Exeggcute,102,Morning,Day,Night,,[[Sun Stone]],4,10-30
 Berry Forest,#FF00BF,Sevii Islands,Gloom,44,,,Night,,[[Sun Stone]],4,34-40
 Berry Forest,#FF00BF,Sevii Islands,Hypno,97,,,Night,,[[Sun Stone]],4,30-32
@@ -61,7 +61,7 @@ Bond Bridge,#FF00BF,Sevii Islands,Pidgeotto,17,Morning,,,,,2,29-37
 Bond Bridge,#FF00BF,Sevii Islands,Psyduck,54,Morning,,,,,2,29-37
 Bond Bridge,#FF00BF,Sevii Islands,Weepinbell,70,Morning,,,,,4,29-37
 Bond Bridge,#FF00BF,Sevii Islands,Pidgey,16,,Day,,,,1,29-37
-Bond Bridge,#FF00BF,Sevii Islands,Glameow,16,,,Night,,,9,29-37
+Bond Bridge,#FF00BF,Sevii Islands,Glameow,431,,,Night,,,9,29-37
 Bond Bridge,#FF00BF,Sevii Islands,Gloom,44,,,Night,,,4,29-37
 Bond Bridge,#FF00BF,Sevii Islands,Oddish,43,,,Night,,,2,29-37
 Bond Bridge,#FF00BF,Sevii Islands,Gloom,44,Morning,,Night,,,1,29-37
@@ -265,7 +265,7 @@ Dark Cave South,,Johto,Zubat,41,Morning,Day,Night,,,1,3-7
 Desert Cave,#FF00BF,Johto,Sandshrew,27,Morning,Day,Night,,[[Quick Claw]],2,10-14
 Desert Cave,#FF00BF,Johto,Zubat,41,Morning,Day,Night,,,1,10-14
 Desert Lagoon,#FF00BF,Johto,Phanpy,231,Morning,,,,[[Leppa Berry]],4,12-18
-Desert Lagoon,#FF00BF,Johto,Hippopotas,231,Morning,Day,Night,,,8,18-24
+Desert Lagoon,#FF00BF,Johto,Hippopotas,449,Morning,Day,Night,,,8,18-24
 Desert Lagoon,#FF00BF,Johto,Murkrow,198,,,Night,,[[Razor Fang]],8,12-18
 Desert Lagoon,#FF00BF,Johto,Doduo,84,Morning,Day,,,[[Sharp Beak]],1,12-18
 Desert Lagoon,#FF00BF,Johto,Ekans,23,Morning,Day,,,,1,12-18
@@ -2199,7 +2199,7 @@ Route 212 North,,Sinnoh,Smeargle,235,Morning,Day,Night,,,8,22-26
 Route 212 North,,Sinnoh,Ralts,280,Morning,Day,Night,,,9,22-26
 Route 212 North,,Sinnoh,Kirlia,281,Morning,Day,Night,,,9,22-26
 Route 212 North,,Sinnoh,Roselia,315,Morning,Day,Night,,,5,22-26
-Route 212 North,,Sinnoh,Bidoof,339,Morning,Day,Night,,,2,22-26
+Route 212 North,,Sinnoh,Bidoof,399,Morning,Day,Night,,,2,22-26
 Route 212 North,,Sinnoh,Starly,396,Morning,Day,Night,,,3,22-26
 Route 212 North,,Sinnoh,Staravia,397,Morning,Day,Night,,,6,22-26
 Route 212 North,,Sinnoh,Kricketune,402,Morning,Day,Night,,,6,22-26
