@@ -62,15 +62,15 @@ class TypeEffectivenessMatrixModal extends Component {
 
                                 {Object.keys(type_effectiveness).slice(0,9).map(type => {
                                     return (
-                                        <Grid.Column className={`type-icon type-${type.toLocaleLowerCase()}`}>
+                                        <Grid.Column key={type} className={`type-icon type-${type.toLocaleLowerCase()}`}>
                                             {type.substr(0,3).toLocaleUpperCase()}
                                         </Grid.Column>
                                     );
                                 })}
 
-                                {Object.values(type_effectiveness).slice(0,9).map(effectiveness => {
+                                {Object.values(type_effectiveness).slice(0,9).map((effectiveness, index) => {
                                     return (
-                                        <Grid.Column className={this.getEffectivenessClassName(effectiveness)}>
+                                        <Grid.Column key={index} className={this.getEffectivenessClassName(effectiveness)}>
                                             {this.renderEffectiveness(effectiveness)}
                                         </Grid.Column>
                                     );
@@ -78,15 +78,15 @@ class TypeEffectivenessMatrixModal extends Component {
 
                                 {Object.keys(type_effectiveness).slice(9,18).map(type => {
                                     return (
-                                        <Grid.Column className={`type-icon type-${type.toLocaleLowerCase()}`}>
+                                        <Grid.Column key={type} className={`type-icon type-${type.toLocaleLowerCase()}`}>
                                             {type.substr(0,3).toLocaleUpperCase()}
                                         </Grid.Column>
                                     );
                                 })}
 
-                                {Object.values(type_effectiveness).slice(9,18).map(effectiveness => {
+                                {Object.values(type_effectiveness).slice(9,18).map((effectiveness, index) => {
                                     return (
-                                        <Grid.Column className={this.getEffectivenessClassName(effectiveness)}>
+                                        <Grid.Column key={index} className={this.getEffectivenessClassName(effectiveness)}>
                                             {this.renderEffectiveness(effectiveness)}
                                         </Grid.Column>
                                     );
