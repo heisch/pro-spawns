@@ -9,6 +9,34 @@ const POKEMON_DATA = require('../resources/json/pokemon_data');
 
 class SpawnTable extends Component {
 
+    numberOfColumnsForType(type) {
+        const showColumns = this.props.settings.showColumns;
+        let columns = 2;
+
+        switch (type) {
+            case 'water':
+                columns++; // rod
+            /* eslint-disable-next-line no-fallthrough */
+            case 'land':
+                columns += showColumns.time_of_day ? 3 : 0;
+                columns += showColumns.repel ? 1 : 0;
+            /* eslint-disable-next-line no-fallthrough */
+            default:
+                [
+                    "id",
+                    "tier",
+                    "ms",
+                    "levels",
+                    "item",
+                    "ev",
+                ].forEach(column => {
+                    columns += showColumns[column] ? 1 : 0;
+                });
+        }
+
+        return columns;
+    }
+
     render() {
         const data = this.props.data;
         const type = this.props.type;
@@ -23,7 +51,6 @@ class SpawnTable extends Component {
 
         const showColumns = this.props.settings.showColumns;
 
-        const numberOfColumns = 2 + Object.values(showColumns).reduce((sum, v) => sum + (v ? 1 : 0));
         const pageSize = this.props.settings.resultsPerPage;
         const currentPage = this.props.pagination[type];
 
@@ -66,7 +93,7 @@ class SpawnTable extends Component {
                 {data.length > pageSize &&
                 <Table.Footer>
                     <Table.Row>
-                        <Table.HeaderCell colSpan={numberOfColumns}>
+                        <Table.HeaderCell colSpan={this.numberOfColumnsForType(type)}>
                             <Pagination
                                 defaultActivePage={this.props.pagination[type]}
                                 totalPages={Math.ceil(data.length / pageSize)}
