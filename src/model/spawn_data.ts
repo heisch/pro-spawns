@@ -53,6 +53,7 @@ export type CombinedCsvSpawnDataType = csv_land_spawn_data | csv_water_spawn_dat
 export interface common_spawn_data {
     [key: string]: any
     _sortArea: string
+    uniqueId: string
     area: string
     membershipExclusive: boolean
     pokemon: string

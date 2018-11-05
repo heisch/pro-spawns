@@ -16,10 +16,15 @@ import {Action, Dispatch} from "redux";
 import {getSettings} from "../selectors/settings";
 import {SettingsModel} from "../model/settingsModel";
 import {toggleFindPokemonSynonyms} from "../actions/settings";
+import {getFilteredSourceData, getSpawnSourceData} from "../selectors/spawn_data";
+import {spawnDataParser, SpawnSourceData} from "../providers/spawnDataParser";
+import {CombinedSpawnDataType, SpawnType} from "../model/spawn_data";
+import {setRepelTrickData, setSpawnDataForType} from "../actions/spawn_data";
 
 interface AppProps {
     filter: FilterValues,
     settings: SettingsModel,
+    spawnSourceData: SpawnSourceData
     toggleFindPokemonSynonyms: () => void
     setFilterPokemon: (pokemon: any | string) => void
 }
@@ -69,6 +74,10 @@ class App extends React.Component<AppProps, AppState> {
                     </Form>
                 </Segment>
 
+                {this.props.spawnSourceData.land.slice(0,5).map((entry: CombinedSpawnDataType) => {
+                    return <div key={entry.uniqueId}>{entry.pokemon}</div>
+                })}
+
                 <QuickList/>
             </Container>
         );
@@ -77,13 +86,27 @@ class App extends React.Component<AppProps, AppState> {
 
 const mapStateToProps = (state: ApplicationState) => ({
     settings: getSettings(state),
-    filter: getFilter(state)
+    filter: getFilter(state),
+    spawnSourceData: getFilteredSourceData(state),
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) => ({
-    toggleFindPokemonSynonyms: () => dispatch(toggleFindPokemonSynonyms()),
-    setFilterPokemon: (pokemon: string) => dispatch(setFilterPokemon(pokemon))
-});
+const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) => {
+    const dataParser = new spawnDataParser();
+
+    dataParser.getSourceData().then(results => {
+        const {sourceData, repelTrickData} = results;
+
+        dispatch(setSpawnDataForType(SpawnType.land, sourceData.land));
+        dispatch(setSpawnDataForType(SpawnType.water, sourceData.water));
+        dispatch(setSpawnDataForType(SpawnType.headbutt, sourceData.headbutt));
+        console.log(repelTrickData);
+        dispatch(setRepelTrickData(repelTrickData));
+    });
+
+    return {
+        toggleFindPokemonSynonyms: () => dispatch(toggleFindPokemonSynonyms()),
+        setFilterPokemon: (pokemon: string) => dispatch(setFilterPokemon(pokemon)),
+    }};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
 

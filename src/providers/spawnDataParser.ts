@@ -3,7 +3,7 @@ import {ParseResult} from "papaparse";
 import _ from "lodash";
 import {CombinedCsvSpawnDataType, CombinedSpawnDataType, SpawnType} from "../model/spawn_data";
 
-interface SpawnDataParseResult extends ParseResult {
+interface SpawnDataPapaParseResult extends ParseResult {
     data: Array<CombinedCsvSpawnDataType>
 }
 
@@ -11,9 +11,19 @@ type string_indexed_array = {
     [key: string]: number
 }
 
-
-type RepelTrickDataType = {
+export type RepelTrickDataType = {
     [key: string]: any
+}
+
+export interface SpawnSourceData {
+    land: CombinedSpawnDataType[],
+    water: CombinedSpawnDataType[],
+    headbutt: CombinedSpawnDataType[]
+}
+
+export interface SpawnDataParserResult {
+    sourceData: SpawnSourceData
+    repelTrickData: RepelTrickDataType
 }
 
 export class spawnDataParser {
@@ -37,8 +47,8 @@ export class spawnDataParser {
             require('../resources/csv/HeadbuttSpawnData.csv'),
         ];
 
-        return new Promise((resolve) => {
-            Promise.all(csv_files.map(file => new Promise<SpawnDataParseResult>((papa_resolve, papa_reject) => {
+        return new Promise((resolve: (result: SpawnDataParserResult) => void) => {
+            Promise.all(csv_files.map(file => new Promise<SpawnDataPapaParseResult>((papa_resolve, papa_reject) => {
                 Papa.parse(file, {
                     header: true,
                     download: true,
@@ -104,10 +114,10 @@ export class spawnDataParser {
             if (!this.repelTrickData.hasOwnProperty(repelId)) {
                 this.repelTrickData[repelId] = {};
             }
-            if (!this.repelTrickData[repelId].hasOwnProperty(data.max)) {
-                this.repelTrickData[repelId][data.max] = 0;
+            if (!this.repelTrickData[repelId].hasOwnProperty(spawnData.max)) {
+                this.repelTrickData[repelId][spawnData.max] = 0;
             }
-            this.repelTrickData[repelId][data.max]++;
+            this.repelTrickData[repelId][spawnData.max]++;
         }
 
         return spawnData;
