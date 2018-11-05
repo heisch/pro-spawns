@@ -11,7 +11,7 @@ export interface DisplayInformationSettings {
     ev: boolean
 }
 
-export interface Settings {
+export interface SettingsModel {
     find_pokemon_synonyms: boolean
     results_per_page: number
     display_information: DisplayInformationSettings

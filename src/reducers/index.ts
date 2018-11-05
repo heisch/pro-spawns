@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux'
 import * as fromSettings from '../reducers/settings'
 import * as fromQuickList from '../reducers/quick_list'
+import * as fromFilter from '../reducers/filter'
 
 /*
  * This is the root state of the app
@@ -9,6 +10,7 @@ import * as fromQuickList from '../reducers/quick_list'
 export interface ApplicationState {
     settings: fromSettings.SettingsState,
     quick_list: fromQuickList.QuickListState,
+    filter: fromFilter.FilterState
 }
 
 /*
@@ -16,7 +18,8 @@ export interface ApplicationState {
  */
 export const initialState: ApplicationState = {
     settings: fromSettings.initialState,
-    quick_list: fromQuickList.initialState
+    quick_list: fromQuickList.initialState,
+    filter: fromFilter.initialState
 };
 
 /*
@@ -25,5 +28,6 @@ export const initialState: ApplicationState = {
  */
 export const reducer = combineReducers<ApplicationState>({
     settings: fromSettings.reducer,
-    quick_list: fromQuickList.reducer
+    quick_list: fromQuickList.reducer,
+    filter: fromFilter.reducer
 });

@@ -14,4 +14,4 @@ export function setFilterPokemon(pokemon: string) {
     return {type: FilterActionTypes.SET_FILTER_POKEMON, pokemon: pokemon}
 }
 
-export type FilterActions = SetFilterPokemonAction
+export type FilterAction = SetFilterPokemonAction

@@ -52,7 +52,6 @@ export const initialState: QuickListState = {
 };
 
 export function reducer(state: QuickListState = initialState, action: QuickListAction) {
-    console.log(action.type);
     switch (action.type) {
         case QuickListActionTypes.ADD_TO_LIST:
             return _.find(state.quick_list, {id: action.entry.id}) !== undefined

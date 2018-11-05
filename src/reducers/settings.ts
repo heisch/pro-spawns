@@ -1,9 +1,9 @@
 // Define our State interface for the current reducer
-import {Settings} from "../model/settings";
+import {SettingsModel} from "../model/settingsModel";
 import {SettingsAction, SettingsActionTypes} from "../actions/settings";
 
 export interface SettingsState {
-    settings: Settings
+    settings: SettingsModel
 }
 
 // Define our initialState

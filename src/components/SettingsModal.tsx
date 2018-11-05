@@ -1,11 +1,10 @@
 import React from "react";
 import {Button, Checkbox, Form, Modal} from "semantic-ui-react";
 import _ from "lodash";
-import {Settings} from "../model/settings";
+import {SettingsModel} from "../model/settingsModel";
 
 interface SettingsModalProps {
-    settings: Settings
-    toggleFindPokemonSynonyms: () => void
+    settings: SettingsModel
     setResultsPerPage: (results_per_page: number) => void
     toggleDisplayInformation: (key: string) => void
 }
