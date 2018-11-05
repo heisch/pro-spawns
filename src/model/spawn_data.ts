@@ -1,18 +1,18 @@
 export enum Rod {
-    'OLD',
-    'GOOD',
-    'SUPER'
+    Old = 'Old',
+    Good = 'Good',
+    Super = 'Super'
 }
 
 export enum WaterSpawnLocation {
-    'Surfing',
-    'Fishing'
+    Surfing = 'Surfing',
+    Fishing = 'Fishing'
 }
 
 export enum SpawnType {
-    'land',
-    'water',
-    'headbutt'
+    land = 'land',
+    water = 'water',
+    headbutt = 'headbutt'
 }
 
 export interface csv_common_spawn_data {
@@ -48,6 +48,8 @@ export interface csv_headbutt_spawn_data extends csv_common_spawn_data {
 
 }
 
+export type CombinedCsvSpawnDataType = csv_land_spawn_data | csv_water_spawn_data | csv_headbutt_spawn_data
+
 export interface common_spawn_data {
     [key: string]: any
     _sortArea: string
@@ -80,3 +82,5 @@ export interface water_spawn_data extends time_based_spawn_data {
 export interface headbutt_spawn_data extends common_spawn_data {
 
 }
+
+export type CombinedSpawnDataType = land_spawn_data | water_spawn_data | headbutt_spawn_data;

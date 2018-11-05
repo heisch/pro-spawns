@@ -1,19 +1,10 @@
 import * as Papa from "papaparse";
 import {ParseResult} from "papaparse";
 import _ from "lodash";
-import {
-    csv_common_spawn_data,
-    csv_headbutt_spawn_data,
-    csv_land_spawn_data,
-    csv_water_spawn_data,
-    headbutt_spawn_data,
-    land_spawn_data,
-    SpawnType,
-    water_spawn_data
-} from "../model/spawn_data";
+import {CombinedCsvSpawnDataType, CombinedSpawnDataType, SpawnType} from "../model/spawn_data";
 
 interface SpawnDataParseResult extends ParseResult {
-    data: Array<csv_land_spawn_data | csv_water_spawn_data | csv_common_spawn_data>
+    data: Array<CombinedCsvSpawnDataType>
 }
 
 type string_indexed_array = {
@@ -71,9 +62,9 @@ export class spawnDataParser {
 
     }
 
-    _dataParser(data: csv_land_spawn_data | csv_water_spawn_data | csv_headbutt_spawn_data, type: SpawnType): land_spawn_data | water_spawn_data | headbutt_spawn_data {
+    _dataParser(data: CombinedCsvSpawnDataType, type: SpawnType): CombinedSpawnDataType {
 
-        const spawnData:land_spawn_data | water_spawn_data | headbutt_spawn_data = {
+        const spawnData:CombinedSpawnDataType = {
             uniqueId :_.uniqueId(),
             pokemon: data.pokemon,
             pokedexNumber: data.pokedexNumber.padStart(3, '0'),
