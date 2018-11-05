@@ -1,0 +1,2444 @@
+.pokedex-sprite {
+    display: inline-block;
+    /*width: 40px; !* original size *!*/
+    /*height: 30px; !* original size *!*/
+
+    /*width: 20px;!* half size *!*/
+    /*height: 15px;!* half size *!*/
+    /*background-size: 240px;!* half size *!*/
+
+    width: 24px;/* 2/5th size */
+    height: 18px;/* 2/5th size */
+    background-size: 288px;/* 2/5th size */
+
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url("https://play.pokemonshowdown.com/sprites/smicons-sheet.png");
+
+    vertical-align: text-bottom;
+}
+.pokedex-sprite-000 {
+    background-position: 0 0;
+}
+.pokedex-sprite-001 {
+    background-position: -24px 0;
+}
+.pokedex-sprite-002 {
+    background-position: -48px 0;
+}
+.pokedex-sprite-003 {
+    background-position: -72px 0;
+}
+.pokedex-sprite-004 {
+    background-position: -96px 0;
+}
+.pokedex-sprite-005 {
+    background-position: -120px 0;
+}
+.pokedex-sprite-006 {
+    background-position: -144px 0;
+}
+.pokedex-sprite-007 {
+    background-position: -168px 0;
+}
+.pokedex-sprite-008 {
+    background-position: -192px 0;
+}
+.pokedex-sprite-009 {
+    background-position: -216px 0;
+}
+.pokedex-sprite-010 {
+    background-position: -240px 0;
+}
+.pokedex-sprite-011 {
+    background-position: -264px 0;
+}
+.pokedex-sprite-012 {
+    background-position: 0 -18px;
+}
+.pokedex-sprite-013 {
+    background-position: -24px -18px;
+}
+.pokedex-sprite-014 {
+    background-position: -48px -18px;
+}
+.pokedex-sprite-015 {
+    background-position: -72px -18px;
+}
+.pokedex-sprite-016 {
+    background-position: -96px -18px;
+}
+.pokedex-sprite-017 {
+    background-position: -120px -18px;
+}
+.pokedex-sprite-018 {
+    background-position: -144px -18px;
+}
+.pokedex-sprite-019 {
+    background-position: -168px -18px;
+}
+.pokedex-sprite-020 {
+    background-position: -192px -18px;
+}
+.pokedex-sprite-021 {
+    background-position: -216px -18px;
+}
+.pokedex-sprite-022 {
+    background-position: -240px -18px;
+}
+.pokedex-sprite-023 {
+    background-position: -264px -18px;
+}
+.pokedex-sprite-024 {
+    background-position: 0 -36px;
+}
+.pokedex-sprite-025 {
+    background-position: -24px -36px;
+}
+.pokedex-sprite-026 {
+    background-position: -48px -36px;
+}
+.pokedex-sprite-027 {
+    background-position: -72px -36px;
+}
+.pokedex-sprite-028 {
+    background-position: -96px -36px;
+}
+.pokedex-sprite-029 {
+    background-position: -120px -36px;
+}
+.pokedex-sprite-030 {
+    background-position: -144px -36px;
+}
+.pokedex-sprite-031 {
+    background-position: -168px -36px;
+}
+.pokedex-sprite-032 {
+    background-position: -192px -36px;
+}
+.pokedex-sprite-033 {
+    background-position: -216px -36px;
+}
+.pokedex-sprite-034 {
+    background-position: -240px -36px;
+}
+.pokedex-sprite-035 {
+    background-position: -264px -36px;
+}
+.pokedex-sprite-036 {
+    background-position: 0 -54px;
+}
+.pokedex-sprite-037 {
+    background-position: -24px -54px;
+}
+.pokedex-sprite-038 {
+    background-position: -48px -54px;
+}
+.pokedex-sprite-039 {
+    background-position: -72px -54px;
+}
+.pokedex-sprite-040 {
+    background-position: -96px -54px;
+}
+.pokedex-sprite-041 {
+    background-position: -120px -54px;
+}
+.pokedex-sprite-042 {
+    background-position: -144px -54px;
+}
+.pokedex-sprite-043 {
+    background-position: -168px -54px;
+}
+.pokedex-sprite-044 {
+    background-position: -192px -54px;
+}
+.pokedex-sprite-045 {
+    background-position: -216px -54px;
+}
+.pokedex-sprite-046 {
+    background-position: -240px -54px;
+}
+.pokedex-sprite-047 {
+    background-position: -264px -54px;
+}
+.pokedex-sprite-048 {
+    background-position: 0 -72px;
+}
+.pokedex-sprite-049 {
+    background-position: -24px -72px;
+}
+.pokedex-sprite-050 {
+    background-position: -48px -72px;
+}
+.pokedex-sprite-051 {
+    background-position: -72px -72px;
+}
+.pokedex-sprite-052 {
+    background-position: -96px -72px;
+}
+.pokedex-sprite-053 {
+    background-position: -120px -72px;
+}
+.pokedex-sprite-054 {
+    background-position: -144px -72px;
+}
+.pokedex-sprite-055 {
+    background-position: -168px -72px;
+}
+.pokedex-sprite-056 {
+    background-position: -192px -72px;
+}
+.pokedex-sprite-057 {
+    background-position: -216px -72px;
+}
+.pokedex-sprite-058 {
+    background-position: -240px -72px;
+}
+.pokedex-sprite-059 {
+    background-position: -264px -72px;
+}
+.pokedex-sprite-060 {
+    background-position: 0 -90px;
+}
+.pokedex-sprite-061 {
+    background-position: -24px -90px;
+}
+.pokedex-sprite-062 {
+    background-position: -48px -90px;
+}
+.pokedex-sprite-063 {
+    background-position: -72px -90px;
+}
+.pokedex-sprite-064 {
+    background-position: -96px -90px;
+}
+.pokedex-sprite-065 {
+    background-position: -120px -90px;
+}
+.pokedex-sprite-066 {
+    background-position: -144px -90px;
+}
+.pokedex-sprite-067 {
+    background-position: -168px -90px;
+}
+.pokedex-sprite-068 {
+    background-position: -192px -90px;
+}
+.pokedex-sprite-069 {
+    background-position: -216px -90px;
+}
+.pokedex-sprite-070 {
+    background-position: -240px -90px;
+}
+.pokedex-sprite-071 {
+    background-position: -264px -90px;
+}
+.pokedex-sprite-072 {
+    background-position: 0 -108px;
+}
+.pokedex-sprite-073 {
+    background-position: -24px -108px;
+}
+.pokedex-sprite-074 {
+    background-position: -48px -108px;
+}
+.pokedex-sprite-075 {
+    background-position: -72px -108px;
+}
+.pokedex-sprite-076 {
+    background-position: -96px -108px;
+}
+.pokedex-sprite-077 {
+    background-position: -120px -108px;
+}
+.pokedex-sprite-078 {
+    background-position: -144px -108px;
+}
+.pokedex-sprite-079 {
+    background-position: -168px -108px;
+}
+.pokedex-sprite-080 {
+    background-position: -192px -108px;
+}
+.pokedex-sprite-081 {
+    background-position: -216px -108px;
+}
+.pokedex-sprite-082 {
+    background-position: -240px -108px;
+}
+.pokedex-sprite-083 {
+    background-position: -264px -108px;
+}
+.pokedex-sprite-084 {
+    background-position: 0 -126px;
+}
+.pokedex-sprite-085 {
+    background-position: -24px -126px;
+}
+.pokedex-sprite-086 {
+    background-position: -48px -126px;
+}
+.pokedex-sprite-087 {
+    background-position: -72px -126px;
+}
+.pokedex-sprite-088 {
+    background-position: -96px -126px;
+}
+.pokedex-sprite-089 {
+    background-position: -120px -126px;
+}
+.pokedex-sprite-090 {
+    background-position: -144px -126px;
+}
+.pokedex-sprite-091 {
+    background-position: -168px -126px;
+}
+.pokedex-sprite-092 {
+    background-position: -192px -126px;
+}
+.pokedex-sprite-093 {
+    background-position: -216px -126px;
+}
+.pokedex-sprite-094 {
+    background-position: -240px -126px;
+}
+.pokedex-sprite-095 {
+    background-position: -264px -126px;
+}
+.pokedex-sprite-096 {
+    background-position: 0 -144px;
+}
+.pokedex-sprite-097 {
+    background-position: -24px -144px;
+}
+.pokedex-sprite-098 {
+    background-position: -48px -144px;
+}
+.pokedex-sprite-099 {
+    background-position: -72px -144px;
+}
+.pokedex-sprite-100 {
+    background-position: -96px -144px;
+}
+.pokedex-sprite-101 {
+    background-position: -120px -144px;
+}
+.pokedex-sprite-102 {
+    background-position: -144px -144px;
+}
+.pokedex-sprite-103 {
+    background-position: -168px -144px;
+}
+.pokedex-sprite-104 {
+    background-position: -192px -144px;
+}
+.pokedex-sprite-105 {
+    background-position: -216px -144px;
+}
+.pokedex-sprite-106 {
+    background-position: -240px -144px;
+}
+.pokedex-sprite-107 {
+    background-position: -264px -144px;
+}
+.pokedex-sprite-108 {
+    background-position: 0 -162px;
+}
+.pokedex-sprite-109 {
+    background-position: -24px -162px;
+}
+.pokedex-sprite-110 {
+    background-position: -48px -162px;
+}
+.pokedex-sprite-111 {
+    background-position: -72px -162px;
+}
+.pokedex-sprite-112 {
+    background-position: -96px -162px;
+}
+.pokedex-sprite-113 {
+    background-position: -120px -162px;
+}
+.pokedex-sprite-114 {
+    background-position: -144px -162px;
+}
+.pokedex-sprite-115 {
+    background-position: -168px -162px;
+}
+.pokedex-sprite-116 {
+    background-position: -192px -162px;
+}
+.pokedex-sprite-117 {
+    background-position: -216px -162px;
+}
+.pokedex-sprite-118 {
+    background-position: -240px -162px;
+}
+.pokedex-sprite-119 {
+    background-position: -264px -162px;
+}
+.pokedex-sprite-120 {
+    background-position: 0 -180px;
+}
+.pokedex-sprite-121 {
+    background-position: -24px -180px;
+}
+.pokedex-sprite-122 {
+    background-position: -48px -180px;
+}
+.pokedex-sprite-123 {
+    background-position: -72px -180px;
+}
+.pokedex-sprite-124 {
+    background-position: -96px -180px;
+}
+.pokedex-sprite-125 {
+    background-position: -120px -180px;
+}
+.pokedex-sprite-126 {
+    background-position: -144px -180px;
+}
+.pokedex-sprite-127 {
+    background-position: -168px -180px;
+}
+.pokedex-sprite-128 {
+    background-position: -192px -180px;
+}
+.pokedex-sprite-129 {
+    background-position: -216px -180px;
+}
+.pokedex-sprite-130 {
+    background-position: -240px -180px;
+}
+.pokedex-sprite-131 {
+    background-position: -264px -180px;
+}
+.pokedex-sprite-132 {
+    background-position: 0 -198px;
+}
+.pokedex-sprite-133 {
+    background-position: -24px -198px;
+}
+.pokedex-sprite-134 {
+    background-position: -48px -198px;
+}
+.pokedex-sprite-135 {
+    background-position: -72px -198px;
+}
+.pokedex-sprite-136 {
+    background-position: -96px -198px;
+}
+.pokedex-sprite-137 {
+    background-position: -120px -198px;
+}
+.pokedex-sprite-138 {
+    background-position: -144px -198px;
+}
+.pokedex-sprite-139 {
+    background-position: -168px -198px;
+}
+.pokedex-sprite-140 {
+    background-position: -192px -198px;
+}
+.pokedex-sprite-141 {
+    background-position: -216px -198px;
+}
+.pokedex-sprite-142 {
+    background-position: -240px -198px;
+}
+.pokedex-sprite-143 {
+    background-position: -264px -198px;
+}
+.pokedex-sprite-144 {
+    background-position: 0 -216px;
+}
+.pokedex-sprite-145 {
+    background-position: -24px -216px;
+}
+.pokedex-sprite-146 {
+    background-position: -48px -216px;
+}
+.pokedex-sprite-147 {
+    background-position: -72px -216px;
+}
+.pokedex-sprite-148 {
+    background-position: -96px -216px;
+}
+.pokedex-sprite-149 {
+    background-position: -120px -216px;
+}
+.pokedex-sprite-150 {
+    background-position: -144px -216px;
+}
+.pokedex-sprite-151 {
+    background-position: -168px -216px;
+}
+.pokedex-sprite-152 {
+    background-position: -192px -216px;
+}
+.pokedex-sprite-153 {
+    background-position: -216px -216px;
+}
+.pokedex-sprite-154 {
+    background-position: -240px -216px;
+}
+.pokedex-sprite-155 {
+    background-position: -264px -216px;
+}
+.pokedex-sprite-156 {
+    background-position: 0 -234px;
+}
+.pokedex-sprite-157 {
+    background-position: -24px -234px;
+}
+.pokedex-sprite-158 {
+    background-position: -48px -234px;
+}
+.pokedex-sprite-159 {
+    background-position: -72px -234px;
+}
+.pokedex-sprite-160 {
+    background-position: -96px -234px;
+}
+.pokedex-sprite-161 {
+    background-position: -120px -234px;
+}
+.pokedex-sprite-162 {
+    background-position: -144px -234px;
+}
+.pokedex-sprite-163 {
+    background-position: -168px -234px;
+}
+.pokedex-sprite-164 {
+    background-position: -192px -234px;
+}
+.pokedex-sprite-165 {
+    background-position: -216px -234px;
+}
+.pokedex-sprite-166 {
+    background-position: -240px -234px;
+}
+.pokedex-sprite-167 {
+    background-position: -264px -234px;
+}
+.pokedex-sprite-168 {
+    background-position: 0 -252px;
+}
+.pokedex-sprite-169 {
+    background-position: -24px -252px;
+}
+.pokedex-sprite-170 {
+    background-position: -48px -252px;
+}
+.pokedex-sprite-171 {
+    background-position: -72px -252px;
+}
+.pokedex-sprite-172 {
+    background-position: -96px -252px;
+}
+.pokedex-sprite-173 {
+    background-position: -120px -252px;
+}
+.pokedex-sprite-174 {
+    background-position: -144px -252px;
+}
+.pokedex-sprite-175 {
+    background-position: -168px -252px;
+}
+.pokedex-sprite-176 {
+    background-position: -192px -252px;
+}
+.pokedex-sprite-177 {
+    background-position: -216px -252px;
+}
+.pokedex-sprite-178 {
+    background-position: -240px -252px;
+}
+.pokedex-sprite-179 {
+    background-position: -264px -252px;
+}
+.pokedex-sprite-180 {
+    background-position: 0 -270px;
+}
+.pokedex-sprite-181 {
+    background-position: -24px -270px;
+}
+.pokedex-sprite-182 {
+    background-position: -48px -270px;
+}
+.pokedex-sprite-183 {
+    background-position: -72px -270px;
+}
+.pokedex-sprite-184 {
+    background-position: -96px -270px;
+}
+.pokedex-sprite-185 {
+    background-position: -120px -270px;
+}
+.pokedex-sprite-186 {
+    background-position: -144px -270px;
+}
+.pokedex-sprite-187 {
+    background-position: -168px -270px;
+}
+.pokedex-sprite-188 {
+    background-position: -192px -270px;
+}
+.pokedex-sprite-189 {
+    background-position: -216px -270px;
+}
+.pokedex-sprite-190 {
+    background-position: -240px -270px;
+}
+.pokedex-sprite-191 {
+    background-position: -264px -270px;
+}
+.pokedex-sprite-192 {
+    background-position: 0 -288px;
+}
+.pokedex-sprite-193 {
+    background-position: -24px -288px;
+}
+.pokedex-sprite-194 {
+    background-position: -48px -288px;
+}
+.pokedex-sprite-195 {
+    background-position: -72px -288px;
+}
+.pokedex-sprite-196 {
+    background-position: -96px -288px;
+}
+.pokedex-sprite-197 {
+    background-position: -120px -288px;
+}
+.pokedex-sprite-198 {
+    background-position: -144px -288px;
+}
+.pokedex-sprite-199 {
+    background-position: -168px -288px;
+}
+.pokedex-sprite-200 {
+    background-position: -192px -288px;
+}
+.pokedex-sprite-201 {
+    background-position: -216px -288px;
+}
+.pokedex-sprite-202 {
+    background-position: -240px -288px;
+}
+.pokedex-sprite-203 {
+    background-position: -264px -288px;
+}
+.pokedex-sprite-204 {
+    background-position: 0 -306px;
+}
+.pokedex-sprite-205 {
+    background-position: -24px -306px;
+}
+.pokedex-sprite-206 {
+    background-position: -48px -306px;
+}
+.pokedex-sprite-207 {
+    background-position: -72px -306px;
+}
+.pokedex-sprite-208 {
+    background-position: -96px -306px;
+}
+.pokedex-sprite-209 {
+    background-position: -120px -306px;
+}
+.pokedex-sprite-210 {
+    background-position: -144px -306px;
+}
+.pokedex-sprite-211 {
+    background-position: -168px -306px;
+}
+.pokedex-sprite-212 {
+    background-position: -192px -306px;
+}
+.pokedex-sprite-213 {
+    background-position: -216px -306px;
+}
+.pokedex-sprite-214 {
+    background-position: -240px -306px;
+}
+.pokedex-sprite-215 {
+    background-position: -264px -306px;
+}
+.pokedex-sprite-216 {
+    background-position: 0 -324px;
+}
+.pokedex-sprite-217 {
+    background-position: -24px -324px;
+}
+.pokedex-sprite-218 {
+    background-position: -48px -324px;
+}
+.pokedex-sprite-219 {
+    background-position: -72px -324px;
+}
+.pokedex-sprite-220 {
+    background-position: -96px -324px;
+}
+.pokedex-sprite-221 {
+    background-position: -120px -324px;
+}
+.pokedex-sprite-222 {
+    background-position: -144px -324px;
+}
+.pokedex-sprite-223 {
+    background-position: -168px -324px;
+}
+.pokedex-sprite-224 {
+    background-position: -192px -324px;
+}
+.pokedex-sprite-225 {
+    background-position: -216px -324px;
+}
+.pokedex-sprite-226 {
+    background-position: -240px -324px;
+}
+.pokedex-sprite-227 {
+    background-position: -264px -324px;
+}
+.pokedex-sprite-228 {
+    background-position: 0 -342px;
+}
+.pokedex-sprite-229 {
+    background-position: -24px -342px;
+}
+.pokedex-sprite-230 {
+    background-position: -48px -342px;
+}
+.pokedex-sprite-231 {
+    background-position: -72px -342px;
+}
+.pokedex-sprite-232 {
+    background-position: -96px -342px;
+}
+.pokedex-sprite-233 {
+    background-position: -120px -342px;
+}
+.pokedex-sprite-234 {
+    background-position: -144px -342px;
+}
+.pokedex-sprite-235 {
+    background-position: -168px -342px;
+}
+.pokedex-sprite-236 {
+    background-position: -192px -342px;
+}
+.pokedex-sprite-237 {
+    background-position: -216px -342px;
+}
+.pokedex-sprite-238 {
+    background-position: -240px -342px;
+}
+.pokedex-sprite-239 {
+    background-position: -264px -342px;
+}
+.pokedex-sprite-240 {
+    background-position: 0 -360px;
+}
+.pokedex-sprite-241 {
+    background-position: -24px -360px;
+}
+.pokedex-sprite-242 {
+    background-position: -48px -360px;
+}
+.pokedex-sprite-243 {
+    background-position: -72px -360px;
+}
+.pokedex-sprite-244 {
+    background-position: -96px -360px;
+}
+.pokedex-sprite-245 {
+    background-position: -120px -360px;
+}
+.pokedex-sprite-246 {
+    background-position: -144px -360px;
+}
+.pokedex-sprite-247 {
+    background-position: -168px -360px;
+}
+.pokedex-sprite-248 {
+    background-position: -192px -360px;
+}
+.pokedex-sprite-249 {
+    background-position: -216px -360px;
+}
+.pokedex-sprite-250 {
+    background-position: -240px -360px;
+}
+.pokedex-sprite-251 {
+    background-position: -264px -360px;
+}
+.pokedex-sprite-252 {
+    background-position: 0 -378px;
+}
+.pokedex-sprite-253 {
+    background-position: -24px -378px;
+}
+.pokedex-sprite-254 {
+    background-position: -48px -378px;
+}
+.pokedex-sprite-255 {
+    background-position: -72px -378px;
+}
+.pokedex-sprite-256 {
+    background-position: -96px -378px;
+}
+.pokedex-sprite-257 {
+    background-position: -120px -378px;
+}
+.pokedex-sprite-258 {
+    background-position: -144px -378px;
+}
+.pokedex-sprite-259 {
+    background-position: -168px -378px;
+}
+.pokedex-sprite-260 {
+    background-position: -192px -378px;
+}
+.pokedex-sprite-261 {
+    background-position: -216px -378px;
+}
+.pokedex-sprite-262 {
+    background-position: -240px -378px;
+}
+.pokedex-sprite-263 {
+    background-position: -264px -378px;
+}
+.pokedex-sprite-264 {
+    background-position: 0 -396px;
+}
+.pokedex-sprite-265 {
+    background-position: -24px -396px;
+}
+.pokedex-sprite-266 {
+    background-position: -48px -396px;
+}
+.pokedex-sprite-267 {
+    background-position: -72px -396px;
+}
+.pokedex-sprite-268 {
+    background-position: -96px -396px;
+}
+.pokedex-sprite-269 {
+    background-position: -120px -396px;
+}
+.pokedex-sprite-270 {
+    background-position: -144px -396px;
+}
+.pokedex-sprite-271 {
+    background-position: -168px -396px;
+}
+.pokedex-sprite-272 {
+    background-position: -192px -396px;
+}
+.pokedex-sprite-273 {
+    background-position: -216px -396px;
+}
+.pokedex-sprite-274 {
+    background-position: -240px -396px;
+}
+.pokedex-sprite-275 {
+    background-position: -264px -396px;
+}
+.pokedex-sprite-276 {
+    background-position: 0 -414px;
+}
+.pokedex-sprite-277 {
+    background-position: -24px -414px;
+}
+.pokedex-sprite-278 {
+    background-position: -48px -414px;
+}
+.pokedex-sprite-279 {
+    background-position: -72px -414px;
+}
+.pokedex-sprite-280 {
+    background-position: -96px -414px;
+}
+.pokedex-sprite-281 {
+    background-position: -120px -414px;
+}
+.pokedex-sprite-282 {
+    background-position: -144px -414px;
+}
+.pokedex-sprite-283 {
+    background-position: -168px -414px;
+}
+.pokedex-sprite-284 {
+    background-position: -192px -414px;
+}
+.pokedex-sprite-285 {
+    background-position: -216px -414px;
+}
+.pokedex-sprite-286 {
+    background-position: -240px -414px;
+}
+.pokedex-sprite-287 {
+    background-position: -264px -414px;
+}
+.pokedex-sprite-288 {
+    background-position: 0 -432px;
+}
+.pokedex-sprite-289 {
+    background-position: -24px -432px;
+}
+.pokedex-sprite-290 {
+    background-position: -48px -432px;
+}
+.pokedex-sprite-291 {
+    background-position: -72px -432px;
+}
+.pokedex-sprite-292 {
+    background-position: -96px -432px;
+}
+.pokedex-sprite-293 {
+    background-position: -120px -432px;
+}
+.pokedex-sprite-294 {
+    background-position: -144px -432px;
+}
+.pokedex-sprite-295 {
+    background-position: -168px -432px;
+}
+.pokedex-sprite-296 {
+    background-position: -192px -432px;
+}
+.pokedex-sprite-297 {
+    background-position: -216px -432px;
+}
+.pokedex-sprite-298 {
+    background-position: -240px -432px;
+}
+.pokedex-sprite-299 {
+    background-position: -264px -432px;
+}
+.pokedex-sprite-300 {
+    background-position: 0 -450px;
+}
+.pokedex-sprite-301 {
+    background-position: -24px -450px;
+}
+.pokedex-sprite-302 {
+    background-position: -48px -450px;
+}
+.pokedex-sprite-303 {
+    background-position: -72px -450px;
+}
+.pokedex-sprite-304 {
+    background-position: -96px -450px;
+}
+.pokedex-sprite-305 {
+    background-position: -120px -450px;
+}
+.pokedex-sprite-306 {
+    background-position: -144px -450px;
+}
+.pokedex-sprite-307 {
+    background-position: -168px -450px;
+}
+.pokedex-sprite-308 {
+    background-position: -192px -450px;
+}
+.pokedex-sprite-309 {
+    background-position: -216px -450px;
+}
+.pokedex-sprite-310 {
+    background-position: -240px -450px;
+}
+.pokedex-sprite-311 {
+    background-position: -264px -450px;
+}
+.pokedex-sprite-312 {
+    background-position: 0 -468px;
+}
+.pokedex-sprite-313 {
+    background-position: -24px -468px;
+}
+.pokedex-sprite-314 {
+    background-position: -48px -468px;
+}
+.pokedex-sprite-315 {
+    background-position: -72px -468px;
+}
+.pokedex-sprite-316 {
+    background-position: -96px -468px;
+}
+.pokedex-sprite-317 {
+    background-position: -120px -468px;
+}
+.pokedex-sprite-318 {
+    background-position: -144px -468px;
+}
+.pokedex-sprite-319 {
+    background-position: -168px -468px;
+}
+.pokedex-sprite-320 {
+    background-position: -192px -468px;
+}
+.pokedex-sprite-321 {
+    background-position: -216px -468px;
+}
+.pokedex-sprite-322 {
+    background-position: -240px -468px;
+}
+.pokedex-sprite-323 {
+    background-position: -264px -468px;
+}
+.pokedex-sprite-324 {
+    background-position: 0 -486px;
+}
+.pokedex-sprite-325 {
+    background-position: -24px -486px;
+}
+.pokedex-sprite-326 {
+    background-position: -48px -486px;
+}
+.pokedex-sprite-327 {
+    background-position: -72px -486px;
+}
+.pokedex-sprite-328 {
+    background-position: -96px -486px;
+}
+.pokedex-sprite-329 {
+    background-position: -120px -486px;
+}
+.pokedex-sprite-330 {
+    background-position: -144px -486px;
+}
+.pokedex-sprite-331 {
+    background-position: -168px -486px;
+}
+.pokedex-sprite-332 {
+    background-position: -192px -486px;
+}
+.pokedex-sprite-333 {
+    background-position: -216px -486px;
+}
+.pokedex-sprite-334 {
+    background-position: -240px -486px;
+}
+.pokedex-sprite-335 {
+    background-position: -264px -486px;
+}
+.pokedex-sprite-336 {
+    background-position: 0 -504px;
+}
+.pokedex-sprite-337 {
+    background-position: -24px -504px;
+}
+.pokedex-sprite-338 {
+    background-position: -48px -504px;
+}
+.pokedex-sprite-339 {
+    background-position: -72px -504px;
+}
+.pokedex-sprite-340 {
+    background-position: -96px -504px;
+}
+.pokedex-sprite-341 {
+    background-position: -120px -504px;
+}
+.pokedex-sprite-342 {
+    background-position: -144px -504px;
+}
+.pokedex-sprite-343 {
+    background-position: -168px -504px;
+}
+.pokedex-sprite-344 {
+    background-position: -192px -504px;
+}
+.pokedex-sprite-345 {
+    background-position: -216px -504px;
+}
+.pokedex-sprite-346 {
+    background-position: -240px -504px;
+}
+.pokedex-sprite-347 {
+    background-position: -264px -504px;
+}
+.pokedex-sprite-348 {
+    background-position: 0 -522px;
+}
+.pokedex-sprite-349 {
+    background-position: -24px -522px;
+}
+.pokedex-sprite-350 {
+    background-position: -48px -522px;
+}
+.pokedex-sprite-351 {
+    background-position: -72px -522px;
+}
+.pokedex-sprite-352 {
+    background-position: -96px -522px;
+}
+.pokedex-sprite-353 {
+    background-position: -120px -522px;
+}
+.pokedex-sprite-354 {
+    background-position: -144px -522px;
+}
+.pokedex-sprite-355 {
+    background-position: -168px -522px;
+}
+.pokedex-sprite-356 {
+    background-position: -192px -522px;
+}
+.pokedex-sprite-357 {
+    background-position: -216px -522px;
+}
+.pokedex-sprite-358 {
+    background-position: -240px -522px;
+}
+.pokedex-sprite-359 {
+    background-position: -264px -522px;
+}
+.pokedex-sprite-360 {
+    background-position: 0 -540px;
+}
+.pokedex-sprite-361 {
+    background-position: -24px -540px;
+}
+.pokedex-sprite-362 {
+    background-position: -48px -540px;
+}
+.pokedex-sprite-363 {
+    background-position: -72px -540px;
+}
+.pokedex-sprite-364 {
+    background-position: -96px -540px;
+}
+.pokedex-sprite-365 {
+    background-position: -120px -540px;
+}
+.pokedex-sprite-366 {
+    background-position: -144px -540px;
+}
+.pokedex-sprite-367 {
+    background-position: -168px -540px;
+}
+.pokedex-sprite-368 {
+    background-position: -192px -540px;
+}
+.pokedex-sprite-369 {
+    background-position: -216px -540px;
+}
+.pokedex-sprite-370 {
+    background-position: -240px -540px;
+}
+.pokedex-sprite-371 {
+    background-position: -264px -540px;
+}
+.pokedex-sprite-372 {
+    background-position: 0 -558px;
+}
+.pokedex-sprite-373 {
+    background-position: -24px -558px;
+}
+.pokedex-sprite-374 {
+    background-position: -48px -558px;
+}
+.pokedex-sprite-375 {
+    background-position: -72px -558px;
+}
+.pokedex-sprite-376 {
+    background-position: -96px -558px;
+}
+.pokedex-sprite-377 {
+    background-position: -120px -558px;
+}
+.pokedex-sprite-378 {
+    background-position: -144px -558px;
+}
+.pokedex-sprite-379 {
+    background-position: -168px -558px;
+}
+.pokedex-sprite-380 {
+    background-position: -192px -558px;
+}
+.pokedex-sprite-381 {
+    background-position: -216px -558px;
+}
+.pokedex-sprite-382 {
+    background-position: -240px -558px;
+}
+.pokedex-sprite-383 {
+    background-position: -264px -558px;
+}
+.pokedex-sprite-384 {
+    background-position: 0 -576px;
+}
+.pokedex-sprite-385 {
+    background-position: -24px -576px;
+}
+.pokedex-sprite-386 {
+    background-position: -48px -576px;
+}
+.pokedex-sprite-387 {
+    background-position: -72px -576px;
+}
+.pokedex-sprite-388 {
+    background-position: -96px -576px;
+}
+.pokedex-sprite-389 {
+    background-position: -120px -576px;
+}
+.pokedex-sprite-390 {
+    background-position: -144px -576px;
+}
+.pokedex-sprite-391 {
+    background-position: -168px -576px;
+}
+.pokedex-sprite-392 {
+    background-position: -192px -576px;
+}
+.pokedex-sprite-393 {
+    background-position: -216px -576px;
+}
+.pokedex-sprite-394 {
+    background-position: -240px -576px;
+}
+.pokedex-sprite-395 {
+    background-position: -264px -576px;
+}
+.pokedex-sprite-396 {
+    background-position: 0 -594px;
+}
+.pokedex-sprite-397 {
+    background-position: -24px -594px;
+}
+.pokedex-sprite-398 {
+    background-position: -48px -594px;
+}
+.pokedex-sprite-399 {
+    background-position: -72px -594px;
+}
+.pokedex-sprite-400 {
+    background-position: -96px -594px;
+}
+.pokedex-sprite-401 {
+    background-position: -120px -594px;
+}
+.pokedex-sprite-402 {
+    background-position: -144px -594px;
+}
+.pokedex-sprite-403 {
+    background-position: -168px -594px;
+}
+.pokedex-sprite-404 {
+    background-position: -192px -594px;
+}
+.pokedex-sprite-405 {
+    background-position: -216px -594px;
+}
+.pokedex-sprite-406 {
+    background-position: -240px -594px;
+}
+.pokedex-sprite-407 {
+    background-position: -264px -594px;
+}
+.pokedex-sprite-408 {
+    background-position: 0 -612px;
+}
+.pokedex-sprite-409 {
+    background-position: -24px -612px;
+}
+.pokedex-sprite-410 {
+    background-position: -48px -612px;
+}
+.pokedex-sprite-411 {
+    background-position: -72px -612px;
+}
+.pokedex-sprite-412 {
+    background-position: -96px -612px;
+}
+.pokedex-sprite-413 {
+    background-position: -120px -612px;
+}
+.pokedex-sprite-414 {
+    background-position: -144px -612px;
+}
+.pokedex-sprite-415 {
+    background-position: -168px -612px;
+}
+.pokedex-sprite-416 {
+    background-position: -192px -612px;
+}
+.pokedex-sprite-417 {
+    background-position: -216px -612px;
+}
+.pokedex-sprite-418 {
+    background-position: -240px -612px;
+}
+.pokedex-sprite-419 {
+    background-position: -264px -612px;
+}
+.pokedex-sprite-420 {
+    background-position: 0 -630px;
+}
+.pokedex-sprite-421 {
+    background-position: -24px -630px;
+}
+.pokedex-sprite-422 {
+    background-position: -48px -630px;
+}
+.pokedex-sprite-423 {
+    background-position: -72px -630px;
+}
+.pokedex-sprite-424 {
+    background-position: -96px -630px;
+}
+.pokedex-sprite-425 {
+    background-position: -120px -630px;
+}
+.pokedex-sprite-426 {
+    background-position: -144px -630px;
+}
+.pokedex-sprite-427 {
+    background-position: -168px -630px;
+}
+.pokedex-sprite-428 {
+    background-position: -192px -630px;
+}
+.pokedex-sprite-429 {
+    background-position: -216px -630px;
+}
+.pokedex-sprite-430 {
+    background-position: -240px -630px;
+}
+.pokedex-sprite-431 {
+    background-position: -264px -630px;
+}
+.pokedex-sprite-432 {
+    background-position: 0 -648px;
+}
+.pokedex-sprite-433 {
+    background-position: -24px -648px;
+}
+.pokedex-sprite-434 {
+    background-position: -48px -648px;
+}
+.pokedex-sprite-435 {
+    background-position: -72px -648px;
+}
+.pokedex-sprite-436 {
+    background-position: -96px -648px;
+}
+.pokedex-sprite-437 {
+    background-position: -120px -648px;
+}
+.pokedex-sprite-438 {
+    background-position: -144px -648px;
+}
+.pokedex-sprite-439 {
+    background-position: -168px -648px;
+}
+.pokedex-sprite-440 {
+    background-position: -192px -648px;
+}
+.pokedex-sprite-441 {
+    background-position: -216px -648px;
+}
+.pokedex-sprite-442 {
+    background-position: -240px -648px;
+}
+.pokedex-sprite-443 {
+    background-position: -264px -648px;
+}
+.pokedex-sprite-444 {
+    background-position: 0 -666px;
+}
+.pokedex-sprite-445 {
+    background-position: -24px -666px;
+}
+.pokedex-sprite-446 {
+    background-position: -48px -666px;
+}
+.pokedex-sprite-447 {
+    background-position: -72px -666px;
+}
+.pokedex-sprite-448 {
+    background-position: -96px -666px;
+}
+.pokedex-sprite-449 {
+    background-position: -120px -666px;
+}
+.pokedex-sprite-450 {
+    background-position: -144px -666px;
+}
+.pokedex-sprite-451 {
+    background-position: -168px -666px;
+}
+.pokedex-sprite-452 {
+    background-position: -192px -666px;
+}
+.pokedex-sprite-453 {
+    background-position: -216px -666px;
+}
+.pokedex-sprite-454 {
+    background-position: -240px -666px;
+}
+.pokedex-sprite-455 {
+    background-position: -264px -666px;
+}
+.pokedex-sprite-456 {
+    background-position: 0 -684px;
+}
+.pokedex-sprite-457 {
+    background-position: -24px -684px;
+}
+.pokedex-sprite-458 {
+    background-position: -48px -684px;
+}
+.pokedex-sprite-459 {
+    background-position: -72px -684px;
+}
+.pokedex-sprite-460 {
+    background-position: -96px -684px;
+}
+.pokedex-sprite-461 {
+    background-position: -120px -684px;
+}
+.pokedex-sprite-462 {
+    background-position: -144px -684px;
+}
+.pokedex-sprite-463 {
+    background-position: -168px -684px;
+}
+.pokedex-sprite-464 {
+    background-position: -192px -684px;
+}
+.pokedex-sprite-465 {
+    background-position: -216px -684px;
+}
+.pokedex-sprite-466 {
+    background-position: -240px -684px;
+}
+.pokedex-sprite-467 {
+    background-position: -264px -684px;
+}
+.pokedex-sprite-468 {
+    background-position: 0 -702px;
+}
+.pokedex-sprite-469 {
+    background-position: -24px -702px;
+}
+.pokedex-sprite-470 {
+    background-position: -48px -702px;
+}
+.pokedex-sprite-471 {
+    background-position: -72px -702px;
+}
+.pokedex-sprite-472 {
+    background-position: -96px -702px;
+}
+.pokedex-sprite-473 {
+    background-position: -120px -702px;
+}
+.pokedex-sprite-474 {
+    background-position: -144px -702px;
+}
+.pokedex-sprite-475 {
+    background-position: -168px -702px;
+}
+.pokedex-sprite-476 {
+    background-position: -192px -702px;
+}
+.pokedex-sprite-477 {
+    background-position: -216px -702px;
+}
+.pokedex-sprite-478 {
+    background-position: -240px -702px;
+}
+.pokedex-sprite-479 {
+    background-position: -264px -702px;
+}
+.pokedex-sprite-480 {
+    background-position: 0 -720px;
+}
+.pokedex-sprite-481 {
+    background-position: -24px -720px;
+}
+.pokedex-sprite-482 {
+    background-position: -48px -720px;
+}
+.pokedex-sprite-483 {
+    background-position: -72px -720px;
+}
+.pokedex-sprite-484 {
+    background-position: -96px -720px;
+}
+.pokedex-sprite-485 {
+    background-position: -120px -720px;
+}
+.pokedex-sprite-486 {
+    background-position: -144px -720px;
+}
+.pokedex-sprite-487 {
+    background-position: -168px -720px;
+}
+.pokedex-sprite-488 {
+    background-position: -192px -720px;
+}
+.pokedex-sprite-489 {
+    background-position: -216px -720px;
+}
+.pokedex-sprite-490 {
+    background-position: -240px -720px;
+}
+.pokedex-sprite-491 {
+    background-position: -264px -720px;
+}
+.pokedex-sprite-492 {
+    background-position: 0 -738px;
+}
+.pokedex-sprite-493 {
+    background-position: -24px -738px;
+}
+.pokedex-sprite-494 {
+    background-position: -48px -738px;
+}
+.pokedex-sprite-495 {
+    background-position: -72px -738px;
+}
+.pokedex-sprite-496 {
+    background-position: -96px -738px;
+}
+.pokedex-sprite-497 {
+    background-position: -120px -738px;
+}
+.pokedex-sprite-498 {
+    background-position: -144px -738px;
+}
+.pokedex-sprite-499 {
+    background-position: -168px -738px;
+}
+.pokedex-sprite-500 {
+    background-position: -192px -738px;
+}
+.pokedex-sprite-501 {
+    background-position: -216px -738px;
+}
+.pokedex-sprite-502 {
+    background-position: -240px -738px;
+}
+.pokedex-sprite-503 {
+    background-position: -264px -738px;
+}
+.pokedex-sprite-504 {
+    background-position: 0 -756px;
+}
+.pokedex-sprite-505 {
+    background-position: -24px -756px;
+}
+.pokedex-sprite-506 {
+    background-position: -48px -756px;
+}
+.pokedex-sprite-507 {
+    background-position: -72px -756px;
+}
+.pokedex-sprite-508 {
+    background-position: -96px -756px;
+}
+.pokedex-sprite-509 {
+    background-position: -120px -756px;
+}
+.pokedex-sprite-510 {
+    background-position: -144px -756px;
+}
+.pokedex-sprite-511 {
+    background-position: -168px -756px;
+}
+.pokedex-sprite-512 {
+    background-position: -192px -756px;
+}
+.pokedex-sprite-513 {
+    background-position: -216px -756px;
+}
+.pokedex-sprite-514 {
+    background-position: -240px -756px;
+}
+.pokedex-sprite-515 {
+    background-position: -264px -756px;
+}
+.pokedex-sprite-516 {
+    background-position: 0 -774px;
+}
+.pokedex-sprite-517 {
+    background-position: -24px -774px;
+}
+.pokedex-sprite-518 {
+    background-position: -48px -774px;
+}
+.pokedex-sprite-519 {
+    background-position: -72px -774px;
+}
+.pokedex-sprite-520 {
+    background-position: -96px -774px;
+}
+.pokedex-sprite-521 {
+    background-position: -120px -774px;
+}
+.pokedex-sprite-522 {
+    background-position: -144px -774px;
+}
+.pokedex-sprite-523 {
+    background-position: -168px -774px;
+}
+.pokedex-sprite-524 {
+    background-position: -192px -774px;
+}
+.pokedex-sprite-525 {
+    background-position: -216px -774px;
+}
+.pokedex-sprite-526 {
+    background-position: -240px -774px;
+}
+.pokedex-sprite-527 {
+    background-position: -264px -774px;
+}
+.pokedex-sprite-528 {
+    background-position: 0 -792px;
+}
+.pokedex-sprite-529 {
+    background-position: -24px -792px;
+}
+.pokedex-sprite-530 {
+    background-position: -48px -792px;
+}
+.pokedex-sprite-531 {
+    background-position: -72px -792px;
+}
+.pokedex-sprite-532 {
+    background-position: -96px -792px;
+}
+.pokedex-sprite-533 {
+    background-position: -120px -792px;
+}
+.pokedex-sprite-534 {
+    background-position: -144px -792px;
+}
+.pokedex-sprite-535 {
+    background-position: -168px -792px;
+}
+.pokedex-sprite-536 {
+    background-position: -192px -792px;
+}
+.pokedex-sprite-537 {
+    background-position: -216px -792px;
+}
+.pokedex-sprite-538 {
+    background-position: -240px -792px;
+}
+.pokedex-sprite-539 {
+    background-position: -264px -792px;
+}
+.pokedex-sprite-540 {
+    background-position: 0 -810px;
+}
+.pokedex-sprite-541 {
+    background-position: -24px -810px;
+}
+.pokedex-sprite-542 {
+    background-position: -48px -810px;
+}
+.pokedex-sprite-543 {
+    background-position: -72px -810px;
+}
+.pokedex-sprite-544 {
+    background-position: -96px -810px;
+}
+.pokedex-sprite-545 {
+    background-position: -120px -810px;
+}
+.pokedex-sprite-546 {
+    background-position: -144px -810px;
+}
+.pokedex-sprite-547 {
+    background-position: -168px -810px;
+}
+.pokedex-sprite-548 {
+    background-position: -192px -810px;
+}
+.pokedex-sprite-549 {
+    background-position: -216px -810px;
+}
+.pokedex-sprite-550 {
+    background-position: -240px -810px;
+}
+.pokedex-sprite-551 {
+    background-position: -264px -810px;
+}
+.pokedex-sprite-552 {
+    background-position: 0 -828px;
+}
+.pokedex-sprite-553 {
+    background-position: -24px -828px;
+}
+.pokedex-sprite-554 {
+    background-position: -48px -828px;
+}
+.pokedex-sprite-555 {
+    background-position: -72px -828px;
+}
+.pokedex-sprite-556 {
+    background-position: -96px -828px;
+}
+.pokedex-sprite-557 {
+    background-position: -120px -828px;
+}
+.pokedex-sprite-558 {
+    background-position: -144px -828px;
+}
+.pokedex-sprite-559 {
+    background-position: -168px -828px;
+}
+.pokedex-sprite-560 {
+    background-position: -192px -828px;
+}
+.pokedex-sprite-561 {
+    background-position: -216px -828px;
+}
+.pokedex-sprite-562 {
+    background-position: -240px -828px;
+}
+.pokedex-sprite-563 {
+    background-position: -264px -828px;
+}
+.pokedex-sprite-564 {
+    background-position: 0 -846px;
+}
+.pokedex-sprite-565 {
+    background-position: -24px -846px;
+}
+.pokedex-sprite-566 {
+    background-position: -48px -846px;
+}
+.pokedex-sprite-567 {
+    background-position: -72px -846px;
+}
+.pokedex-sprite-568 {
+    background-position: -96px -846px;
+}
+.pokedex-sprite-569 {
+    background-position: -120px -846px;
+}
+.pokedex-sprite-570 {
+    background-position: -144px -846px;
+}
+.pokedex-sprite-571 {
+    background-position: -168px -846px;
+}
+.pokedex-sprite-572 {
+    background-position: -192px -846px;
+}
+.pokedex-sprite-573 {
+    background-position: -216px -846px;
+}
+.pokedex-sprite-574 {
+    background-position: -240px -846px;
+}
+.pokedex-sprite-575 {
+    background-position: -264px -846px;
+}
+.pokedex-sprite-576 {
+    background-position: 0 -864px;
+}
+.pokedex-sprite-577 {
+    background-position: -24px -864px;
+}
+.pokedex-sprite-578 {
+    background-position: -48px -864px;
+}
+.pokedex-sprite-579 {
+    background-position: -72px -864px;
+}
+.pokedex-sprite-580 {
+    background-position: -96px -864px;
+}
+.pokedex-sprite-581 {
+    background-position: -120px -864px;
+}
+.pokedex-sprite-582 {
+    background-position: -144px -864px;
+}
+.pokedex-sprite-583 {
+    background-position: -168px -864px;
+}
+.pokedex-sprite-584 {
+    background-position: -192px -864px;
+}
+.pokedex-sprite-585 {
+    background-position: -216px -864px;
+}
+.pokedex-sprite-586 {
+    background-position: -240px -864px;
+}
+.pokedex-sprite-587 {
+    background-position: -264px -864px;
+}
+.pokedex-sprite-588 {
+    background-position: 0 -882px;
+}
+.pokedex-sprite-589 {
+    background-position: -24px -882px;
+}
+.pokedex-sprite-590 {
+    background-position: -48px -882px;
+}
+.pokedex-sprite-591 {
+    background-position: -72px -882px;
+}
+.pokedex-sprite-592 {
+    background-position: -96px -882px;
+}
+.pokedex-sprite-593 {
+    background-position: -120px -882px;
+}
+.pokedex-sprite-594 {
+    background-position: -144px -882px;
+}
+.pokedex-sprite-595 {
+    background-position: -168px -882px;
+}
+.pokedex-sprite-596 {
+    background-position: -192px -882px;
+}
+.pokedex-sprite-597 {
+    background-position: -216px -882px;
+}
+.pokedex-sprite-598 {
+    background-position: -240px -882px;
+}
+.pokedex-sprite-599 {
+    background-position: -264px -882px;
+}
+.pokedex-sprite-600 {
+    background-position: 0 -900px;
+}
+.pokedex-sprite-601 {
+    background-position: -24px -900px;
+}
+.pokedex-sprite-602 {
+    background-position: -48px -900px;
+}
+.pokedex-sprite-603 {
+    background-position: -72px -900px;
+}
+.pokedex-sprite-604 {
+    background-position: -96px -900px;
+}
+.pokedex-sprite-605 {
+    background-position: -120px -900px;
+}
+.pokedex-sprite-606 {
+    background-position: -144px -900px;
+}
+.pokedex-sprite-607 {
+    background-position: -168px -900px;
+}
+.pokedex-sprite-608 {
+    background-position: -192px -900px;
+}
+.pokedex-sprite-609 {
+    background-position: -216px -900px;
+}
+.pokedex-sprite-610 {
+    background-position: -240px -900px;
+}
+.pokedex-sprite-611 {
+    background-position: -264px -900px;
+}
+.pokedex-sprite-612 {
+    background-position: 0 -918px;
+}
+.pokedex-sprite-613 {
+    background-position: -24px -918px;
+}
+.pokedex-sprite-614 {
+    background-position: -48px -918px;
+}
+.pokedex-sprite-615 {
+    background-position: -72px -918px;
+}
+.pokedex-sprite-616 {
+    background-position: -96px -918px;
+}
+.pokedex-sprite-617 {
+    background-position: -120px -918px;
+}
+.pokedex-sprite-618 {
+    background-position: -144px -918px;
+}
+.pokedex-sprite-619 {
+    background-position: -168px -918px;
+}
+.pokedex-sprite-620 {
+    background-position: -192px -918px;
+}
+.pokedex-sprite-621 {
+    background-position: -216px -918px;
+}
+.pokedex-sprite-622 {
+    background-position: -240px -918px;
+}
+.pokedex-sprite-623 {
+    background-position: -264px -918px;
+}
+.pokedex-sprite-624 {
+    background-position: 0 -936px;
+}
+.pokedex-sprite-625 {
+    background-position: -24px -936px;
+}
+.pokedex-sprite-626 {
+    background-position: -48px -936px;
+}
+.pokedex-sprite-627 {
+    background-position: -72px -936px;
+}
+.pokedex-sprite-628 {
+    background-position: -96px -936px;
+}
+.pokedex-sprite-629 {
+    background-position: -120px -936px;
+}
+.pokedex-sprite-630 {
+    background-position: -144px -936px;
+}
+.pokedex-sprite-631 {
+    background-position: -168px -936px;
+}
+.pokedex-sprite-632 {
+    background-position: -192px -936px;
+}
+.pokedex-sprite-633 {
+    background-position: -216px -936px;
+}
+.pokedex-sprite-634 {
+    background-position: -240px -936px;
+}
+.pokedex-sprite-635 {
+    background-position: -264px -936px;
+}
+.pokedex-sprite-636 {
+    background-position: 0 -954px;
+}
+.pokedex-sprite-637 {
+    background-position: -24px -954px;
+}
+.pokedex-sprite-638 {
+    background-position: -48px -954px;
+}
+.pokedex-sprite-639 {
+    background-position: -72px -954px;
+}
+.pokedex-sprite-640 {
+    background-position: -96px -954px;
+}
+.pokedex-sprite-641 {
+    background-position: -120px -954px;
+}
+.pokedex-sprite-642 {
+    background-position: -144px -954px;
+}
+.pokedex-sprite-643 {
+    background-position: -168px -954px;
+}
+.pokedex-sprite-644 {
+    background-position: -192px -954px;
+}
+.pokedex-sprite-645 {
+    background-position: -216px -954px;
+}
+.pokedex-sprite-646 {
+    background-position: -240px -954px;
+}
+.pokedex-sprite-647 {
+    background-position: -264px -954px;
+}
+.pokedex-sprite-648 {
+    background-position: 0 -972px;
+}
+.pokedex-sprite-649 {
+    background-position: -24px -972px;
+}
+.pokedex-sprite-650 {
+    background-position: -48px -972px;
+}
+.pokedex-sprite-651 {
+    background-position: -72px -972px;
+}
+.pokedex-sprite-652 {
+    background-position: -96px -972px;
+}
+.pokedex-sprite-653 {
+    background-position: -120px -972px;
+}
+.pokedex-sprite-654 {
+    background-position: -144px -972px;
+}
+.pokedex-sprite-655 {
+    background-position: -168px -972px;
+}
+.pokedex-sprite-656 {
+    background-position: -192px -972px;
+}
+.pokedex-sprite-657 {
+    background-position: -216px -972px;
+}
+.pokedex-sprite-658 {
+    background-position: -240px -972px;
+}
+.pokedex-sprite-659 {
+    background-position: -264px -972px;
+}
+.pokedex-sprite-660 {
+    background-position: 0 -990px;
+}
+.pokedex-sprite-661 {
+    background-position: -24px -990px;
+}
+.pokedex-sprite-662 {
+    background-position: -48px -990px;
+}
+.pokedex-sprite-663 {
+    background-position: -72px -990px;
+}
+.pokedex-sprite-664 {
+    background-position: -96px -990px;
+}
+.pokedex-sprite-665 {
+    background-position: -120px -990px;
+}
+.pokedex-sprite-666 {
+    background-position: -144px -990px;
+}
+.pokedex-sprite-667 {
+    background-position: -168px -990px;
+}
+.pokedex-sprite-668 {
+    background-position: -192px -990px;
+}
+.pokedex-sprite-669 {
+    background-position: -216px -990px;
+}
+.pokedex-sprite-670 {
+    background-position: -240px -990px;
+}
+.pokedex-sprite-671 {
+    background-position: -264px -990px;
+}
+.pokedex-sprite-672 {
+    background-position: 0 -1008px;
+}
+.pokedex-sprite-673 {
+    background-position: -24px -1008px;
+}
+.pokedex-sprite-674 {
+    background-position: -48px -1008px;
+}
+.pokedex-sprite-675 {
+    background-position: -72px -1008px;
+}
+.pokedex-sprite-676 {
+    background-position: -96px -1008px;
+}
+.pokedex-sprite-677 {
+    background-position: -120px -1008px;
+}
+.pokedex-sprite-678 {
+    background-position: -144px -1008px;
+}
+.pokedex-sprite-679 {
+    background-position: -168px -1008px;
+}
+.pokedex-sprite-680 {
+    background-position: -192px -1008px;
+}
+.pokedex-sprite-681 {
+    background-position: -216px -1008px;
+}
+.pokedex-sprite-682 {
+    background-position: -240px -1008px;
+}
+.pokedex-sprite-683 {
+    background-position: -264px -1008px;
+}
+.pokedex-sprite-684 {
+    background-position: 0 -1026px;
+}
+.pokedex-sprite-685 {
+    background-position: -24px -1026px;
+}
+.pokedex-sprite-686 {
+    background-position: -48px -1026px;
+}
+.pokedex-sprite-687 {
+    background-position: -72px -1026px;
+}
+.pokedex-sprite-688 {
+    background-position: -96px -1026px;
+}
+.pokedex-sprite-689 {
+    background-position: -120px -1026px;
+}
+.pokedex-sprite-690 {
+    background-position: -144px -1026px;
+}
+.pokedex-sprite-691 {
+    background-position: -168px -1026px;
+}
+.pokedex-sprite-692 {
+    background-position: -192px -1026px;
+}
+.pokedex-sprite-693 {
+    background-position: -216px -1026px;
+}
+.pokedex-sprite-694 {
+    background-position: -240px -1026px;
+}
+.pokedex-sprite-695 {
+    background-position: -264px -1026px;
+}
+.pokedex-sprite-696 {
+    background-position: 0 -1044px;
+}
+.pokedex-sprite-697 {
+    background-position: -24px -1044px;
+}
+.pokedex-sprite-698 {
+    background-position: -48px -1044px;
+}
+.pokedex-sprite-699 {
+    background-position: -72px -1044px;
+}
+.pokedex-sprite-700 {
+    background-position: -96px -1044px;
+}
+.pokedex-sprite-701 {
+    background-position: -120px -1044px;
+}
+.pokedex-sprite-702 {
+    background-position: -144px -1044px;
+}
+.pokedex-sprite-703 {
+    background-position: -168px -1044px;
+}
+.pokedex-sprite-704 {
+    background-position: -192px -1044px;
+}
+.pokedex-sprite-705 {
+    background-position: -216px -1044px;
+}
+.pokedex-sprite-706 {
+    background-position: -240px -1044px;
+}
+.pokedex-sprite-707 {
+    background-position: -264px -1044px;
+}
+.pokedex-sprite-708 {
+    background-position: 0 -1062px;
+}
+.pokedex-sprite-709 {
+    background-position: -24px -1062px;
+}
+.pokedex-sprite-710 {
+    background-position: -48px -1062px;
+}
+.pokedex-sprite-711 {
+    background-position: -72px -1062px;
+}
+.pokedex-sprite-712 {
+    background-position: -96px -1062px;
+}
+.pokedex-sprite-713 {
+    background-position: -120px -1062px;
+}
+.pokedex-sprite-714 {
+    background-position: -144px -1062px;
+}
+.pokedex-sprite-715 {
+    background-position: -168px -1062px;
+}
+.pokedex-sprite-716 {
+    background-position: -192px -1062px;
+}
+.pokedex-sprite-717 {
+    background-position: -216px -1062px;
+}
+.pokedex-sprite-718 {
+    background-position: -240px -1062px;
+}
+.pokedex-sprite-719 {
+    background-position: -264px -1062px;
+}
+.pokedex-sprite-720 {
+    background-position: 0 -1080px;
+}
+.pokedex-sprite-721 {
+    background-position: -24px -1080px;
+}
+.pokedex-sprite-722 {
+    background-position: -48px -1080px;
+}
+.pokedex-sprite-723 {
+    background-position: -72px -1080px;
+}
+.pokedex-sprite-724 {
+    background-position: -96px -1080px;
+}
+.pokedex-sprite-725 {
+    background-position: -120px -1080px;
+}
+.pokedex-sprite-726 {
+    background-position: -144px -1080px;
+}
+.pokedex-sprite-727 {
+    background-position: -168px -1080px;
+}
+.pokedex-sprite-728 {
+    background-position: -192px -1080px;
+}
+.pokedex-sprite-729 {
+    background-position: -216px -1080px;
+}
+.pokedex-sprite-730 {
+    background-position: -240px -1080px;
+}
+.pokedex-sprite-731 {
+    background-position: -264px -1080px;
+}
+.pokedex-sprite-732 {
+    background-position: 0 -1098px;
+}
+.pokedex-sprite-733 {
+    background-position: -24px -1098px;
+}
+.pokedex-sprite-734 {
+    background-position: -48px -1098px;
+}
+.pokedex-sprite-735 {
+    background-position: -72px -1098px;
+}
+.pokedex-sprite-736 {
+    background-position: -96px -1098px;
+}
+.pokedex-sprite-737 {
+    background-position: -120px -1098px;
+}
+.pokedex-sprite-738 {
+    background-position: -144px -1098px;
+}
+.pokedex-sprite-739 {
+    background-position: -168px -1098px;
+}
+.pokedex-sprite-740 {
+    background-position: -192px -1098px;
+}
+.pokedex-sprite-741 {
+    background-position: -216px -1098px;
+}
+.pokedex-sprite-742 {
+    background-position: -240px -1098px;
+}
+.pokedex-sprite-743 {
+    background-position: -264px -1098px;
+}
+.pokedex-sprite-744 {
+    background-position: 0 -1116px;
+}
+.pokedex-sprite-745 {
+    background-position: -24px -1116px;
+}
+.pokedex-sprite-746 {
+    background-position: -48px -1116px;
+}
+.pokedex-sprite-747 {
+    background-position: -72px -1116px;
+}
+.pokedex-sprite-748 {
+    background-position: -96px -1116px;
+}
+.pokedex-sprite-749 {
+    background-position: -120px -1116px;
+}
+.pokedex-sprite-750 {
+    background-position: -144px -1116px;
+}
+.pokedex-sprite-751 {
+    background-position: -168px -1116px;
+}
+.pokedex-sprite-752 {
+    background-position: -192px -1116px;
+}
+.pokedex-sprite-753 {
+    background-position: -216px -1116px;
+}
+.pokedex-sprite-754 {
+    background-position: -240px -1116px;
+}
+.pokedex-sprite-755 {
+    background-position: -264px -1116px;
+}
+.pokedex-sprite-756 {
+    background-position: 0 -1134px;
+}
+.pokedex-sprite-757 {
+    background-position: -24px -1134px;
+}
+.pokedex-sprite-758 {
+    background-position: -48px -1134px;
+}
+.pokedex-sprite-759 {
+    background-position: -72px -1134px;
+}
+.pokedex-sprite-760 {
+    background-position: -96px -1134px;
+}
+.pokedex-sprite-761 {
+    background-position: -120px -1134px;
+}
+.pokedex-sprite-762 {
+    background-position: -144px -1134px;
+}
+.pokedex-sprite-763 {
+    background-position: -168px -1134px;
+}
+.pokedex-sprite-764 {
+    background-position: -192px -1134px;
+}
+.pokedex-sprite-765 {
+    background-position: -216px -1134px;
+}
+.pokedex-sprite-766 {
+    background-position: -240px -1134px;
+}
+.pokedex-sprite-767 {
+    background-position: -264px -1134px;
+}
+.pokedex-sprite-768 {
+    background-position: 0 -1152px;
+}
+.pokedex-sprite-769 {
+    background-position: -24px -1152px;
+}
+.pokedex-sprite-770 {
+    background-position: -48px -1152px;
+}
+.pokedex-sprite-771 {
+    background-position: -72px -1152px;
+}
+.pokedex-sprite-772 {
+    background-position: -96px -1152px;
+}
+.pokedex-sprite-773 {
+    background-position: -120px -1152px;
+}
+.pokedex-sprite-774 {
+    background-position: -144px -1152px;
+}
+.pokedex-sprite-775 {
+    background-position: -168px -1152px;
+}
+.pokedex-sprite-776 {
+    background-position: -192px -1152px;
+}
+.pokedex-sprite-777 {
+    background-position: -216px -1152px;
+}
+.pokedex-sprite-778 {
+    background-position: -240px -1152px;
+}
+.pokedex-sprite-779 {
+    background-position: -264px -1152px;
+}
+.pokedex-sprite-780 {
+    background-position: 0 -1170px;
+}
+.pokedex-sprite-781 {
+    background-position: -24px -1170px;
+}
+.pokedex-sprite-782 {
+    background-position: -48px -1170px;
+}
+.pokedex-sprite-783 {
+    background-position: -72px -1170px;
+}
+.pokedex-sprite-784 {
+    background-position: -96px -1170px;
+}
+.pokedex-sprite-785 {
+    background-position: -120px -1170px;
+}
+.pokedex-sprite-786 {
+    background-position: -144px -1170px;
+}
+.pokedex-sprite-787 {
+    background-position: -168px -1170px;
+}
+.pokedex-sprite-788 {
+    background-position: -192px -1170px;
+}
+.pokedex-sprite-789 {
+    background-position: -216px -1170px;
+}
+.pokedex-sprite-790 {
+    background-position: -240px -1170px;
+}
+.pokedex-sprite-791 {
+    background-position: -264px -1170px;
+}
+.pokedex-sprite-792 {
+    background-position: 0 -1188px;
+}
+.pokedex-sprite-793 {
+    background-position: -24px -1188px;
+}
+.pokedex-sprite-794 {
+    background-position: -48px -1188px;
+}
+.pokedex-sprite-795 {
+    background-position: -72px -1188px;
+}
+.pokedex-sprite-796 {
+    background-position: -96px -1188px;
+}
+.pokedex-sprite-797 {
+    background-position: -120px -1188px;
+}
+.pokedex-sprite-798 {
+    background-position: -144px -1188px;
+}
+.pokedex-sprite-799 {
+    background-position: -168px -1188px;
+}
+.pokedex-sprite-800 {
+    background-position: -192px -1188px;
+}
+.pokedex-sprite-801 {
+    background-position: -216px -1188px;
+}
+.pokedex-sprite-802 {
+    background-position: -240px -1188px;
+}
+.pokedex-sprite-803 {
+    background-position: -264px -1188px;
+}
+.pokedex-sprite-804 {
+    background-position: 0 -1206px;
+}
+.pokedex-sprite-805 {
+    background-position: -24px -1206px;
+}
+.pokedex-sprite-806 {
+    background-position: -48px -1206px;
+}
+.pokedex-sprite-807 {
+    background-position: -72px -1206px;
+}

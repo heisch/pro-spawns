@@ -1,19 +1,22 @@
 import {combineReducers} from 'redux'
 import * as fromSettings from '../reducers/settings'
+import * as fromQuickList from '../reducers/quick_list'
 
 /*
  * This is the root state of the app
  * It contains every substate of the app
  */
 export interface ApplicationState {
-    settings: fromSettings.SettingsState
+    settings: fromSettings.SettingsState,
+    quick_list: fromQuickList.QuickListState,
 }
 
 /*
  * initialState of the app
  */
 export const initialState: ApplicationState = {
-    settings: fromSettings.initialState
+    settings: fromSettings.initialState,
+    quick_list: fromQuickList.initialState
 };
 
 /*
@@ -21,5 +24,6 @@ export const initialState: ApplicationState = {
  * Returned reducer will be of type Reducer<State>
  */
 export const reducer = combineReducers<ApplicationState>({
-    settings: fromSettings.reducer
+    settings: fromSettings.reducer,
+    quick_list: fromQuickList.reducer
 });

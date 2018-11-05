@@ -1,0 +1,216 @@
+
+@media only screen and (max-width: 767px) {
+  .ui.basic.table {
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .ui.basic.table {
+    font-size: 0.8em;
+  }
+}
+
+.ui.sortable.table tbody tr td{
+  white-space: nowrap;
+}
+
+.ui.sortable.table thead tr th.header-id,
+.ui.sortable.table thead tr th.header-morning,
+.ui.sortable.table thead tr th.header-day,
+.ui.sortable.table thead tr th.header-night,
+.ui.sortable.table thead tr th.header-rod,
+.ui.sortable.table thead tr th.header-tier,
+.ui.sortable.table thead tr th.header-ms,
+.ui.sortable.table thead tr th.header-levels,
+.ui.sortable.table thead tr th.header-repel,
+.ui.sortable.table thead tr th.header-ev {
+  width: 1px;
+}
+
+.ui.sortable.table tbody tr td.row-morning,
+.ui.sortable.table tbody tr td.row-day,
+.ui.sortable.table tbody tr td.row-night {
+  padding: 0;
+}
+
+.ui.sortable.table tbody tr td.row-morning img,
+.ui.sortable.table tbody tr td.row-day img,
+.ui.sortable.table tbody tr td.row-night img,
+.ui.sortable.table tbody tr td.row-rod img,
+.ui.sortable.table thead tr th.header-rod img {
+  vertical-align: bottom;
+  height: 17px;
+  width: auto;
+}
+
+.ui.sortable.table tbody tr td.row-tier {
+  font-weight: bold;
+}
+
+.ev_yield {
+  white-space: nowrap;
+  font-weight: bolder;
+}
+.ev_yield small {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.ev_yield_hp {
+  background-color: black;
+  color: white;
+}
+
+.ev_yield_atk {
+  background-color: red;
+  color: white;
+}
+.ev_yield_sp_atk {
+  background-color: darkorange;
+  color: white;
+}
+
+.ev_yield_def {
+  background-color: slategray;
+  color: white;
+}
+.ev_yield_sp_def {
+  background-color: blueviolet;
+  color: white;
+}
+.ev_yield_spd {
+  background-color: darkgreen;
+  color: white;
+}
+
+.ui.table tr td.red    {background-color: #B03060;color: white;}
+.ui.table tr td.orange {background-color: #FE9A76;color: white;}
+.ui.table tr td.yellow {background-color: #FFD700;color: black;}
+.ui.table tr td.olive  {background-color: #32CD32;color: white;}
+.ui.table tr td.green  {background-color: #016936;color: white;}
+.ui.table tr td.teal   {background-color: #008080;color: white;}
+.ui.table tr td.blue   {background-color: #0E6EB8;color: white;}
+.ui.table tr td.violet {background-color: #EE82EE;color: white;}
+.ui.table tr td.purple {background-color: #B413EC;color: white;}
+.ui.table tr td.pink   {background-color: #FF1493;color: white;}
+.ui.table tr td.brown  {background-color: #A52A2A;color: white;}
+.ui.table tr td.grey   {background-color: #A0A0A0;color: white;}
+.ui.table tr td.black  {background-color: #000000;color: white;}
+
+.ui.table tr td .icon {margin: 0}
+
+
+.ui.button.btn-lnk {
+  color: #4183c4;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  font-weight: normal;
+  cursor: pointer;
+  background: transparent;
+}
+
+a:hover,
+.ui.button.btn-lnk:hover {
+  color: #1e70bf;
+  text-decoration: underline;
+}
+
+a:hover .icon {
+  text-decoration: none;
+  color: blue;
+}
+
+.type-icon {
+  font-family: monospace;
+  display: inline-block;
+  /*border: 1px solid #a3a3a3;*/
+  width: 22px;
+  margin: 0 1px;
+  /*background: #dbdbdb;*/
+  border-radius: 2px;
+  color: #fff;
+  font-size: .7rem;
+  font-weight: normal;
+  line-height: 0.9rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.type-normal {
+  background-color: #aa9
+}
+
+.type-fire {
+  background-color: #f42
+}
+
+.type-water {
+  background-color: #39f
+}
+
+.type-electric {
+  background-color: #fc3
+}
+
+.type-grass {
+  background-color: #7c5
+}
+
+.type-ice {
+  background-color: #6cf
+}
+
+.type-fighting {
+  background-color: #b54
+}
+
+.type-poison {
+  background-color: #a59
+}
+
+.type-ground {
+  background-color: #db5
+}
+
+.type-flying {
+  background-color: #89f
+}
+
+.type-psychic {
+  background-color: #f59
+}
+
+.type-bug {
+  background-color: #ab2
+}
+
+.type-rock {
+  background-color: #ba6
+}
+
+.type-ghost {
+  background-color: #66b
+}
+
+.type-dragon {
+  background-color: #76e
+}
+
+.type-dark {
+  background-color: #754
+}
+
+.type-steel {
+  background-color: #aab
+}
+
+.type-fairy {
+  background-color: #e9e
+}
+
+.type-curse {
+  background-color: #698
+}

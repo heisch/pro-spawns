@@ -1,9 +1,9 @@
 import {AnyAction} from "redux";
 
 export enum SettingsActionTypes {
-    'TOGGLE_FIND_POKEMON_SYNONYMS',
-    'SET_RESULTS_PER_PAGE',
-    'TOGGLE_DISPLAY_INFORMATION_KEY'
+    TOGGLE_FIND_POKEMON_SYNONYMS = 'TOGGLE_FIND_POKEMON_SYNONYMS',
+    SET_RESULTS_PER_PAGE = 'SET_RESULTS_PER_PAGE',
+    TOGGLE_DISPLAY_INFORMATION_KEY = 'TOGGLE_DISPLAY_INFORMATION_KEY'
 }
 
 export interface ToggleFindPokemonSynonymsAction extends AnyAction {
