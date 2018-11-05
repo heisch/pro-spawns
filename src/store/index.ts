@@ -14,5 +14,8 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, reducer);
 
-export const store = createStore(persistedReducer, initialState, applyMiddleware(logger));
+export const store = process.env.NODE_ENV === 'development'
+        ? createStore(persistedReducer, initialState, applyMiddleware(logger))
+        : createStore(persistedReducer, initialState);
+
 export const persistor = persistStore(store);
