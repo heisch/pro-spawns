@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "lib": [
+      "es6",
+      "dom",
+      "dom.iterable",
+      "es2015.promise",
+      "es2017"
+    ],
     "allowJs": true,
     "skipLibCheck": false,
     "esModuleInterop": true,
