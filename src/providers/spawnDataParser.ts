@@ -16,6 +16,7 @@ export type RepelTrickDataType = {
 }
 
 export interface SpawnSourceData {
+    [key: string]: CombinedSpawnDataType[]
     land: CombinedSpawnDataType[],
     water: CombinedSpawnDataType[],
     headbutt: CombinedSpawnDataType[]

@@ -1,13 +1,9 @@
-import {RepelTrickDataType} from "../providers/spawnDataParser";
-import {CombinedSpawnDataType, SpawnType} from "../model/spawn_data";
+import {RepelTrickDataType, SpawnSourceData} from "../providers/spawnDataParser";
+import {SpawnType} from "../model/spawn_data";
 import {SpawnDataAction, SpawnDataActionTypes} from "../actions/spawn_data";
 
 export interface SpawnDataState {
-    sourceData: {
-        land: CombinedSpawnDataType[]
-        water: CombinedSpawnDataType[]
-        headbutt: CombinedSpawnDataType[]
-    }
+    sourceData: SpawnSourceData
     repelTrickData: RepelTrickDataType
 }
 

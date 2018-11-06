@@ -4,9 +4,9 @@ import QuickList from "../containers/QuickList";
 import '../resources/css/App.css';
 import '../resources/css/pokdex_sprites.css';
 import '../resources/css/TypeEffectivenessMatrixModal.css';
-import {Checkbox, Container, Dropdown, DropdownItemProps, Form, Segment} from "semantic-ui-react";
+import {Checkbox, Container, Dropdown, DropdownItemProps, Form, Input, Segment} from "semantic-ui-react";
 import {ApplicationState} from "../reducers";
-import {setFilterPokemon} from "../actions/filter";
+import {setFilterArea, setFilterPokemon} from "../actions/filter";
 import {connect} from "react-redux";
 import {getFilter} from "../selectors/filter";
 import {FilterValues} from "../reducers/filter";
@@ -16,7 +16,7 @@ import {Action, Dispatch} from "redux";
 import {getSettings} from "../selectors/settings";
 import {SettingsModel} from "../model/settingsModel";
 import {toggleFindPokemonSynonyms} from "../actions/settings";
-import {getFilteredSourceData, getSpawnSourceData} from "../selectors/spawn_data";
+import {getFilteredSourceData} from "../selectors/spawn_data";
 import {spawnDataParser, SpawnSourceData} from "../providers/spawnDataParser";
 import {CombinedSpawnDataType, SpawnType} from "../model/spawn_data";
 import {setRepelTrickData, setSpawnDataForType} from "../actions/spawn_data";
@@ -27,6 +27,7 @@ interface AppProps {
     spawnSourceData: SpawnSourceData
     toggleFindPokemonSynonyms: () => void
     setFilterPokemon: (pokemon: any | string) => void
+    setFilterArea: (area: any | string) => void
 }
 interface AppState {
 
@@ -37,6 +38,8 @@ class App extends React.Component<AppProps, AppState> {
         const pokemon_dropdown_values = defaultMemoize(() => getPokemonData().map((entry): DropdownItemProps => {
             return {key: entry.name, value: entry.name, text: entry.id + ': ' + entry.name}
         }))();
+
+        const number_of_results = this.props.spawnSourceData.land.length + this.props.spawnSourceData.water.length + this.props.spawnSourceData.headbutt.length;
 
         return (
             <Container>
@@ -56,16 +59,18 @@ class App extends React.Component<AppProps, AppState> {
                         &nbsp;
                         &nbsp;
 
-                        {/*<Input*/}
-                            {/*value={this.state.filter.area}*/}
-                            {/*onChange={(e) => this.setFilter({area: e.target.value})}*/}
-                            {/*icon={{name: 'close', link: true, onClick: () => this.setFilter({area: ''})}}*/}
-                            {/*placeholder='region/area (regex)...'*/}
-                        {/*/>*/}
-                        {/*&nbsp;*/}
-                        {/*&nbsp;*/}
-                        {/*&nbsp;*/}
-                        {/*<strong>{number_of_results} results</strong>*/}
+                        <Input
+                            value={this.props.filter.area}
+                            onChange={(e: any) => this.props.setFilterArea(e.target.value)}
+                            icon={{name: 'close', link: true, onClick: () => this.props.setFilterArea('')}}
+                            placeholder='region/area (regex)...'
+                        />
+
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+
+                        <strong>{number_of_results} results</strong>
 
                         <Form.Field>
                             <Checkbox label='Include evolutions' checked={this.props.settings.find_pokemon_synonyms}
@@ -75,7 +80,7 @@ class App extends React.Component<AppProps, AppState> {
                 </Segment>
 
                 {this.props.spawnSourceData.land.slice(0,5).map((entry: CombinedSpawnDataType) => {
-                    return <div key={entry.uniqueId}>{entry.pokemon}</div>
+                    return <div key={entry.uniqueId}>{entry.pokemon} - {entry._sortArea}</div>
                 })}
 
                 <QuickList/>
@@ -99,13 +104,13 @@ const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) => {
         dispatch(setSpawnDataForType(SpawnType.land, sourceData.land));
         dispatch(setSpawnDataForType(SpawnType.water, sourceData.water));
         dispatch(setSpawnDataForType(SpawnType.headbutt, sourceData.headbutt));
-        console.log(repelTrickData);
         dispatch(setRepelTrickData(repelTrickData));
     });
 
     return {
         toggleFindPokemonSynonyms: () => dispatch(toggleFindPokemonSynonyms()),
         setFilterPokemon: (pokemon: string) => dispatch(setFilterPokemon(pokemon)),
+        setFilterArea: (area: string) => dispatch(setFilterArea(area)),
     }};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

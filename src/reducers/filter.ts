@@ -29,6 +29,14 @@ export function reducer(state: FilterState = initialState, action: FilterAction)
                     area: ''
                 }
             };
+        case FilterActionTypes.SET_FILTER_AREA:
+            return {
+                ...state,
+                filter: {
+                    pokemon: '',
+                    area: action.area
+                }
+            };
         default:
             return state;
     }
