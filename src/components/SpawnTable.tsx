@@ -123,7 +123,7 @@ export default class SpawnTable extends React.Component<SpawnTableProps> {
                         {showColumns.id && (
                             <Table.HeaderCell textAlign='right' className='header-id' sorted={column === 'pokedexNumber' ? direction : undefined} onClick={() => this.props.setSortBy('pokedexNumber')}>ID</Table.HeaderCell>
                         )}
-                        <Table.HeaderCell>Pokemon</Table.HeaderCell>
+                        <Table.HeaderCell sorted={column === 'pokemon' ? direction : undefined} onClick={() => this.props.setSortBy('pokemon')}>Pokemon</Table.HeaderCell>
                         {showColumns.time_of_day && type !== 'headbutt' && (
                             <React.Fragment>
                                 <Table.HeaderCell className='header-morning' sorted={column === 'morning' ? direction : undefined} onClick={() => this.props.setSortBy('morning')}>M</Table.HeaderCell>

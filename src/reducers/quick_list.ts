@@ -53,13 +53,13 @@ export const initialState: QuickListState = {
 
 export function reducer(state: QuickListState = initialState, action: QuickListAction) {
     let newState: QuickListState = {
-        quick_list: {
+        quick_list: [
             ...state.quick_list
-        }
+        ]
     };
     switch (action.type) {
         case QuickListActionTypes.ADD_TO_LIST:
-            if (_.find(state.quick_list, {id: action.entry.id}) !== undefined) {
+            if (_.find(state.quick_list, {id: action.entry.id}) === undefined) {
                 newState.quick_list.push({id: action.entry.pokedexNumber, name: action.entry.pokemon});
             }
             break;

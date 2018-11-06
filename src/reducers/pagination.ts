@@ -15,6 +15,7 @@ const toggleSortByDirection = (direction: SortByDirection) => direction === "asc
 export const sortByColumnsSorting = {
     _sortArea: ['_sortArea', 'pokedexNumber', 'tier', 'location'],
     pokedexNumber: ['pokedexNumber', '_sortArea', 'location'],
+    pokemon: ['pokemon', '_sortArea', 'location'],
     min: ['min', '_sortArea', 'location'],
     tier: ['tier', '_sortArea', 'pokedexNumber', 'location'],
     morning: ['morning', 'day', 'night', '_sortArea', 'pokedexNumber', 'location'],
@@ -22,7 +23,7 @@ export const sortByColumnsSorting = {
     night: ['night', 'morning', 'day', '_sortArea', 'pokedexNumber', 'location'],
 };
 
-export type SortByColumn = '_sortArea' | 'pokedexNumber' | 'min' | 'tier' | 'morning' | 'day' | 'night';
+export type SortByColumn = '_sortArea' | 'pokedexNumber' | 'pokemon' | 'min' | 'tier' | 'morning' | 'day' | 'night';
 
 export const initialState: PaginationState = {
     // no need to store page for every type since we reset the page to 1 on every tab change

@@ -5,6 +5,9 @@ import {SpawnSourceData} from "../providers/spawnDataParser";
 import {CombinedSpawnDataType} from "../model/spawn_data";
 import {getSettings} from "./settings";
 import getEvolutionSynonyms from "../providers/getEvolutionSynonyms";
+import _ from "lodash";
+import {sortByColumnsSorting} from "../reducers/pagination";
+import {getPaginationState} from "./pagination";
 
 export const getSpawnSourceData = ((state: ApplicationState) => state.spawn_data.sourceData);
 
@@ -52,8 +55,21 @@ export const getFilteredSourceData = createSelector([getSpawnSourceData, getFilt
     return filteredData;
 });
 
-export const getSortedFilteredSourceData = createSelector([getFilteredSourceData], (sourceData) => {
-    return sourceData; // todo: sorting
+export const getSortedFilteredSourceData = createSelector([getFilteredSourceData, getPaginationState], (sourceData, pagination) => {
+    const sortedData: SpawnSourceData = {
+        land: [],
+        water: [],
+        headbutt: [],
+    };
+
+    Object.keys(sortedData).forEach(type => {
+        sortedData[type] = _.sortBy(sourceData[type], sortByColumnsSorting[pagination.pagination.sortBy]);
+        if (pagination.pagination.sortByDirection === "descending") {
+            sortedData[type] = sortedData[type].reverse();
+        }
+    });
+
+    return sortedData; // todo: sorting
 });
 
 export const getFilteredSourceDataCount = createSelector([getFilteredSourceData], (sourceData) => {
