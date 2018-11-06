@@ -1,23 +1,4 @@
-export enum PokemonTypes {
-    Normal = 'Normal',
-    Fire = 'Fire',
-    Water = 'Water',
-    Electric = 'Electric',
-    Grass = 'Grass',
-    Ice = 'Ice',
-    Fighting = 'Fighting',
-    Poison = 'Poison',
-    Ground = 'Ground',
-    Flying = 'Flying',
-    Psychic = 'Psychic',
-    Bug = 'Bug',
-    Rock = 'Rock',
-    Ghost = 'Ghost',
-    Dragon = 'Dragon',
-    Dark = 'Dark',
-    Steel = 'Steel',
-    Fairy = 'Fairy'
-}
+export type PokemonTypes = 'Normal' | 'Fire' | 'Water' | 'Electric' | 'Grass' | 'Ice' | 'Fighting' | 'Poison' | 'Ground' | 'Flying' | 'Psychic' | 'Bug' | 'Rock' | 'Ghost' | 'Dragon' | 'Dark' | 'Steel' | 'Fairy';
 
 interface CommonPokemonData {
     name: string

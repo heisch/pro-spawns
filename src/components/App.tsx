@@ -16,18 +16,19 @@ import {Action, Dispatch} from "redux";
 import {getSettings} from "../selectors/settings";
 import {SettingsModel} from "../model/settingsModel";
 import {toggleFindPokemonSynonyms} from "../actions/settings";
-import {getFilteredSourceData} from "../selectors/spawn_data";
-import {spawnDataParser, SpawnSourceData} from "../providers/spawnDataParser";
-import {CombinedSpawnDataType, SpawnType} from "../model/spawn_data";
+import {getFilteredSourceDataCount} from "../selectors/spawn_data";
+import {spawnDataParser} from "../providers/spawnDataParser";
+import {SpawnType} from "../model/spawn_data";
 import {setRepelTrickData, setSpawnDataForType} from "../actions/spawn_data";
+import SpawnDataTabs from "../containers/SpawnDataTabs";
 
 interface AppProps {
     filter: FilterValues,
     settings: SettingsModel,
-    spawnSourceData: SpawnSourceData
     toggleFindPokemonSynonyms: () => void
     setFilterPokemon: (pokemon: any | string) => void
     setFilterArea: (area: any | string) => void
+    numberOfResults: number
 }
 interface AppState {
 
@@ -38,8 +39,6 @@ class App extends React.Component<AppProps, AppState> {
         const pokemon_dropdown_values = defaultMemoize(() => getPokemonData().map((entry): DropdownItemProps => {
             return {key: entry.name, value: entry.name, text: entry.id + ': ' + entry.name}
         }))();
-
-        const number_of_results = this.props.spawnSourceData.land.length + this.props.spawnSourceData.water.length + this.props.spawnSourceData.headbutt.length;
 
         return (
             <Container>
@@ -70,7 +69,7 @@ class App extends React.Component<AppProps, AppState> {
                         &nbsp;
                         &nbsp;
 
-                        <strong>{number_of_results} results</strong>
+                        <strong>{this.props.numberOfResults} results</strong>
 
                         <Form.Field>
                             <Checkbox label='Include evolutions' checked={this.props.settings.find_pokemon_synonyms}
@@ -79,9 +78,7 @@ class App extends React.Component<AppProps, AppState> {
                     </Form>
                 </Segment>
 
-                {this.props.spawnSourceData.land.slice(0,5).map((entry: CombinedSpawnDataType) => {
-                    return <div key={entry.uniqueId}>{entry.pokemon} - {entry._sortArea}</div>
-                })}
+                <SpawnDataTabs/>
 
                 <QuickList/>
             </Container>
@@ -92,7 +89,7 @@ class App extends React.Component<AppProps, AppState> {
 const mapStateToProps = (state: ApplicationState) => ({
     settings: getSettings(state),
     filter: getFilter(state),
-    spawnSourceData: getFilteredSourceData(state),
+    numberOfResults: getFilteredSourceDataCount(state),
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) => {
@@ -111,7 +108,8 @@ const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) => {
         toggleFindPokemonSynonyms: () => dispatch(toggleFindPokemonSynonyms()),
         setFilterPokemon: (pokemon: string) => dispatch(setFilterPokemon(pokemon)),
         setFilterArea: (area: string) => dispatch(setFilterArea(area)),
-    }};
+    }
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
 

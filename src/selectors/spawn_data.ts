@@ -51,3 +51,13 @@ export const getFilteredSourceData = createSelector([getSpawnSourceData, getFilt
 
     return filteredData;
 });
+
+export const getSortedFilteredSourceData = createSelector([getFilteredSourceData], (sourceData) => {
+    return sourceData; // todo: sorting
+});
+
+export const getFilteredSourceDataCount = createSelector([getFilteredSourceData], (sourceData) => {
+    return sourceData.land.length + sourceData.water.length + sourceData.headbutt.length
+});
+
+export const getRepelTrickData = ((state: ApplicationState) => state.spawn_data.repelTrickData);

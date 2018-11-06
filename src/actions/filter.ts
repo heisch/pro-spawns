@@ -15,11 +15,11 @@ export interface SetFilterAreaAction extends AnyAction {
     area: string
 }
 
-export function setFilterPokemon(pokemon: string) {
+export function setFilterPokemon(pokemon: string): SetFilterPokemonAction {
     return {type: FilterActionTypes.SET_FILTER_POKEMON, pokemon: pokemon}
 }
 
-export function setFilterArea(area: string) {
+export function setFilterArea(area: string): SetFilterAreaAction {
     return {type: FilterActionTypes.SET_FILTER_AREA, area: area}
 }
 

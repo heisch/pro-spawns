@@ -3,6 +3,7 @@ import * as fromSettings from '../reducers/settings'
 import * as fromQuickList from '../reducers/quick_list'
 import * as fromFilter from '../reducers/filter'
 import * as fromSpawnData from '../reducers/spawn_data'
+import * as fromPagination from '../reducers/pagination'
 
 /*
  * This is the root state of the app
@@ -13,6 +14,7 @@ export interface ApplicationState {
     quick_list: fromQuickList.QuickListState,
     filter: fromFilter.FilterState,
     spawn_data: fromSpawnData.SpawnDataState,
+    pagination: fromPagination.PaginationState,
 }
 
 /*
@@ -23,6 +25,7 @@ export const initialState: ApplicationState = {
     quick_list: fromQuickList.initialState,
     filter: fromFilter.initialState,
     spawn_data: fromSpawnData.initialState,
+    pagination: fromPagination.initialState,
 };
 
 /*
@@ -34,4 +37,5 @@ export const reducer = combineReducers<ApplicationState>({
     quick_list: fromQuickList.reducer,
     filter: fromFilter.reducer,
     spawn_data: fromSpawnData.reducer,
+    pagination: fromPagination.reducer,
 });

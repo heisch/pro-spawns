@@ -55,6 +55,7 @@ export interface common_spawn_data {
     _sortArea: string
     uniqueId: string
     area: string
+    region: string
     membershipExclusive: boolean
     pokemon: string
     pokedexNumber: string

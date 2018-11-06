@@ -11,8 +11,12 @@ type string_indexed_array = {
     [key: string]: number
 }
 
+export type RepelTrickDataEntry = {
+    [key: string]: number
+}
+
 export type RepelTrickDataType = {
-    [key: string]: any
+    [key: string]: RepelTrickDataEntry
 }
 
 export interface SpawnSourceData {
@@ -81,12 +85,13 @@ export class spawnDataParser {
             pokedexNumber: data.pokedexNumber.padStart(3, '0'),
             _sortArea: this.regionSorting[data.region] + ' - ' + data.region + ' - ' + data.area,
             area: data.area,
+            region: data.region,
             membershipExclusive: data.membership.length > 0 || data.membersAccessible.length > 0,
             morning: !!data.morning,
             day: !!data.day,
             night: !!data.night,
             levels: data.levels,
-            tier: '',
+            tier: data.tier,
             heldItem: '',
             min: parseInt(!!data.levels.match(/^(\d+)-(\d+)$/) ? data.levels.replace(/^(\d+)-(\d+)$/, '$1') : data.levels, 10),
             max: parseInt(!!data.levels.match(/^(\d+)-(\d+)$/) ? data.levels.replace(/^(\d+)-(\d+)$/, '$2') : data.levels, 10),

@@ -13,7 +13,7 @@ export const initialState: SpawnDataState = {
         water: [],
         headbutt: []
     },
-    repelTrickData: []
+    repelTrickData: {}
 };
 
 export function reducer(state: SpawnDataState = initialState, action: SpawnDataAction) {
