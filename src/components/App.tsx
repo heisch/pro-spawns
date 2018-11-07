@@ -35,7 +35,7 @@ interface AppState {
 }
 
 class App extends React.Component<AppProps, AppState> {
-    render() {
+    public render() {
         const pokemon_dropdown_values = defaultMemoize(() => getPokemonData().map((entry): DropdownItemProps => {
             return {key: entry.name, value: entry.name, text: entry.id + ': ' + entry.name}
         }))();

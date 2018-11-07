@@ -6,7 +6,7 @@ import {FilterValues} from "../store/reducers/filter";
 import {SettingsModel} from "../store/model/settingsModel";
 import {RepelTrickDataType, SpawnSourceData} from "../providers/spawnDataParser";
 import {CombinedSpawnDataType} from "../store/model/spawn_data";
-import {PaginationState, SortByColumn, SortByDirection} from "../store/reducers/pagination";
+import {PaginationState, SortByColumn} from "../store/reducers/pagination";
 import {QuickListEntry} from "../store/reducers/quick_list";
 import getPokemonData from "../providers/getPokemonData";
 import TypeEffectivenessMatrixModal from "./TypeEffectivenessModal";
@@ -31,7 +31,7 @@ export interface SpawnTableProps {
 
 export default class SpawnTable extends React.Component<SpawnTableProps> {
 
-    repelTrickPossible(type: string, entry: CombinedSpawnDataType) {
+    private repelTrickPossible(type: string, entry: CombinedSpawnDataType) {
         if (entry.hasOwnProperty('location') && entry.location === 'Fishing') return false;
         let repelId = type + ' - ' + entry.region + ' - ' + entry.area;
         if (!this.props.repelTrickData.hasOwnProperty(repelId)) return false;
@@ -176,7 +176,7 @@ export default class SpawnTable extends React.Component<SpawnTableProps> {
         );
     }
 
-    renderTableRow(entry: CombinedSpawnDataType, type: string) {
+    private renderTableRow(entry: CombinedSpawnDataType, type: string) {
         const showColumns = this.props.settings.display_information;
         const repelTrickPossible = this.repelTrickPossible(type, entry);
 

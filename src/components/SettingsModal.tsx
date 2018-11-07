@@ -14,14 +14,14 @@ interface State {
 
 export default class SettingsModal extends React.Component<SettingsModalProps, State> {
 
-    constructor(props: SettingsModalProps) {
+    public constructor(props: SettingsModalProps) {
         super(props);
         this.state = {
             settingsModalOpen: false
         };
     }
 
-    render() {
+    public render() {
         const modalOpen = this.state.settingsModalOpen;
         const settings = this.props.settings;
         const display_information = settings.display_information;

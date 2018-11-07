@@ -1,5 +1,3 @@
-import {PokemonTypes} from "./getPokemonData";
-
 interface TypeEffectivenessChartDefending {
     [key: string]: number
 }

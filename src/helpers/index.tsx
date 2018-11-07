@@ -1,7 +1,7 @@
 import {CombinedSpawnDataType} from "../store/model/spawn_data";
 
 export class Helpers {
-    static getSourceTypeLabel(type: string) {
+    public static getSourceTypeLabel(type: string) {
         switch (type) {
             case 'headbutt':
                 return 'Headbutting';
@@ -12,11 +12,7 @@ export class Helpers {
         }
     }
 
-    static alternateDirection(direction: string) {
-        return direction === 'ascending' ? 'descending' : 'ascending';
-    }
-
-    static getTierClassName(entry: CombinedSpawnDataType) {
+    public static getTierClassName(entry: CombinedSpawnDataType) {
         const rarity = entry.tier;
         switch (rarity) {
             case "1":

@@ -1,5 +1,4 @@
-import React, {Component} from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import {Button, Grid, Modal} from "semantic-ui-react";
 import '../resources/css/TypeEffectivenessMatrixModal.css';
 import Types from "./Types";
@@ -17,31 +16,31 @@ interface TypeEffectivenessMatrixModalState {
 
 class TypeEffectivenessMatrixModal extends React.Component<TypeEffectivenessMatrixModalProps, TypeEffectivenessMatrixModalState> {
 
-    constructor(props: TypeEffectivenessMatrixModalProps) {
+    public constructor(props: TypeEffectivenessMatrixModalProps) {
         super(props);
         this.state = {
             settingsModalOpen: false,
         };
     }
 
-    getEffectivenessClassName = (effectiveness: number) => {
+    private static getEffectivenessClassName(effectiveness: number) {
         switch (effectiveness) {
             case 0.25: return 'type-fx-025';
             case 0.5: return 'type-fx-050';
             default: return `type-fx-0${effectiveness}0`;
         }
-    };
+    }
 
-    renderEffectiveness = (effectiveness: number) => {
+    private static renderEffectiveness(effectiveness: number) {
         switch (effectiveness) {
             case 0.25: return '¼';
             case 0.5: return '½';
             // case 1: return '';
             default: return effectiveness;
         }
-    };
+    }
 
-    render() {
+    public render() {
         const modalOpen = this.state.settingsModalOpen;
 
         const TYPE_EFFECTIVENESS_CHART = getTypeEffectivenessChart();
@@ -81,8 +80,8 @@ class TypeEffectivenessMatrixModal extends React.Component<TypeEffectivenessMatr
 
                                 {Object.values(type_effectiveness).slice(0,9).map((effectiveness, index) => {
                                     return (
-                                        <Grid.Column key={index} className={this.getEffectivenessClassName(effectiveness)}>
-                                            {this.renderEffectiveness(effectiveness)}
+                                        <Grid.Column key={index} className={TypeEffectivenessMatrixModal.getEffectivenessClassName(effectiveness)}>
+                                            {TypeEffectivenessMatrixModal.renderEffectiveness(effectiveness)}
                                         </Grid.Column>
                                     );
                                 })}
@@ -97,8 +96,8 @@ class TypeEffectivenessMatrixModal extends React.Component<TypeEffectivenessMatr
 
                                 {Object.values(type_effectiveness).slice(9,18).map((effectiveness, index) => {
                                     return (
-                                        <Grid.Column key={index} className={this.getEffectivenessClassName(effectiveness)}>
-                                            {this.renderEffectiveness(effectiveness)}
+                                        <Grid.Column key={index} className={TypeEffectivenessMatrixModal.getEffectivenessClassName(effectiveness)}>
+                                            {TypeEffectivenessMatrixModal.renderEffectiveness(effectiveness)}
                                         </Grid.Column>
                                     );
                                 })}

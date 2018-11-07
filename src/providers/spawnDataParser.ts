@@ -33,7 +33,7 @@ export interface SpawnDataParserResult {
 
 export class spawnDataParser {
 
-    regionSorting: string_indexed_array = {
+    private regionSorting: string_indexed_array = {
         Kanto: 1,
         Johto: 2,
         Hoenn: 3,
@@ -43,9 +43,9 @@ export class spawnDataParser {
         Alola: 7,
     };
 
-    repelTrickData: RepelTrickDataType = {};
+    private repelTrickData: RepelTrickDataType = {};
 
-    getSourceData() {
+    public getSourceData() {
         const csv_files = [
             require('../resources/csv/RawSpawnData.csv'),
             require('../resources/csv/RawWaterSpawnData.csv'),
@@ -65,9 +65,9 @@ export class spawnDataParser {
 
                 resolve({
                     sourceData: {
-                        land: results[0].data.map((data) => this._dataParser(data, SpawnType.land)),
-                        water: results[1].data.map((data) => this._dataParser(data, SpawnType.water)),
-                        headbutt: results[2].data.map((data) => this._dataParser(data, SpawnType.headbutt)),
+                        land: results[0].data.map((data) => this.dataParser(data, SpawnType.land)),
+                        water: results[1].data.map((data) => this.dataParser(data, SpawnType.water)),
+                        headbutt: results[2].data.map((data) => this.dataParser(data, SpawnType.headbutt)),
                     },
                     repelTrickData: this.repelTrickData
                 });
@@ -77,7 +77,7 @@ export class spawnDataParser {
 
     }
 
-    _dataParser(data: CombinedCsvSpawnDataType, type: SpawnType): CombinedSpawnDataType {
+    private dataParser(data: CombinedCsvSpawnDataType, type: SpawnType): CombinedSpawnDataType {
 
         const spawnData:CombinedSpawnDataType = {
             uniqueId :_.uniqueId(),

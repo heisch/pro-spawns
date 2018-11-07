@@ -10,7 +10,7 @@ interface QuickListState {
 }
 
 export default class QuickList extends React.Component<QuickListProps, QuickListState> {
-    render() {
+    public render() {
         const quickListData = this.props.quick_list;
         return (
             !quickListData ? null :
