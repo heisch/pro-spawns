@@ -7,7 +7,7 @@ import {getFilteredSourceDataCount, getRepelTrickData, getSortedFilteredSourceDa
 import {Action, Dispatch} from "redux";
 import {setFilterArea, setFilterPokemon} from "../store/actions/filter";
 import {getCurrentPage, getPaginationState} from "../store/selectors/pagination";
-import {setPage, setSortBy} from "../store/actions/pagination";
+import {resetPage, setPage, setSortBy} from "../store/actions/pagination";
 import SpawnTable from '../components/SpawnTable';
 import {getQuickList} from "../store/selectors/quick_list";
 import {addToQuickList, removeFromQuickList} from "../store/actions/quick_list";
@@ -26,8 +26,8 @@ const mapStateToProps = (state: ApplicationState) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) => ({
-    setFilterPokemon: (pokemon: string) => dispatch(setFilterPokemon(pokemon)),
-    setFilterArea: (area: string) => dispatch(setFilterArea(area)),
+    setFilterPokemon: (pokemon: string) => {dispatch(setFilterPokemon(pokemon)); dispatch(resetPage())},
+    setFilterArea: (area: string) => {dispatch(setFilterArea(area)); dispatch(resetPage())},
     setPage: (page?: number | string) => dispatch(setPage(page)),
     setSortBy: (sortBy: SortByColumn) => dispatch(setSortBy(sortBy)),
     addToQuickList: (entry: CombinedSpawnDataType) => dispatch(addToQuickList(entry)),

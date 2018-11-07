@@ -14,6 +14,7 @@ import {spawnDataParser} from "../providers/spawnDataParser";
 import {SpawnType} from "../store/model/spawn_data";
 import {setRepelTrickData, setSpawnDataForType} from "../store/actions/spawn_data";
 import App from "../components/App";
+import {resetPage} from "../store/actions/pagination";
 
 const mapStateToProps = (state: ApplicationState) => ({
     settings: getSettings(state),
@@ -35,8 +36,8 @@ const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) => {
 
     return {
         toggleFindPokemonSynonyms: () => dispatch(toggleFindPokemonSynonyms()),
-        setFilterPokemon: (pokemon: string) => dispatch(setFilterPokemon(pokemon)),
-        setFilterArea: (area: string) => dispatch(setFilterArea(area)),
+        setFilterPokemon: (pokemon: string) => {dispatch(setFilterPokemon(pokemon)); dispatch(resetPage())},
+        setFilterArea: (area: string) => {dispatch(setFilterArea(area)); dispatch(resetPage())},
     }
 };
 
