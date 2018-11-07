@@ -20,7 +20,8 @@ export const initialState: SettingsState = {
             levels: true,
             repel: true,
             item: true,
-            ev: true
+            ev: true,
+            catch_rate: true,
         }
     }
 };

@@ -9,6 +9,7 @@ export interface DisplayInformationSettings {
     repel: boolean
     item: boolean
     ev: boolean
+    catch_rate: boolean
 }
 
 export interface SettingsModel {

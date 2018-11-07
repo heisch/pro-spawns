@@ -35,7 +35,8 @@ export default class SettingsModal extends React.Component<SettingsModalProps, S
             "levels": 'levels',
             "repel": 'repel trick',
             "item": 'held item',
-            "ev": 'ev yield'
+            "ev": 'ev yield',
+            "catch_rate": 'catch rate',
         };
 
         return (

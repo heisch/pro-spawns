@@ -65,6 +65,7 @@ export default class SpawnTable extends React.Component<SpawnTableProps> {
                     "levels",
                     "item",
                     "ev",
+                    "catch_rate",
                 ].forEach(column => {
                     columns += showColumns[column] ? 1 : 0;
                 });
@@ -94,6 +95,13 @@ export default class SpawnTable extends React.Component<SpawnTableProps> {
         });
     }
 
+    private static renderCatchRate(entry: CombinedSpawnDataType) {
+        const pokemon_data = _.find(getPokemonData(), {id: entry.pokedexNumber});
+        if (pokemon_data === undefined) return null;
+        let catch_rate = pokemon_data.catch_rate * 100 / 255 * (1 / 3);
+        catch_rate = Math.round(catch_rate * 10) / 10; // round to .1
+        return catch_rate.toLocaleString() + '%';
+    }
 
     public render() {
         const type = this.props.type;
@@ -142,6 +150,7 @@ export default class SpawnTable extends React.Component<SpawnTableProps> {
                         {type !== 'headbutt' && showColumns.repel && <Table.HeaderCell className='header-repel'>Repel</Table.HeaderCell>}
                         {showColumns.item && <Table.HeaderCell className='header-item'>Item</Table.HeaderCell>}
                         {showColumns.ev && <Table.HeaderCell className='header-ev' textAlign='right'>EVs</Table.HeaderCell>}
+                        {showColumns.catch_rate && <Table.HeaderCell className='header-catch-rate'>Catch%</Table.HeaderCell>}
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
@@ -236,6 +245,7 @@ export default class SpawnTable extends React.Component<SpawnTableProps> {
                 )}
                 {showColumns.item && <Table.Cell>{entry.heldItem}</Table.Cell>}
                 {showColumns.ev && <Table.Cell className='ev_yield' textAlign='right'>{SpawnTable.renderEvYield(entry)}</Table.Cell>}
+                {showColumns.catch_rate && <Table.Cell className='catch_rate' textAlign='right'>{SpawnTable.renderCatchRate(entry)}</Table.Cell>}
             </Table.Row>
         );
     }
