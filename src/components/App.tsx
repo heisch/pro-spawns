@@ -5,21 +5,10 @@ import '../resources/css/App.css';
 import '../resources/css/pokdex_sprites.css';
 import '../resources/css/TypeEffectivenessMatrixModal.css';
 import {Checkbox, Container, Dropdown, DropdownItemProps, Form, Input, Segment} from "semantic-ui-react";
-import {ApplicationState} from "../store/reducers";
-import {setFilterArea, setFilterPokemon} from "../store/actions/filter";
-import {connect} from "react-redux";
-import {getFilter} from "../store/selectors/filter";
 import {FilterValues} from "../store/reducers/filter";
 import {defaultMemoize} from "reselect";
 import getPokemonData from "../providers/getPokemonData";
-import {Action, Dispatch} from "redux";
-import {getSettings} from "../store/selectors/settings";
 import {SettingsModel} from "../store/model/settingsModel";
-import {toggleFindPokemonSynonyms} from "../store/actions/settings";
-import {getFilteredSourceDataCount} from "../store/selectors/spawn_data";
-import {spawnDataParser} from "../providers/spawnDataParser";
-import {SpawnType} from "../store/model/spawn_data";
-import {setRepelTrickData, setSpawnDataForType} from "../store/actions/spawn_data";
 import SpawnDataTabs from "../containers/SpawnDataTabs";
 
 interface AppProps {
@@ -85,30 +74,4 @@ class App extends React.Component<AppProps, AppState> {
     }
 }
 
-const mapStateToProps = (state: ApplicationState) => ({
-    settings: getSettings(state),
-    filter: getFilter(state),
-    numberOfResults: getFilteredSourceDataCount(state),
-});
-
-const mapDispatchToProps = (dispatch: Dispatch<Action<any>>) => {
-    const dataParser = new spawnDataParser();
-
-    dataParser.getSourceData().then(results => {
-        const {sourceData, repelTrickData} = results;
-
-        dispatch(setSpawnDataForType(SpawnType.land, sourceData.land));
-        dispatch(setSpawnDataForType(SpawnType.water, sourceData.water));
-        dispatch(setSpawnDataForType(SpawnType.headbutt, sourceData.headbutt));
-        dispatch(setRepelTrickData(repelTrickData));
-    });
-
-    return {
-        toggleFindPokemonSynonyms: () => dispatch(toggleFindPokemonSynonyms()),
-        setFilterPokemon: (pokemon: string) => dispatch(setFilterPokemon(pokemon)),
-        setFilterArea: (area: string) => dispatch(setFilterArea(area)),
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
-
+export default App
