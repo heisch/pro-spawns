@@ -43,39 +43,38 @@ class App extends React.Component<AppProps, AppState> {
         return (
             <Container>
                 <Segment>
-                <Settings/>
-                    <Form>
-                        <Dropdown
-                            placeholder='pokemon name...'
-                            search
-                            selection
-                            clearable
-                            value={this.props.filter.pokemon}
-                            onChange={(e, obj) => this.props.setFilterPokemon(obj.value)}
-                            options={pokemon_dropdown_values}
-                        />
+                    <Settings/>
 
-                        &nbsp;
-                        &nbsp;
+                    <Dropdown
+                        placeholder='pokemon name...'
+                        search
+                        selection
+                        clearable
+                        value={this.props.filter.pokemon}
+                        onChange={(e, obj) => this.props.setFilterPokemon(obj.value)}
+                        options={pokemon_dropdown_values}
+                    />
 
-                        <Input
-                            value={this.props.filter.area}
-                            onChange={(e: any) => this.props.setFilterArea(e.target.value)}
-                            icon={{name: 'close', link: true, onClick: () => this.props.setFilterArea('')}}
-                            placeholder='region/area (regex)...'
-                        />
+                    &nbsp;
+                    &nbsp;
 
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
+                    <Input
+                        value={this.props.filter.area}
+                        onChange={(e: any) => this.props.setFilterArea(e.target.value)}
+                        icon={{name: 'close', link: true, onClick: () => this.props.setFilterArea('')}}
+                        placeholder='region/area (regex)...'
+                    />
 
-                        <strong>{this.props.numberOfResults} results</strong>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
 
-                        <Form.Field>
-                            <Checkbox label='Include evolutions' checked={this.props.settings.find_pokemon_synonyms}
-                                      onClick={() => this.props.toggleFindPokemonSynonyms()}/>
-                        </Form.Field>
-                    </Form>
+                    <strong>{this.props.numberOfResults} results</strong>
+
+                    <Form.Field>
+                        <Checkbox label='Include evolutions' checked={this.props.settings.find_pokemon_synonyms}
+                                  onClick={() => this.props.toggleFindPokemonSynonyms()}/>
+                    </Form.Field>
                 </Segment>
 
                 <SpawnDataTabs/>
