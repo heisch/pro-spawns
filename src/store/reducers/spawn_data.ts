@@ -1,4 +1,4 @@
-import {RepelTrickDataType, SpawnSourceData} from "../providers/spawnDataParser";
+import {RepelTrickDataType, SpawnSourceData} from "../../providers/spawnDataParser";
 import {SpawnType} from "../model/spawn_data";
 import {SpawnDataAction, SpawnDataActionTypes} from "../actions/spawn_data";
 

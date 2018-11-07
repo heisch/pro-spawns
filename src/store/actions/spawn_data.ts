@@ -1,6 +1,6 @@
 import {AnyAction} from "redux";
 import {CombinedSpawnDataType, SpawnType} from "../model/spawn_data";
-import {RepelTrickDataType} from "../providers/spawnDataParser";
+import {RepelTrickDataType} from "../../providers/spawnDataParser";
 
 export enum SpawnDataActionTypes {
     SET_DATA_FOR_TYPE = 'SET_DATA_FOR_TYPE',

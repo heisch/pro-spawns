@@ -1,7 +1,7 @@
 import React from "react";
 import {Button, Checkbox, Form, Modal} from "semantic-ui-react";
 import _ from "lodash";
-import {SettingsModel} from "../model/settingsModel";
+import {SettingsModel} from "../store/model/settingsModel";
 
 interface SettingsModalProps {
     settings: SettingsModel

@@ -1,13 +1,13 @@
 import React from "react";
 import {connect} from "react-redux";
-import {ApplicationState} from "../reducers";
-import {getFilteredSourceDataCount, getSortedFilteredSourceData} from "../selectors/spawn_data";
+import {ApplicationState} from "../store/reducers";
+import {getFilteredSourceDataCount, getSortedFilteredSourceData} from "../store/selectors/spawn_data";
 import {Action, Dispatch} from "redux";
 import {SpawnSourceData} from "../providers/spawnDataParser";
 import {Tab} from "semantic-ui-react";
 import SpawnTable from "./SpawnTable";
 import {Helpers} from "../helpers";
-import {resetPage} from "../actions/pagination";
+import {resetPage} from "../store/actions/pagination";
 
 export interface SpawnDataTabsProps {
     spawnSourceData: SpawnSourceData

@@ -1,18 +1,18 @@
 import React from "react";
 import {connect} from "react-redux";
-import {ApplicationState} from "../reducers";
-import {getSettings} from "../selectors/settings";
-import {getFilter} from "../selectors/filter";
-import {getFilteredSourceDataCount, getRepelTrickData, getSortedFilteredSourceData} from "../selectors/spawn_data";
+import {ApplicationState} from "../store/reducers";
+import {getSettings} from "../store/selectors/settings";
+import {getFilter} from "../store/selectors/filter";
+import {getFilteredSourceDataCount, getRepelTrickData, getSortedFilteredSourceData} from "../store/selectors/spawn_data";
 import {Action, Dispatch} from "redux";
-import {setFilterArea, setFilterPokemon} from "../actions/filter";
-import {getCurrentPage, getPaginationState} from "../selectors/pagination";
-import {setPage, setSortBy} from "../actions/pagination";
+import {setFilterArea, setFilterPokemon} from "../store/actions/filter";
+import {getCurrentPage, getPaginationState} from "../store/selectors/pagination";
+import {setPage, setSortBy} from "../store/actions/pagination";
 import SpawnTable from '../components/SpawnTable';
-import {getQuickList} from "../selectors/quick_list";
-import {addToQuickList, removeFromQuickList} from "../actions/quick_list";
-import {CombinedSpawnDataType} from "../model/spawn_data";
-import {SortByColumn} from "../reducers/pagination";
+import {getQuickList} from "../store/selectors/quick_list";
+import {addToQuickList, removeFromQuickList} from "../store/actions/quick_list";
+import {CombinedSpawnDataType} from "../store/model/spawn_data";
+import {SortByColumn} from "../store/reducers/pagination";
 
 const mapStateToProps = (state: ApplicationState) => ({
     settings: getSettings(state),

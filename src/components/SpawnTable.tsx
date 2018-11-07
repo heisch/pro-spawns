@@ -2,12 +2,12 @@ import React from "react";
 import {Button, Icon, Pagination, Table} from "semantic-ui-react";
 import _ from "lodash";
 import {Helpers} from "../helpers";
-import {FilterValues} from "../reducers/filter";
-import {SettingsModel} from "../model/settingsModel";
+import {FilterValues} from "../store/reducers/filter";
+import {SettingsModel} from "../store/model/settingsModel";
 import {RepelTrickDataType, SpawnSourceData} from "../providers/spawnDataParser";
-import {CombinedSpawnDataType} from "../model/spawn_data";
-import {PaginationState, SortByColumn, SortByDirection} from "../reducers/pagination";
-import {QuickListEntry} from "../reducers/quick_list";
+import {CombinedSpawnDataType} from "../store/model/spawn_data";
+import {PaginationState, SortByColumn, SortByDirection} from "../store/reducers/pagination";
+import {QuickListEntry} from "../store/reducers/quick_list";
 import getPokemonData from "../providers/getPokemonData";
 import TypeEffectivenessMatrixModal from "./TypeEffectivenessModal";
 

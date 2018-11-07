@@ -1,7 +1,7 @@
 import * as Papa from "papaparse";
 import {ParseResult} from "papaparse";
 import _ from "lodash";
-import {CombinedCsvSpawnDataType, CombinedSpawnDataType, SpawnType} from "../model/spawn_data";
+import {CombinedCsvSpawnDataType, CombinedSpawnDataType, SpawnType} from "../store/model/spawn_data";
 
 interface SpawnDataPapaParseResult extends ParseResult {
     data: Array<CombinedCsvSpawnDataType>

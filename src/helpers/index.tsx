@@ -1,4 +1,4 @@
-import {CombinedSpawnDataType} from "../model/spawn_data";
+import {CombinedSpawnDataType} from "../store/model/spawn_data";
 
 export class Helpers {
     static getSourceTypeLabel(type: string) {

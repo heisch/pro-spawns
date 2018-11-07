@@ -1,7 +1,7 @@
-import {ApplicationState} from "../reducers";
+import {ApplicationState} from "../store/reducers";
 import {connect} from "react-redux";
-import {getQuickList} from "../selectors/quick_list";
-import {setFilterPokemon} from "../actions/filter";
+import {getQuickList} from "../store/selectors/quick_list";
+import {setFilterPokemon} from "../store/actions/filter";
 import QuickList from "../components/QuickList";
 import {Action, Dispatch} from "redux";
 

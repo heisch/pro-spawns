@@ -1,6 +1,6 @@
 import React from "react";
 import {Button, List, Segment} from "semantic-ui-react";
-import {QuickListEntry} from "../reducers/quick_list";
+import {QuickListEntry} from "../store/reducers/quick_list";
 
 interface QuickListProps {
     quick_list: QuickListEntry[]

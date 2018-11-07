@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux'
-import * as fromSettings from '../reducers/settings'
-import * as fromQuickList from '../reducers/quick_list'
-import * as fromFilter from '../reducers/filter'
-import * as fromSpawnData from '../reducers/spawn_data'
-import * as fromPagination from '../reducers/pagination'
+import * as fromSettings from './settings'
+import * as fromQuickList from './quick_list'
+import * as fromFilter from './filter'
+import * as fromSpawnData from './spawn_data'
+import * as fromPagination from './pagination'
 
 /*
  * This is the root state of the app

@@ -1,6 +1,6 @@
 import logger from 'redux-logger';
 import {applyMiddleware, createStore} from 'redux'
-import {initialState, reducer} from '../reducers'
+import {initialState, reducer} from './reducers'
 import {persistReducer, persistStore} from 'redux-persist'
 import storage from 'redux-persist/lib/storage';
 import autoMergeLevel2 from "redux-persist/es/stateReconciler/autoMergeLevel2";
